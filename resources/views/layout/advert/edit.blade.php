@@ -22,11 +22,11 @@
                   <input type="hidden" name="id" id="id" value="{{$advert->id}}">
                     <div class="col-md-6">
                       <label for="brand" class="form-label">Marka *</label>
-                      <input type="text" class="form-control" id="brand" name="brand" value="{{$advert->brand}}">
+                      <input type="text" class="form-control" id="brand" name="brand" value="{{$advert->vehicle_brand_id}}">
                     </div>
                     <div class="col-md-6">
                       <label for="model" class="form-label">Model *</label>
-                      <input type="text" class="form-control" id="model" name="model" value="{{$advert->model}}">
+                      <input type="text" class="form-control" id="model" name="model" value="{{$advert->vehicle_model_id}}">
                     </div>
                     <div class="col-3">
                       <label for="motor" class="form-label">Motor</label>
@@ -48,39 +48,40 @@
                       <label for="gear" class="form-label">Şanzıman</label>
                       <select name="gear" id="gear" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Manuel" {{$advert->gear == "Manuel" ? "selected":""}}>Manuel</option>
-                        <option value="Otomatik" {{$advert->gear == "Otomatik" ? "selected":""}}>Otomatik</option>
-                        <option value="Triptonik" {{$advert->gear == "Triptonik" ? "selected":""}}>Triptonik</option>
+                        <option value="1" {{$advert->gear_id == 1 ? "selected":""}}>Manuel</option>
+                        <option value="2" {{$advert->gear_id == 2 ? "selected":""}}>Otomatik</option>
+                        <option value="3" {{$advert->gear_id == 3 ? "selected":""}}>Triptonik</option>
                       </select>
                     </div>
+
                     <div class="col-3">
                       <label for="fuel" class="form-label">Yakıt</label>
                       <select name="fuel" id="fuel" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Benzin" {{$advert->fuel == "Benzin" ? "selected":""}}>Benzin</option>
-                        <option value="Dizel" {{$advert->fuel == "Dizel" ? "selected":""}}>Dizel</option>
-                        <option value="LPG" {{$advert->fuel == "LPG" ? "selected":""}}>LPG</option>
-                        <option value="Elektrik" {{$advert->fuel == "Elektrik" ? "selected":""}}>Elektrik</option>
+                        <option value="1" {{$advert->fuel_id == 1 ? "selected":""}}>Benzin</option>
+                        <option value="2" {{$advert->fuel_id == 2 ? "selected":""}}>Dizel</option>
+                        <option value="3" {{$advert->fuel_id == 3 ? "selected":""}}>LPG</option>
+                        <option value="4" {{$advert->fuel_id == 4 ? "selected":""}}>Elektrik</option>
                       </select>
                     </div>
                     <div class="col-3">
                       <label for="color" class="form-label">Renk</label>
-                      <input type="text" class="form-control" id="color" name="color" value="{{$advert->color}}">
+                      <input type="text" class="form-control" id="color" name="color" value="{{$advert->color_id}}">
                     </div>
                     <div class="col-3">
                       <label for="case" class="form-label">Kasa Tipi</label>
                       <select name="case" id="case" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Sedan" {{$advert->casetype == "Sedan" ? "selected":""}}>Sedan</option>
-                        <option value="Hatchback" {{$advert->casetype == "Hatchback" ? "selected":""}}>Hatchback</option>
-                        <option value="Station Wagon" {{$advert->casetype == "Station Wagon" ? "selected":""}}>Station Wagon</option>
-                        <option value="SUV" {{$advert->casetype == "SUV" ? "selected":""}}>SUV</option>
-                        <option value="Crossover" {{$advert->casetype == "Crossover" ? "selected":""}}>Crossover</option>
-                        <option value="Coupe" {{$advert->casetype == "Coupe" ? "selected":""}}>Coupe</option>
-                        <option value="Coupe SUV" {{$advert->casetype == "Coupe SUV" ? "selected":""}}>Coupe SUV</option>
-                        <option value="Convertible" {{$advert->casetype == "Convertible" ? "selected":""}}>Convertible</option>
-                        <option value="MPV" {{$advert->casetype == "MPV" ? "selected":""}}>MPV</option>
-                        <option value="Roadster" {{$advert->casetype == "Roadster" ? "selected":""}}>Roadster</option>
+                        <option value="1" {{$advert->case_type_id == 1 ? "selected":""}}>Sedan</option>
+                        <option value="2" {{$advert->case_type_id == 2 ? "selected":""}}>Hatchback</option>
+                        <option value="3" {{$advert->case_type_id == 3 ? "selected":""}}>Station Wagon</option>
+                        <option value="4" {{$advert->case_type_id == 4 ? "selected":""}}>SUV</option>
+                        <option value="5" {{$advert->case_type_id == 5 ? "selected":""}}>Crossover</option>
+                        <option value="6" {{$advert->case_type_id == 6 ? "selected":""}}>Coupe</option>
+                        <option value="7" {{$advert->case_type_id == 7 ? "selected":""}}>Coupe SUV</option>
+                        <option value="8" {{$advert->case_type_id == 8 ? "selected":""}}>Convertible</option>
+                        <option value="9" {{$advert->case_type_id == 9 ? "selected":""}}>MPV</option>
+                        <option value="10" {{$advert->case_type_id == 10 ? "selected":""}}>Roadster</option>
                       </select>
                     </div>
 
@@ -98,12 +99,12 @@
                       <div class="col-4">
                         <label for="status" class="form-label">Araç Durumu *</label>
                         <select id="status" name="status" class="form-select">
-                          <option value="1" {{$advert->status == 1 ? "selected":""}}>Satılık</option>
-                          <option value="2" {{$advert->status == 2 ? "selected":""}}>Kullanımda</option>
-                          <option value="3" {{$advert->status == 3 ? "selected":""}}>Sahibinde</option>
-                          <option value="4" {{$advert->status == 4 ? "selected":""}}>Kirada</option>
-                          <option value="5" {{$advert->status == 5 ? "selected":""}}>Onarımda</option>
-                          <option value="6" {{$advert->status == 6 ? "selected":""}}>Hazırlanıyor</option>
+                          <option value="1" {{$advert->status_id == 1 ? "selected":""}}>Satılık</option>
+                          <option value="2" {{$advert->status_id == 2 ? "selected":""}}>Kullanımda</option>
+                          <option value="3" {{$advert->status_id == 3 ? "selected":""}}>Sahibinde</option>
+                          <option value="4" {{$advert->status_id == 4 ? "selected":""}}>Kirada</option>
+                          <option value="5" {{$advert->status_id == 5 ? "selected":""}}>Onarımda</option>
+                          <option value="6" {{$advert->status_id == 6 ? "selected":""}}>Hazırlanıyor</option>
                         </select>
                       </div>
 

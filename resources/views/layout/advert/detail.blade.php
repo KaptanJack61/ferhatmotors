@@ -15,8 +15,8 @@
 
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
-        <li class="breadcrumb-item" aria-current="page">İlan Detayları</li>
+        <li class="breadcrumb-item"><a href="/advert">Araçlar</a></li>
+        <li class="breadcrumb-item" aria-current="page">Araç Detayları</li>
         <li class="breadcrumb-item active" aria-current="page"># {{$advert->id}}</li>
     </ol>
 </nav>
@@ -27,16 +27,16 @@
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn-outline-secondary"><b>Marka: </b> {{$advert->brand}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Model: </b> {{$advert->model}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Marka: </b> {{$advert->vehicle_brand_id}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Model: </b> {{$advert->vehicle_model_id}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Paket: </b> {{$advert->package ?? "-"}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Motor: </b> {{$advert->motor ?? "-"}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>KM: </b> {{$advert->km}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Yıl: </b> {{$advert->year}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Şanzıman: </b> {{$advert->gear ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Yakıt: </b> {{$advert->fuel ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Renk: </b> {{$advert->color ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Kasa: </b> {{$advert->casetype ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Şanzıman: </b> {{$advert->gear_id ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Yakıt: </b> {{$advert->fuel_id ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Renk: </b> {{$advert->color_id ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Kasa: </b> {{$advert->case_type_id ?? "-"}}</button>
             </div>
         </div>
     </div>
@@ -52,25 +52,25 @@
                         <ul class="list-group">
 
                             <li class="list-group-item active justify-content-between d-flex
-                                    @if ($advert->status == 1)
+                                    @if ($advert->status_id == 1)
                                         bg-warning
                                         border-warning
-                                    @elseif($advert->status == 2)
+                                    @elseif($advert->status_id == 2)
                                         bg-primary
                                         border-primary
-                                    @elseif($advert->status == 3)
+                                    @elseif($advert->status_id == 3)
                                         bg-info
                                         border-info
-                                    @elseif($advert->status == 4)
+                                    @elseif($advert->status_id == 4)
                                         bg-danger
                                         border-danger
-                                    @elseif($advert->status == 5)
+                                    @elseif($advert->status_id == 5)
                                         bg-danger
                                         border-danger
-                                    @elseif($advert->status == 6)
+                                    @elseif($advert->status_id == 6)
                                         bg-primary
                                         border-primary
-                                    @elseif($advert->status == 7)
+                                    @elseif($advert->sstatus_id == 7)
                                         bg-success
                                         border-success
                                     @else
@@ -79,29 +79,27 @@
                                     @endif
                             ">
                                 <b>Araç Durumu: </b>
-                                @if ($advert->status == 1)
+                                @if ($advert->status_id == 1)
                                         Satılık
-                                    @elseif($advert->status == 2)
+                                    @elseif($advert->status_id == 2)
                                         Kullanımda
-                                    @elseif($advert->status == 3)
+                                    @elseif($advert->status_id == 3)
                                         Sahibinde
-                                    @elseif($advert->status == 4)
+                                    @elseif($advert->status_id == 4)
                                         Kirada
-                                    @elseif($advert->status == 5)
+                                    @elseif($advert->status_id == 5)
                                         Onarımda
-                                    @elseif($advert->status == 6)
+                                    @elseif($advert->status_id == 6)
                                         Hazırlanıyor
-                                    @elseif($advert->status == 7)
+                                    @elseif($advert->status_id == 7)
                                         Satıldı
                                     @else
                                         Bilinmiyor
                                     @endif
                             </li>
-
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tipi: </b> {!!$advert->sales_type == 1 ? '<span class="badge bg-primary">Sahiplik</span>' : '<b>'.$profit.'</b><span class="badge bg-primary">Komisyon</span>'!!}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tipi: </b> {!!$advert->sale_type_id == 1 ? '<span class="badge bg-primary">Sahiplik</span>' : '<b>'.$profit.'</b><span class="badge bg-primary">Komisyon</span>'!!}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {{ $advert->Owner->firstname.' '.$advert->Owner->lastname }}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>İlanı Oluşturan: </b> {!! $advert->Creator != "" ? $advert->Creator->firstname.' '.$advert->Creator->lastname : '<strike class="text-danger">'.$advert->username.'</strike>' !!}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->created_at)->timestamp)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b>
                                 @if($advert->sold_date)
@@ -110,12 +108,6 @@
                                 -
                                 @endif
                             </li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satıcı: </b>@if ($advert->status == 7)
-                                {!! $advert->Seller != "" ? $advert->Seller->firstname.' '.$advert->Seller->lastname : '<strike class="text-danger">'.$advert->username.'</strike>' !!}
-                                @else
-                                -
-                            @endif</li>
-
                           </ul>
                     </div>
                 </div>
@@ -172,19 +164,18 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        @if ($advert->status == 7)
+                        @if ($advert->status_id == 7)
                         <div class="alert alert-primary" role="alert">
                             Bu ilan <b>{{$advert->sold_date}}</b> tarihinde <u>Satıldı</u> olarak işaretlendiği için değişiklik yapamazsınız.
                         </div>
                         @else
                         <a href="/advert/edit/{{$advert->id}}" class="btn text-white btn-primary w-100 mb-2">İlanı Düzenle</a>
 
-
                         @if ($system->add_expense == 0)
                             <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense">Masraf Ekle</a>
 
                         @else
-                            @if(Auth::user()->id == $advert->user)
+                            @if(Auth::user()->id == $advert->user_id)
                             <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense">Masraf Ekle</a>
                             @endif
                         @endif
@@ -304,12 +295,12 @@
         </div>
         <div class="modal-body">
             <select class="form-control" id="new_status" advert-id="{{$advert->id}}">
-                <option value="1" {{$advert->status == 1 ? "selected":""}}>Satılık</option>
-                <option value="2" {{$advert->status == 2 ? "selected":""}}>Kullanımda</option>
-                <option value="3" {{$advert->status == 3 ? "selected":""}}>Sahibinde</option>
-                <option value="4" {{$advert->status == 4 ? "selected":""}}>Kirada</option>
-                <option value="5" {{$advert->status == 5 ? "selected":""}}>Onarımda</option>
-                <option value="6" {{$advert->status == 6 ? "selected":""}}>Hazırlanıyor</option>
+                <option value="1" {{$advert->status_id == 1 ? "selected":""}}>Satılık</option>
+                <option value="2" {{$advert->status_id == 2 ? "selected":""}}>Kullanımda</option>
+                <option value="3" {{$advert->status_id == 3 ? "selected":""}}>Sahibinde</option>
+                <option value="4" {{$advert->status_id == 4 ? "selected":""}}>Kirada</option>
+                <option value="5" {{$advert->status_id == 5 ? "selected":""}}>Onarımda</option>
+                <option value="6" {{$advert->status_id == 6 ? "selected":""}}>Hazırlanıyor</option>
             </select>
         </div>
       </div>

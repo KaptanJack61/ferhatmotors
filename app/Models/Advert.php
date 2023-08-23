@@ -10,9 +10,9 @@ class Advert extends Model
     use HasFactory;
 
     public function Owner(){
-        return $this->hasOne(User::class, 'id', 'owner');
+        return $this->hasOne(User::class, 'id', 'owner_id');
     }
-    
+
     public function Creator(){
         return $this->hasOne(User::class, 'id', 'user');
     }

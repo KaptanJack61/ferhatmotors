@@ -23,29 +23,27 @@ class AdvertController extends Controller
             $this->response["message"] = "Yızldız (*) ile işaretlenen alanlar zorunludur.";
         }else{
             $adv = new Advert;
-            $adv->user = Auth::user()->id;
-            $adv->username = Auth::user()->firstname.' '.Auth::user()->lastname;
-            $adv->brand = trim(ucfirst($request->brand));
-            $adv->model = trim(ucfirst($request->model));
+            $adv->vehicle_type_id = 1;
+            $adv->vehicle_brand_id = trim(ucfirst($request->brand));
+            $adv->vehicle_model_id = trim(ucfirst($request->model));
             $adv->package = trim(ucfirst($request->package)) ?? null;
             $adv->motor = trim(ucfirst($request->motor)) ?? null;
             $adv->km = trim(ucfirst($request->km)) ?? null;
             $adv->year = trim(ucfirst($request->year)) ?? null;
-            $adv->gear = trim(ucfirst($request->gear)) ?? null;
-            $adv->fuel = trim(ucfirst($request->fuel)) ?? null;
-            $adv->color = trim(ucfirst($request->color)) ?? null;
-            $adv->casetype = trim(ucfirst($request->case)) ?? null;
-            $adv->sales_type = trim(ucfirst($request->sales_type));
-            $adv->owner = trim(ucfirst($request->owner));
-            $adv->ownername = trim(ucfirst($request->ownername));
+            $adv->gear_id = 1;//trim(ucfirst($request->gear)) ?? null;
+            $adv->fuel_id = 1;//trim(ucfirst($request->fuel)) ?? null;
+            $adv->color_id = 1;//trim(ucfirst($request->color)) ?? null;
+            $adv->case_type_id = 1;//trim(ucfirst($request->case)) ?? null;
+            $adv->sale_type_id = trim(ucfirst($request->sales_type));
+            $adv->owner_id = trim(ucfirst($request->owner));
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden)) ?? null;
             $adv->arabam_url = trim(ucfirst($request->arabam)) ?? null;
-            $adv->status = $request->status;
+            $adv->status_id = $request->status;
             $adv->buy_price = $request->buy_price;
             $adv->sell_price = $request->sell_price;
-            $adv->profit = $request->profit;
             $adv->buy_date = trim(ucfirst($request->buy_date)) ?? null;
             $adv->damage = $request->damage ?? null;
+            $adv->profit = $request->profit;
 
             if($adv->save()){
                 if(!empty($request->photodata)){
@@ -88,7 +86,7 @@ class AdvertController extends Controller
         if($request->id && $request->status){
             $advert = Advert::find($request->id);
             if($advert){
-                $advert->status = $request->status;
+                $advert->status_id = $request->status;
                 if($advert->save()){
                     $this->response["type"] = "success";
                     $this->response["message"] = "Durum Güncellendi!";
@@ -139,9 +137,7 @@ class AdvertController extends Controller
                 }else{
                     $advert->sold_price = $request->amount;
                     $advert->sold_date  = date('Y-m-d');
-                    $advert->status = 7;
-                    $advert->seller = Auth::user()->id;
-                    $advert->sellername = Auth::user()->firstname.' '.Auth::user()->lastname;
+                    $advert->status_id = 7;
 
                     if($advert->save()){
                         $this->response["type"] = "success";
@@ -163,7 +159,7 @@ class AdvertController extends Controller
         if($advert->profit < 100){
             $profit = '%'.$advert->profit;
         }else{
-            $profit = $advert->profit.'TL';
+            $profit = '₺'.$advert->profit;
         }
         return view('layout.advert.detail', ['advert' => $advert, 'profit' => $profit, 'totalExpense' => $totalExpense]);
     }
@@ -228,19 +224,20 @@ class AdvertController extends Controller
         }else{
             $adv = Advert::find($request->id);
 
-            $adv->brand = trim(ucfirst($request->brand));
-            $adv->model = trim(ucfirst($request->model));
+            $adv->vehicle_type_id = 1;
+            $adv->vehicle_brand_id = trim(ucfirst($request->brand));
+            $adv->vehicle_model_id = trim(ucfirst($request->model));
             $adv->package = trim(ucfirst($request->package));
             $adv->motor = trim(ucfirst($request->motor));
             $adv->km = trim(ucfirst($request->km));
             $adv->year = trim(ucfirst($request->year));
-            $adv->gear = trim(ucfirst($request->gear));
-            $adv->fuel = trim(ucfirst($request->fuel));
-            $adv->color = trim(ucfirst($request->color));
-            $adv->casetype = trim(ucfirst($request->case));
+            $adv->gear_id = trim(ucfirst($request->gear));
+            $adv->fuel_id = trim(ucfirst($request->fuel));
+            $adv->color_id = trim(ucfirst($request->color));
+            $adv->case_type_id = trim(ucfirst($request->case));
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden));
             $adv->arabam_url = trim(ucfirst($request->arabam));
-            $adv->status = $request->status;
+            $adv->status_id = $request->status;
             $adv->buy_price = $request->buy_price;
             $adv->sell_price = $request->sell_price;
             $adv->buy_date = trim(ucfirst($request->buy_date));
