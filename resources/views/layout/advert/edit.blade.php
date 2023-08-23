@@ -123,12 +123,13 @@
 
                       <div class="col-3">
                         <label for="buy_date" class="form-label">Alım Tarihi</label>
-                        <input type="date" class="form-control" id="buy_date" name="buy_date" value="{{$advert->buy_date}}">
+                        <input type="date" class="form-control" id="buy_date" name="buy_date" value="{{date('Y-m-d',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}">
                       </div>
 
                     <div class="col-12">
                       <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Güncelle</a>
                     </div>
+
             </div>
         </div>
     </div>
@@ -195,7 +196,7 @@ $(document).ready(function(){
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     setInterval(() => {
-                        window.location.reload();
+                        window.location.assign('/advert/detail/'+res.data.id);
                     }, 1000);
                 }
             });
