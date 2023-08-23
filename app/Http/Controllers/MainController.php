@@ -7,11 +7,13 @@ use App\Models\User;
 use App\Models\Customer;
 use App\Models\Advert;
 use App\Models\Expense;
+use App\Models\VehicleModel;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function home(){
+
         $count = [
             "user" => User::all()->count(),
             "customer" => Customer::all()->count(),
@@ -39,7 +41,7 @@ class MainController extends Controller
         $sys->login_cover = trim($request->cover);
         $sys->site_status = $request->status;
         $sys->add_expense = $request->expense;
-        
+
         if($sys->save()){
             return response([
                 "type" => "success",

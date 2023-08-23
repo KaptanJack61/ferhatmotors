@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\System;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +14,10 @@ class SystemSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('system')->insert([
+
+        DB::statement('truncate table system_data');
+
+        DB::table('system_data')->insert([
             'site_name' => "Ferhat Motors - Metatige Dijital",
             'site_url' => 'http://localhost',
             'login_cover' =>  '/static/assets/images/auth-bg.jpg',
@@ -22,7 +26,5 @@ class SystemSeeder extends Seeder
             'add_expense' => 1
         ]);
 
-
-        
     }
 }

@@ -14,7 +14,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            SystemSeeder::class
+            SystemSeeder::class,
+            VehicleTypeSeeder::class,
+            VehicleBrandSeeder::class,
+            VehicleModelSeeder::class
         ]);
 
         $this->command->info("Varsayılan Kullanıcı: Default User");

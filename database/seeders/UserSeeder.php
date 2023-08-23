@@ -14,16 +14,22 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        DB::statement('truncate table users');
+
         DB::table('users')->insert([
-            'firstname' => 'Default',
-            'lastname' => 'User',
-            'email' => 'admin@metatige.com',
-            'phone' => '11111111111',
+            'firstname' => 'Hamdi',
+            'lastname' => 'Kalaycı',
+            'email' => 'hamdikalayci@gmail.com',
+            'phone' => '5616111154',
             'photo' => '/static/assets/images/profile-user.png',
-            'password' => Hash::make('1234567')
+            'password' => Hash::make('54Kaptan.')
         ]);
 
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
-        
+
+
     }
 }

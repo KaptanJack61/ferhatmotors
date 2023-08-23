@@ -9,5 +9,5 @@ class System extends Model
 {
     use HasFactory;
 
-    protected $table = "system";
+    protected $table = "system_data";
 }

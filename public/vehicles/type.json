@@ -1,0 +1,10 @@
+[
+    {"type":"table","name":"arac_tip","database":"otobul","data":
+        [
+            {"id":"1","name":"Otomobil"},
+            {"id":"2","name":"Motosiklet"},
+            {"id":"3","name":"Arazi, SUV, Pickup"},
+            {"id":"4","name":"Minivan, Panelvan"}
+        ]
+    }
+]
