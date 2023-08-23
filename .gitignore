@@ -2,3 +2,4 @@
 vendor
 .editorconfig
 .idea
+public/storage

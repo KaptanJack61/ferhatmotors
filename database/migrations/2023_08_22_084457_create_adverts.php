@@ -35,8 +35,8 @@ return new class extends Migration
             $table->decimal('sell_price', 9,2);
             $table->decimal('sold_price', 9,2)->nullable();
             $table->integer('profit')->nullable();
-            $table->timestamps('buy_date');
-            $table->date('sold_date')->nullable();
+            $table->timestamp('buy_date')->nullable();
+            $table->timestamp('sold_date')->nullable();
             $table->integer('seller')->nullable();
             $table->string('sellername')->nullable();
             $table->integer('status');
