@@ -40,11 +40,17 @@
                         @foreach ($adverts as $advert)
                             <tr>
                                 <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
-                                <td>{{$advert->brand}}</td>
-                                <td>{{$advert->model}}</td>
-                                <td>{{$advert->package ?? "-"}}</td>
-                                <td>{{$advert->year}}</td>
-                                <td>{!! $advert->sales_type == 1 ? '<span class="badge bg-primary">Sahiplik</span>': '<span class="badge bg-warning">Komisyon</span>' !!}</td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->package ?? "-"}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->year}}</a></td>
+                                <td>
+                                    @if($advert->sales_type == 1)
+                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Sahiplik</a></span>
+                                    @else
+                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Komisyon</a></span>
+                                    @endif
+                                </td>
                                 <td>{!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</td>
                                 <td>
                                     @if ($advert->status == 1)
@@ -79,6 +85,7 @@
                                           <li><a class="dropdown-item" href="/advert/detail/{{$advert->id}}">Görüntüle</a></li>
                                           <li><a class="dropdown-item" href="/advert/edit/{{$advert->id}}">Düzenle</a></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changeStatusModal{{$advert->id}}" href="javascript:;">Durumu Değiştir</a></li>
+                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}" href="javascript:;">Harcama Ekle</a></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addNote{{$advert->id}}" href="javascript:;">Not Ekle</a></li>
                                           <li><hr class="dropdown-divider"></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sell{{$advert->id}}" href="javascript:;">Satış Yap</a></li>

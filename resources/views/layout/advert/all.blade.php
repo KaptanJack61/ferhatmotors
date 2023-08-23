@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Yeni İlan')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Tüm İlanlar </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
@@ -34,15 +34,21 @@
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                         @foreach ($adverts as $advert)
                             <tr>
                                 <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
-                                <td>{{$advert->brand}}</td>
-                                <td>{{$advert->model}}</td>
-                                <td>{{$advert->package ?? "-"}}</td>
-                                <td>{{$advert->year}}</td>
-                                <td>{!! $advert->sales_type == 1 ? '<span class="badge bg-primary">Sahiplik</span>': '<span class="badge bg-warning">Komisyon</span>' !!}</td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->package ?? "-"}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->year}}</a></td>
+                                <td>
+                                    @if($advert->sales_type == 1)
+                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Sahiplik</a></span>
+                                    @else
+                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Komisyon</a></span>
+                                    @endif
+                                </td>
                                 <td>{!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</td>
                                 <td>
                                     @if ($advert->status == 1)
@@ -64,22 +70,23 @@
                                     @endif
                                 </td>
                                 <td>
-                   
+
                                     <div class="dropdown">
-            
+
                                         <button type="button" class=" btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
                                             style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                             İşlem
                                     </button>
-                                      
+
                                         <ul class="dropdown-menu">
                                           <li><a class="dropdown-item" href="/advert/detail/{{$advert->id}}">Görüntüle</a></li>
                                           <li><a class="dropdown-item" href="/advert/edit/{{$advert->id}}">Düzenle</a></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changeStatusModal{{$advert->id}}" href="javascript:;">Durumu Değiştir</a></li>
+                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}" href="javascript:;">Harcama Ekle</a></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addNote{{$advert->id}}" href="javascript:;">Not Ekle</a></li>
                                           <li><hr class="dropdown-divider"></li>
                                           <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sell{{$advert->id}}" href="javascript:;">Satış Yap</a></li>
-                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}" href="javascript:;">Harcama Ekle</a></li>
+
 
                                         </ul>
                                       </div>
@@ -141,7 +148,7 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      
+
                                         <textarea class="form-control" id="note{{$advert->id}}" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
                                     </div>
                                     <div class="modal-footer">
@@ -161,7 +168,7 @@
                                     <div class="modal-body">
                                         <label for="amount{{$advert->id}}" class="mb-2">Satış Tutarı:</label>
                                         <input type="text" class="form-control" id="amount{{$advert->id}}" placeholder="100.000">
-                                        
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-primary saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
@@ -170,8 +177,8 @@
                                 </div>
                               </div>
                         @endforeach
-                      
-                      
+
+
                     </tbody>
                   </table>
             </div>
@@ -189,7 +196,7 @@
         },
         order: [[0, 'desc']]
     });
-        
+
     $(".new_status").on("change", function(){
         var id = $(this).attr('advert-id');
         var status = $(this).val();
@@ -201,7 +208,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
 
     $(".saveNote").on("click", function(){
@@ -215,7 +222,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
 
     $(".saveSell").on("click", function(){
@@ -229,7 +236,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
 
 
@@ -245,7 +252,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     </script>
 @endsection
