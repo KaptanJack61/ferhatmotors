@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Yeni İlan')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Yeni İlan </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-3">
                       <label for="pack" class="form-label">Paket</label>
-                      <input type="text" class="form-control" id="pack" name="pack" placeholder="Elegance, Comfortline">
+                      <input type="text" class="form-control" id="pack" name="package" placeholder="Elegance, Comfortline">
                     </div>
                     <div class="col-3">
                       <label for="km" class="form-label">KM *</label>
@@ -82,7 +82,7 @@
                         <option value="Roadster">Roadster</option>
                       </select>
                     </div>
-                    
+
                     <div class="col-md-6">
                       <label for="sales_type" class="form-label">Satış Türü *</label>
                       <select id="sales_type" name="sales_type" class="form-select">
@@ -101,7 +101,7 @@
                         </select>
                         <input type="hidden" name="ownername" id="ownername">
                       </div>
-                    
+
                       <div class="col-4">
                         <label for="sahibinden" class="form-label">Sahibinden.com URL</label>
                         <input type="text" class="form-control" id="sahibinden" name="sahibinden" placeholder="https://www.sahibinden.com/ilan/vasita-otomobil-...">
@@ -156,7 +156,7 @@
                 <div class="col-12 ">
                     <h2 class="card-title d-flex justify-content-between">Fotoğraf
                       <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a>
-                        
+
                     </h2>
                     <input type="file" name="photos[]" id="photo" multiple>
                     <input type="hidden" name="photodata" id="photodata">
@@ -207,7 +207,7 @@
           var files = e.target.files;
 
           console.log(files);
-          
+
           var formData = new FormData();
 
           for (var i = 0; i < files.length; i++) {

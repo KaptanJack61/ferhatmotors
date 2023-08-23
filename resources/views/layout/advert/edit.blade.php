@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Yeni İlan')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Yeni İlan </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-3">
                       <label for="pack" class="form-label">Paket</label>
-                      <input type="text" class="form-control" id="pack" name="pack" value="{{$advert->package}}">
+                      <input type="text" class="form-control" id="pack" name="package" value="{{$advert->package}}">
                     </div>
                     <div class="col-3">
                       <label for="km" class="form-label">KM *</label>
@@ -83,10 +83,10 @@
                         <option value="Roadster" {{$advert->casetype == "Roadster" ? "selected":""}}>Roadster</option>
                       </select>
                     </div>
-                    
-                    
-                    
-                    
+
+
+
+
                       <div class="col-4">
                         <label for="sahibinden" class="form-label">Sahibinden.com URL</label>
                         <input type="text" class="form-control" id="sahibinden" name="sahibinden" value="{{$advert->sahibinden_url}}">
@@ -139,7 +139,7 @@
                 <div class="col-12 ">
                     <h2 class="card-title d-flex justify-content-between">Fotoğraf
                       <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a>
-                        
+
                     </h2>
                     <input type="file" name="photos[]" id="photo" multiple>
                     <input type="hidden" name="photodata" id="photodata" value="{{$advert->photo}}">
@@ -171,9 +171,9 @@
 $(document).ready(function(){
     id = $("#id").val();
     axios.post('/upload/get-photos/', {id:id}).then((res) => {
-       
+
         var photoArray = res.data.map(item => item.file);
-        
+
         // Diziyi virgül ile ayırıp tek bir string haline getir
         var photoDataString = photoArray.join(',');
 
@@ -205,7 +205,7 @@ $(document).ready(function(){
           var files = e.target.files;
 
           console.log(files);
-          
+
           var formData = new FormData();
 
           for (var i = 0; i < files.length; i++) {

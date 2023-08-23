@@ -21,32 +21,32 @@
         <li class="nav-item">
           <a class="nav-link" href="/advert/sold" role="button">
             <i class="link-icon" data-feather="shopping-bag"></i>
-            <span class="link-title">Satılık Araçlar</span>
+            <span class="link-title">Satılan Araçlar</span>
           </a>
         </li>
-        
-        
+
+
         <li class="nav-item nav-category">Menü</li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#adverts" role="button" aria-expanded="false" aria-controls="adverts">
             <i class="link-icon" data-feather="list"></i>
-            <span class="link-title">İlanlar</span>
+            <span class="link-title">Araçlar</span>
             <i class="link-arrow" data-feather="chevron-down"></i>
           </a>
           <div class="collapse" id="adverts">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="/advert/new" class="nav-link">Yeni İlan</a>
+                <a href="/advert/new" class="nav-link">Yeni Araç</a>
               </li>
               <li class="nav-item">
-                <a href="/advert/all" class="nav-link">Tüm İlanlar</a>
+                <a href="/advert/all" class="nav-link">Tüm Araçlar</a>
               </li>
-              
+
               <li class="nav-item">
-                <a href="/advert/on-sale" class="nav-link">Satıştaki İlanlar</a>
+                <a href="/advert/on-sale" class="nav-link">Satıştaki Araçlar</a>
               </li>
               <li class="nav-item">
-                <a href="/advert/sold" class="nav-link">Satılan İlanlar</a>
+                <a href="/advert/sold" class="nav-link">Satılan Araçlar</a>
               </li>
             </ul>
           </div>
@@ -65,8 +65,8 @@
               <li class="nav-item">
                 <a href="/customer/new" class="nav-link">Yeni Müşteri</a>
               </li>
-              
-              
+
+
             </ul>
           </div>
         </li>
@@ -87,7 +87,7 @@
             </ul>
           </div>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#reports" role="button" aria-expanded="false" aria-controls="reports">
             <i class="link-icon" data-feather="file"></i>
@@ -113,7 +113,7 @@
             <span class="link-title">Sistem Ayarları</span>
           </a>
         </li>
-        
+
         <li class="nav-item nav-category">Yardım</li>
         <li class="nav-item">
           <a class="nav-link" href="/docs/how-to-use">

@@ -12,7 +12,7 @@
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">İlan Detayları</h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
@@ -44,13 +44,13 @@
 
 <div class="row">
     <div class="col-4">
-        
+
         <div class="row mb-3">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
                         <ul class="list-group">
-                            
+
                             <li class="list-group-item active justify-content-between d-flex
                                     @if ($advert->status == 1)
                                         bg-warning
@@ -100,16 +100,22 @@
 
                             <li class="list-group-item justify-content-between d-flex"><b>Satış Tipi: </b> {!!$advert->sales_type == 1 ? '<span class="badge bg-primary">Sahiplik</span>' : '<b>'.$profit.'</b><span class="badge bg-primary">Komisyon</span>'!!}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{$advert->buy_date}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İlanı Oluşturan: </b> {!! $advert->Creator != "" ? $advert->Creator->firstname.' '.$advert->Creator->lastname : '<strike class="text-danger">'.$advert->username.'</strike>' !!}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{$advert->created_at}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b> {{$advert->sold_date ?? "-"}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->created_at)->timestamp)}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b>
+                                @if($advert->sold_date)
+                                    {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->sold_date)->timestamp)}}
+                                @else
+                                -
+                                @endif
+                            </li>
                             <li class="list-group-item justify-content-between d-flex"><b>Satıcı: </b>@if ($advert->status == 7)
                                 {!! $advert->Seller != "" ? $advert->Seller->firstname.' '.$advert->Seller->lastname : '<strike class="text-danger">'.$advert->username.'</strike>' !!}
                                 @else
                                 -
                             @endif</li>
-                            
+
                           </ul>
                     </div>
                 </div>
@@ -121,9 +127,30 @@
                 <div class="card">
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item justify-content-between d-flex"><b>Alış Fiyatı: </b> {{currency_format($advert->buy_price)}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Fiyatı: </b> {{currency_format($advert->sell_price) ?? "-"}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> {{currency_format($advert->sold_price) ?? "-"}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Alış Fiyatı: </b> ₺{{currency_format($advert->buy_price)}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Toplam Harcama: </b> ₺{{currency_format($totalExpense)}}</li>
+                            <li class="list-group-item justify-content-between d-flex text-danger fw-bold"><b>Toplam Maliyet: </b> ₺{{currency_format($advert->buy_price + $totalExpense)}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>İstenen Fiyat: </b> ₺{{currency_format($advert->sell_price) ?? "-"}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> {{$advert->sold_price ? "₺".currency_format($advert->sold_price):"-"}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Bilanço: </b>
+                                @if($advert->sold_price)
+                                    @if($advert->sold_price - $advert->buy_price + $totalExpense > 0)
+                                        <span class="fw-bold text-success">
+                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Kazanç"}}
+                                    </span>
+                                    @elseif($advert->sold_price - $advert->buy_price + $totalExpense == 0 )
+                                        <span class="fw-bold text-primary">
+                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Başa Baş"}}
+                                    </span>
+                                    @else
+                                        <span class="fw-bold text-danger">
+                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Zarar"}}
+                                    </span>
+                                    @endif
+                                @else
+                                    -
+                                @endif
+                            </li>
                           </ul>
                     </div>
                 </div>
@@ -151,7 +178,7 @@
                         </div>
                         @else
                         <a href="/advert/edit/{{$advert->id}}" class="btn text-white btn-primary w-100 mb-2">İlanı Düzenle</a>
-                        
+
 
                         @if ($system->add_expense == 0)
                             <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense">Masraf Ekle</a>
@@ -207,24 +234,25 @@
                             @foreach ($advert->Expense as $item)
                                 <li class="list-group-item text-center d-flex align-items-center justify-content-between align-center">
                                     <p class="px-4 w-50 text-start " >{{$item->type}}</p>
-                                    
+
 
                                     <span class="text-muted text-center">
                                         {{$item->User->firstname.' '.$item->User->lastname}}
                                         <br>
                                         {{date_format($item->created_at,"d M, Y")}}
                                     </span>
-                                    <p class="px-4" >- {{currency_format($item->amount)}} TL</p>
+                                    <p class="px-4" >₺{{currency_format($item->amount)}}</p>
                                 </li>
                             @endforeach
                             <li class="list-group-item text-center bg-light d-flex align-items-center justify-content-between align-center">
-                                    <p class="px-4 w-50 text-start fw-bold" >Toplam: </p>
-                                    
+                                    <p class="px-4 w-50 text-start fw-bold" >Toplam Harcama: </p>
+
 
                                     <span class="text-muted text-center">
-                                       
+
                                     </span>
-                                    <p class="px-4 fw-bold" >{{ currency_format($totalExpense) }} TL</p>
+                                    <p class="px-4 fw-bold text-danger" >₺{{currency_format($totalExpense) }}</p>
+
                                 </li>
                           </ul>
                         @else
@@ -295,7 +323,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          
+
             <textarea class="form-control" id="note" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
         </div>
         <div class="modal-footer">
@@ -314,7 +342,7 @@
         <div class="modal-body">
             <label for="amount" class="mb-2">Satış Tutarı:</label>
             <input type="text" class="form-control" id="amount" placeholder="100.000">
-            
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
@@ -366,7 +394,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     $("#saveNote").on("click", function(){
         var note = $("#note").val();
@@ -379,7 +407,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     $("#saveSell").on("click", function(){
         var id   = $(this).attr('advert-id');
@@ -392,7 +420,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     $("#saveExpense").on("click", function(){
         var id   = $(this).attr('advert-id');
@@ -406,7 +434,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     $("#delete").on("click", function(){
         var id = $(this).attr('data-id');

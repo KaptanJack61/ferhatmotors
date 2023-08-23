@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Yeni İlan')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Satıştaki İlanlar </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
@@ -31,11 +31,12 @@
                         <th scope="col">Satış Tipi</th>
                         <th scope="col">Sahibi</th>
                         <th scope="col">Durumu</th>
+                          <th scope="col">İstenen Fiyat</th>
                         <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                         @foreach ($adverts as $advert)
                             <tr>
                                 <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
@@ -64,15 +65,16 @@
                                         <span class="badge bg-secondary">Bilinmiyor</span>
                                     @endif
                                 </td>
+                                <td><b class="h4 fw-bold text-primary">₺{{currency_format($advert->sell_price)}}</b></td>
                                 <td>
-                   
+
                                     <div class="dropdown">
-            
+
                                         <button type="button" class=" btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
                                             style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                             İşlem
                                     </button>
-                                      
+
                                         <ul class="dropdown-menu">
                                           <li><a class="dropdown-item" href="/advert/detail/{{$advert->id}}">Görüntüle</a></li>
                                           <li><a class="dropdown-item" href="/advert/edit/{{$advert->id}}">Düzenle</a></li>
@@ -117,7 +119,7 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      
+
                                         <textarea class="form-control" id="note{{$advert->id}}" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
                                     </div>
                                     <div class="modal-footer">
@@ -137,7 +139,7 @@
                                     <div class="modal-body">
                                         <label for="amount{{$advert->id}}" class="mb-2">Satış Tutarı:</label>
                                         <input type="text" class="form-control" id="amount{{$advert->id}}" placeholder="100.000">
-                                        
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-primary saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
@@ -146,8 +148,8 @@
                                 </div>
                               </div>
                         @endforeach
-                      
-                      
+
+
                     </tbody>
                   </table>
             </div>
@@ -165,7 +167,7 @@
         },
         order: [[0, 'desc']]
     });
-        
+
     $(".new_status").on("change", function(){
         var id = $(this).attr('advert-id');
         var status = $(this).val();
@@ -177,7 +179,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
 
     $(".saveNote").on("click", function(){
@@ -191,7 +193,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
 
     $(".saveSell").on("click", function(){
@@ -205,7 +207,7 @@
                     window.location.reload();
                 }, 500);
             }
-        }); 
+        });
     });
     </script>
 @endsection
