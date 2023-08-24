@@ -1,0 +1,5210 @@
+[
+  {
+    "name": "Tamamen sıfır",
+    "hex": ""
+  },
+  {
+    "name": "Asit Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Aero",
+    "hex": ""
+  },
+  {
+    "name": "Aero Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Afrika Menekşesi",
+    "hex": ""
+  },
+  {
+    "name": "Hava Kuvvetleri Mavisi (RAF)",
+    "hex": ""
+  },
+  {
+    "name": "Hava Kuvvetleri Mavisi (USAF)",
+    "hex": ""
+  },
+  {
+    "name": "Hava Üstünlüğü Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Alabama Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Kaymaktaşı",
+    "hex": ""
+  },
+  {
+    "name": "Alice Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Uzaylı Koltukaltı",
+    "hex": ""
+  },
+  {
+    "name": "Alizarin Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Alaşım Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Badem",
+    "hex": ""
+  },
+  {
+    "name": "solmayan çiçek",
+    "hex": ""
+  },
+  {
+    "name": "Amaranth Koyu Mor",
+    "hex": ""
+  },
+  {
+    "name": "Amarant Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Amarant Moru",
+    "hex": ""
+  },
+  {
+    "name": "Amarant Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Amazon Mağazası",
+    "hex": ""
+  },
+  {
+    "name": "Amazonit",
+    "hex": ""
+  },
+  {
+    "name": "kehribar",
+    "hex": ""
+  },
+  {
+    "name": "Kehribar (SAE/ECE)",
+    "hex": ""
+  },
+  {
+    "name": "Amerikan Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Ametist",
+    "hex": ""
+  },
+  {
+    "name": "Android Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Flaş Önleyici Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Antik Pirinç",
+    "hex": ""
+  },
+  {
+    "name": "Antik Bronz",
+    "hex": ""
+  },
+  {
+    "name": "Antik Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Antik Yakut",
+    "hex": ""
+  },
+  {
+    "name": "Antik Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Ao (İngilizce)",
+    "hex": ""
+  },
+  {
+    "name": "Elma yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Kayısı",
+    "hex": ""
+  },
+  {
+    "name": "Su",
+    "hex": ""
+  },
+  {
+    "name": "Akuamarin",
+    "hex": ""
+  },
+  {
+    "name": "Arktik Kireç",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil Ordu",
+    "hex": ""
+  },
+  {
+    "name": "Arsenik",
+    "hex": ""
+  },
+  {
+    "name": "Enginar",
+    "hex": ""
+  },
+  {
+    "name": "Arilid Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Kül Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Kuşkonmaz",
+    "hex": ""
+  },
+  {
+    "name": "Atomik Mandalina",
+    "hex": ""
+  },
+  {
+    "name": "Kumral",
+    "hex": ""
+  },
+  {
+    "name": "Aureolin",
+    "hex": ""
+  },
+  {
+    "name": "AuroMetalSaurus",
+    "hex": ""
+  },
+  {
+    "name": "Avokado",
+    "hex": ""
+  },
+  {
+    "name": "Mükemmel",
+    "hex": ""
+  },
+  {
+    "name": "Aztek Altın",
+    "hex": ""
+  },
+  {
+    "name": "Azure",
+    "hex": ""
+  },
+  {
+    "name": "Azure (Web Rengi)",
+    "hex": ""
+  },
+  {
+    "name": "Masmavi Sis",
+    "hex": ""
+  },
+  {
+    "name": "Masmavi Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Bebek mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Bebek Mavisi Gözler",
+    "hex": ""
+  },
+  {
+    "name": "Bebek pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Bebek pudrası",
+    "hex": ""
+  },
+  {
+    "name": "Baker-Miller Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Top Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Muz Çılgınlığı",
+    "hex": ""
+  },
+  {
+    "name": "Muz Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Bangladeş Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Barbie Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Ahır Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Pil Şarjlı Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Savaş Gemisi Gri",
+    "hex": ""
+  },
+  {
+    "name": "Çarşı",
+    "hex": ""
+  },
+  {
+    "name": "Beau Mavi",
+    "hex": ""
+  },
+  {
+    "name": "kunduz",
+    "hex": ""
+  },
+  {
+    "name": "Begonya",
+    "hex": ""
+  },
+  {
+    "name": "Bej",
+    "hex": ""
+  },
+  {
+    "name": "göz kamaştırıcı mavi",
+    "hex": ""
+  },
+  {
+    "name": "Büyük Dip O'Ruby",
+    "hex": ""
+  },
+  {
+    "name": "Büyük Ayak Ayakları",
+    "hex": ""
+  },
+  {
+    "name": "Bisküvi",
+    "hex": ""
+  },
+  {
+    "name": "Bistre",
+    "hex": ""
+  },
+  {
+    "name": "Bistre Kahve",
+    "hex": ""
+  },
+  {
+    "name": "Acı limon",
+    "hex": ""
+  },
+  {
+    "name": "Acı Kireç",
+    "hex": ""
+  },
+  {
+    "name": "Acı tatlı",
+    "hex": ""
+  },
+  {
+    "name": "Acı tatlı ışıltı",
+    "hex": ""
+  },
+  {
+    "name": "Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Siyah fasulye",
+    "hex": ""
+  },
+  {
+    "name": "Siyah Mercan",
+    "hex": ""
+  },
+  {
+    "name": "Siyah deri ceket",
+    "hex": ""
+  },
+  {
+    "name": "Siyah zeytin",
+    "hex": ""
+  },
+  {
+    "name": "Siyah Gölgeler",
+    "hex": ""
+  },
+  {
+    "name": "Beyazlatılmış Badem",
+    "hex": ""
+  },
+  {
+    "name": "Patlama Bronzu",
+    "hex": ""
+  },
+  {
+    "name": "Bleu De Fransa",
+    "hex": ""
+  },
+  {
+    "name": "kar fırtınası mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Sarışın",
+    "hex": ""
+  },
+  {
+    "name": "Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (Munsell)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (NCS)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (Pigment)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Çan",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Cıvata",
+    "hex": ""
+  },
+  {
+    "name": "Mavi gri",
+    "hex": ""
+  },
+  {
+    "name": "Mavi-yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Mavi kot",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Lagün",
+    "hex": ""
+  },
+  {
+    "name": "Mavi-Macenta Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Mavi safir",
+    "hex": ""
+  },
+  {
+    "name": "Mavi menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Yol",
+    "hex": ""
+  },
+  {
+    "name": "Yaban mersini",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Bonnet",
+    "hex": ""
+  },
+  {
+    "name": "Kızarmak",
+    "hex": ""
+  },
+  {
+    "name": "Bole",
+    "hex": ""
+  },
+  {
+    "name": "Bondi Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kemik",
+    "hex": ""
+  },
+  {
+    "name": "Sümük Avcısı",
+    "hex": ""
+  },
+  {
+    "name": "Boston Üniversitesi Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil şişe",
+    "hex": ""
+  },
+  {
+    "name": "Böğürtlen",
+    "hex": ""
+  },
+  {
+    "name": "Brandeis Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Pirinç",
+    "hex": ""
+  },
+  {
+    "name": "Tuğla kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Parlak yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Lacivert",
+    "hex": ""
+  },
+  {
+    "name": "Parlak pembe",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Ube",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Sarı (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Azure",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "parlak gül",
+    "hex": ""
+  },
+  {
+    "name": "Eşiğin Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "İngiliz Yarış Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Bronz",
+    "hex": ""
+  },
+  {
+    "name": "Bronz Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Kahverengi (Geleneksel)",
+    "hex": ""
+  },
+  {
+    "name": "Kahverengi (İnternet)",
+    "hex": ""
+  },
+  {
+    "name": "Kahverengi burun",
+    "hex": ""
+  },
+  {
+    "name": "Esmer şeker",
+    "hex": ""
+  },
+  {
+    "name": "Kahverengi Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Brunswick Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Sakız",
+    "hex": ""
+  },
+  {
+    "name": "Kabarcıklar",
+    "hex": ""
+  },
+  {
+    "name": "tomurcuk yeşili",
+    "hex": ""
+  },
+  {
+    "name": "devetüyü rengi",
+    "hex": ""
+  },
+  {
+    "name": "Bulgar Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Burlywood",
+    "hex": ""
+  },
+  {
+    "name": "Perdahlı Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Yanmış Portakal",
+    "hex": ""
+  },
+  {
+    "name": "Yanmış Sienna",
+    "hex": ""
+  },
+  {
+    "name": "Yanmış Kereste",
+    "hex": ""
+  },
+  {
+    "name": "Mavi Düğme",
+    "hex": ""
+  },
+  {
+    "name": "Bizans",
+    "hex": ""
+  },
+  {
+    "name": "Bizans",
+    "hex": ""
+  },
+  {
+    "name": "Harbiyeli",
+    "hex": ""
+  },
+  {
+    "name": "Harbiyeli Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Harbiyeli Gri",
+    "hex": ""
+  },
+  {
+    "name": "Kadmiyum Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Kadmiyum Portakal",
+    "hex": ""
+  },
+  {
+    "name": "Kadmiyum Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Kadmiyum Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Cafe Au Lait",
+    "hex": ""
+  },
+  {
+    "name": "Kafe Noir",
+    "hex": ""
+  },
+  {
+    "name": "Cal Poly Pomona Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Cambridge Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Deve",
+    "hex": ""
+  },
+  {
+    "name": "Minyatür Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Kamuflaj Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Kanarya",
+    "hex": ""
+  },
+  {
+    "name": "Kanarya sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Elma Şekeri Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Şeker Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Kapri",
+    "hex": ""
+  },
+  {
+    "name": "Caput Mortuum",
+    "hex": ""
+  },
+  {
+    "name": "Kardinal",
+    "hex": ""
+  },
+  {
+    "name": "Karayip Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Karmin (M",
+    "hex": ""
+  },
+  {
+    "name": "Karmin Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Karmin Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Karanfil Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Carnelian",
+    "hex": ""
+  },
+  {
+    "name": "Carolina Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Havuç Portakal",
+    "hex": ""
+  },
+  {
+    "name": "Castleton Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Catalina Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Katavba",
+    "hex": ""
+  },
+  {
+    "name": "Sedir Sandığı",
+    "hex": ""
+  },
+  {
+    "name": "Tavan",
+    "hex": ""
+  },
+  {
+    "name": "Seladonlar",
+    "hex": ""
+  },
+  {
+    "name": "Seladon Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Seladon Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Celeste",
+    "hex": ""
+  },
+  {
+    "name": "Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kiraz",
+    "hex": ""
+  },
+  {
+    "name": "Kiraz Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "gök mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Gök Mavisi Don",
+    "hex": ""
+  },
+  {
+    "name": "CG Mavi",
+    "hex": ""
+  },
+  {
+    "name": "CG Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Güderi",
+    "hex": ""
+  },
+  {
+    "name": "Şampanya",
+    "hex": ""
+  },
+  {
+    "name": "Şampanya Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Odun kömürü",
+    "hex": ""
+  },
+  {
+    "name": "Charleston Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Cazibe Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Chartreuse (Geleneksel)",
+    "hex": ""
+  },
+  {
+    "name": "Chartreuse (İnternet)",
+    "hex": ""
+  },
+  {
+    "name": "Kiraz",
+    "hex": ""
+  },
+  {
+    "name": "Kiraz Çiçeği Pembe",
+    "hex": ""
+  },
+  {
+    "name": "kestane",
+    "hex": ""
+  },
+  {
+    "name": "Çin Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Çin Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Çin Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Çin Menekşesi",
+    "hex": ""
+  },
+  {
+    "name": "Klorofil Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Çikolata (Geleneksel)",
+    "hex": ""
+  },
+  {
+    "name": "Çikolata (İnternet)",
+    "hex": ""
+  },
+  {
+    "name": "Krom Sarı",
+    "hex": ""
+  },
+  {
+    "name": "karamsar",
+    "hex": ""
+  },
+  {
+    "name": "Zincifre",
+    "hex": ""
+  },
+  {
+    "name": "Tarçın",
+    "hex": ""
+  },
+  {
+    "name": "Tarçın Saten",
+    "hex": ""
+  },
+  {
+    "name": "sitrin",
+    "hex": ""
+  },
+  {
+    "name": "ağaç kavunu",
+    "hex": ""
+  },
+  {
+    "name": "Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Klasik Gül",
+    "hex": ""
+  },
+  {
+    "name": "Kobalt mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kakao Kahvesi",
+    "hex": ""
+  },
+  {
+    "name": "Hindistan cevizi",
+    "hex": ""
+  },
+  {
+    "name": "Kahve",
+    "hex": ""
+  },
+  {
+    "name": "Columbia Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kongo Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Soğuk Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Soğuk gri",
+    "hex": ""
+  },
+  {
+    "name": "Bakır",
+    "hex": ""
+  },
+  {
+    "name": "Bakır (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Bakır Kuruş",
+    "hex": ""
+  },
+  {
+    "name": "Bakır Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Bakır Gül",
+    "hex": ""
+  },
+  {
+    "name": "Coquelicot",
+    "hex": ""
+  },
+  {
+    "name": "Mercan",
+    "hex": ""
+  },
+  {
+    "name": "Pembe mercan",
+    "hex": ""
+  },
+  {
+    "name": "Mercan kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Mercan Resifi",
+    "hex": ""
+  },
+  {
+    "name": "Kordovan",
+    "hex": ""
+  },
+  {
+    "name": "Mısır",
+    "hex": ""
+  },
+  {
+    "name": "Cornell Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Peygamber Çiçeği Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Mısır püskülü",
+    "hex": ""
+  },
+  {
+    "name": "Kozmik Kobalt",
+    "hex": ""
+  },
+  {
+    "name": "Kozmik Latte",
+    "hex": ""
+  },
+  {
+    "name": "Çakal Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Pamuk şeker",
+    "hex": ""
+  },
+  {
+    "name": "Krem",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl Zafer",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "kültürlü",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği Azure",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği-Mavi Azure",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği Kobalt Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği Peygamber Çiçeği Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Camgöbeği (Süreç)",
+    "hex": ""
+  },
+  {
+    "name": "Siber Üzüm",
+    "hex": ""
+  },
+  {
+    "name": "Siber Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Siklamen",
+    "hex": ""
+  },
+  {
+    "name": "Nergis",
+    "hex": ""
+  },
+  {
+    "name": "Karahindiba",
+    "hex": ""
+  },
+  {
+    "name": "Koyu mavi",
+    "hex": ""
+  },
+  {
+    "name": "Lacivert-Gri",
+    "hex": ""
+  },
+  {
+    "name": "Koyu kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Kahve-Tangelo",
+    "hex": ""
+  },
+  {
+    "name": "Karanlık Bizans",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Şeker Elma Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Kestane",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Mercan",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Camgöbeği",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Elektrik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Altın Başak",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Gri (X11)",
+    "hex": ""
+  },
+  {
+    "name": "Koyu yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Yeşil (X11)",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Tunç",
+    "hex": ""
+  },
+  {
+    "name": "Koyu İmparatorluk Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu İmparatorluk Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Orman Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Haki",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Lav",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Karaciğer",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Karaciğer (Atlar)",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Orta Gri",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Gece Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Yosun Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Zeytin Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Koyu turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Pastel Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Pastel Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Pastel Mor",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Pastel Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Koyu pembe",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Toz Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Puce",
+    "hex": ""
+  },
+  {
+    "name": "Koyu mor",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Ahududu",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Somon",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Deniz Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Karanlık Sienna",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Arduvaz Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Barut Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Bahar Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Tan",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Mandalina",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Pişmiş Toprak",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Vanilya",
+    "hex": ""
+  },
+  {
+    "name": "Koyu mor",
+    "hex": ""
+  },
+  {
+    "name": "Koyu sarı",
+    "hex": ""
+  },
+  {
+    "name": "Dartmouth Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Davy'nin Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Debian Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Derin Akuamarin",
+    "hex": ""
+  },
+  {
+    "name": "Derin Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Derin Karmin Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Derin Havuç Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "Derin Kiraz",
+    "hex": ""
+  },
+  {
+    "name": "Derin Şampanya",
+    "hex": ""
+  },
+  {
+    "name": "Derin Kestane",
+    "hex": ""
+  },
+  {
+    "name": "Derin Kahve",
+    "hex": ""
+  },
+  {
+    "name": "Derin Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Koyu yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Derin Yeşil-Cyan Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Derin Orman Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Derin Koamaru",
+    "hex": ""
+  },
+  {
+    "name": "Derin Limon",
+    "hex": ""
+  },
+  {
+    "name": "Derin Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Derin Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Derin Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Derin Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Derin Yosun Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Derin Şeftali",
+    "hex": ""
+  },
+  {
+    "name": "Derin pembe",
+    "hex": ""
+  },
+  {
+    "name": "Derin Puce",
+    "hex": ""
+  },
+  {
+    "name": "Koyu Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Derin Yakut",
+    "hex": ""
+  },
+  {
+    "name": "Derin Safran",
+    "hex": ""
+  },
+  {
+    "name": "Derin Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Derin Uzay Işıltısı",
+    "hex": ""
+  },
+  {
+    "name": "Derin Bahar Tomurcuğu",
+    "hex": ""
+  },
+  {
+    "name": "Derin Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Derin Toskana Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Derin Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Geyik",
+    "hex": ""
+  },
+  {
+    "name": "Kot",
+    "hex": ""
+  },
+  {
+    "name": "Kot Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Doymamış Camgöbeği",
+    "hex": ""
+  },
+  {
+    "name": "Çöl",
+    "hex": ""
+  },
+  {
+    "name": "Çöl kumu",
+    "hex": ""
+  },
+  {
+    "name": "Arzu",
+    "hex": ""
+  },
+  {
+    "name": "Elmas",
+    "hex": ""
+  },
+  {
+    "name": "Loş Gri",
+    "hex": ""
+  },
+  {
+    "name": "Pis Zindan",
+    "hex": ""
+  },
+  {
+    "name": "Kir",
+    "hex": ""
+  },
+  {
+    "name": "Atlayan Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Dodie Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Kızılcık Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Dolar banknotu",
+    "hex": ""
+  },
+  {
+    "name": "Yunus Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Eşek Kahverengisi",
+    "hex": ""
+  },
+  {
+    "name": "Sıkıcı",
+    "hex": ""
+  },
+  {
+    "name": "Dük Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Toz fırtınası",
+    "hex": ""
+  },
+  {
+    "name": "Hollandalı Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Toprak Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Abanoz",
+    "hex": ""
+  },
+  {
+    "name": "Ekru",
+    "hex": ""
+  },
+  {
+    "name": "ürkütücü siyah",
+    "hex": ""
+  },
+  {
+    "name": "Patlıcan",
+    "hex": ""
+  },
+  {
+    "name": "Yumurta kabuğu",
+    "hex": ""
+  },
+  {
+    "name": "Mısır Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Elektrikli İndigo",
+    "hex": ""
+  },
+  {
+    "name": "Elektrikli Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Elektrikli Kireç",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Moru",
+    "hex": ""
+  },
+  {
+    "name": "Elektrikli Ultramarin",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Elektrik Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Zümrüt",
+    "hex": ""
+  },
+  {
+    "name": "Saygınlık",
+    "hex": ""
+  },
+  {
+    "name": "İngilizce Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "İngiliz Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "İngilizce Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "İngilizce Vermillion",
+    "hex": ""
+  },
+  {
+    "name": "İngilizce Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Eton Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Okaliptüs",
+    "hex": ""
+  },
+  {
+    "name": "Nadas",
+    "hex": ""
+  },
+  {
+    "name": "Falu Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Fandango",
+    "hex": ""
+  },
+  {
+    "name": "Fandango Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Moda Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Geyik yavrusu",
+    "hex": ""
+  },
+  {
+    "name": "Feldgrau",
+    "hex": ""
+  },
+  {
+    "name": "Feldispat",
+    "hex": ""
+  },
+  {
+    "name": "Eğreltiotu Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Ferrari Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Tarla Sıkıcılığı",
+    "hex": ""
+  },
+  {
+    "name": "Ateşli Gül",
+    "hex": ""
+  },
+  {
+    "name": "Ateş tuğlası",
+    "hex": ""
+  },
+  {
+    "name": "İtfaiye Aracı Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Alev",
+    "hex": ""
+  },
+  {
+    "name": "Flamingo Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Dalkavukluk",
+    "hex": ""
+  },
+  {
+    "name": "Sarımtırak",
+    "hex": ""
+  },
+  {
+    "name": "Keten",
+    "hex": ""
+  },
+  {
+    "name": "Flört",
+    "hex": ""
+  },
+  {
+    "name": "Çiçekli Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Floresan Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Floresan Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Floresan Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Delilik",
+    "hex": ""
+  },
+  {
+    "name": "Orman Yeşili (Geleneksel)",
+    "hex": ""
+  },
+  {
+    "name": "Orman Yeşili (Web)",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Beji",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Bistresi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Fuşyası",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Kireç",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Leylak Rengi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Erik",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Puce'si",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Ahududu",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız Menekşesi",
+    "hex": ""
+  },
+  {
+    "name": "Fransız şarabı",
+    "hex": ""
+  },
+  {
+    "name": "Temiz hava",
+    "hex": ""
+  },
+  {
+    "name": "Frogert",
+    "hex": ""
+  },
+  {
+    "name": "Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Fuşya (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Fuşya Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Fuşya Mor",
+    "hex": ""
+  },
+  {
+    "name": "Fuşya Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Fulvous",
+    "hex": ""
+  },
+  {
+    "name": "Bulanık Wuzzy",
+    "hex": ""
+  },
+  {
+    "name": "Gainsboro",
+    "hex": ""
+  },
+  {
+    "name": "Gambo",
+    "hex": ""
+  },
+  {
+    "name": "Gamboge Turuncu (Kahverengi)",
+    "hex": ""
+  },
+  {
+    "name": "Gargoyle Gazı",
+    "hex": ""
+  },
+  {
+    "name": "Jenerik Viridian",
+    "hex": ""
+  },
+  {
+    "name": "Hayalet Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Dev Kulübü",
+    "hex": ""
+  },
+  {
+    "name": "Devler Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Zencefil",
+    "hex": ""
+  },
+  {
+    "name": "parlak",
+    "hex": ""
+  },
+  {
+    "name": "Parıltı",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Üzüm",
+    "hex": ""
+  },
+  {
+    "name": "Yeşile git",
+    "hex": ""
+  },
+  {
+    "name": "Altın (Metalik)",
+    "hex": ""
+  },
+  {
+    "name": "Altın (Web) (Altın)",
+    "hex": ""
+  },
+  {
+    "name": "Altın Füzyon",
+    "hex": ""
+  },
+  {
+    "name": "Altın kahve",
+    "hex": ""
+  },
+  {
+    "name": "Altın Haşhaş",
+    "hex": ""
+  },
+  {
+    "name": "Altın Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Altın Başak",
+    "hex": ""
+  },
+  {
+    "name": "Granit Gri",
+    "hex": ""
+  },
+  {
+    "name": "Büyükanne smith elması",
+    "hex": ""
+  },
+  {
+    "name": "Üzüm",
+    "hex": ""
+  },
+  {
+    "name": "Gri",
+    "hex": ""
+  },
+  {
+    "name": "Gri (HTML/CSS Gri)",
+    "hex": ""
+  },
+  {
+    "name": "Gri (X11 Gri)",
+    "hex": ""
+  },
+  {
+    "name": "Gri-Kuşkonmaz",
+    "hex": ""
+  },
+  {
+    "name": "Gri mavi",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (Renk Çarkı) (X11 Yeşil)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (HTML/CSS Rengi)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (Munsell)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (NCS)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (Pigment)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil-Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil kertenkele",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil Parlaklık",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil sarı",
+    "hex": ""
+  },
+  {
+    "name": "Boz",
+    "hex": ""
+  },
+  {
+    "name": "Grullo",
+    "hex": ""
+  },
+  {
+    "name": "Lepistes Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Tunç",
+    "hex": ""
+  },
+  {
+    "name": "Halaya Ube",
+    "hex": ""
+  },
+  {
+    "name": "Han Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Han Mor",
+    "hex": ""
+  },
+  {
+    "name": "Hansa Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Palyaço",
+    "hex": ""
+  },
+  {
+    "name": "Palyaço Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Harvard Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Altın Hasadı",
+    "hex": ""
+  },
+  {
+    "name": "Altın kalp",
+    "hex": ""
+  },
+  {
+    "name": "Sıcak hava dalgası",
+    "hex": ""
+  },
+  {
+    "name": "Heidelberg Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Kediotu",
+    "hex": ""
+  },
+  {
+    "name": "Heliotrop Gri",
+    "hex": ""
+  },
+  {
+    "name": "Kediotu Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Hollywood Kiraz",
+    "hex": ""
+  },
+  {
+    "name": "Tatlı özsu",
+    "hex": ""
+  },
+  {
+    "name": "Honolulu Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Fahişe Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Sıcak Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Sıcak pembe",
+    "hex": ""
+  },
+  {
+    "name": "Avcı yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Buzdağı",
+    "hex": ""
+  },
+  {
+    "name": "İkterin",
+    "hex": ""
+  },
+  {
+    "name": "İguana Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Aydınlatıcı Zümrüt",
+    "hex": ""
+  },
+  {
+    "name": "İmparatorluk",
+    "hex": ""
+  },
+  {
+    "name": "İmparatorluk Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "İmparatorluk Moru",
+    "hex": ""
+  },
+  {
+    "name": "İmparatorluk Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "İnç kurdu",
+    "hex": ""
+  },
+  {
+    "name": "Bağımsızlık",
+    "hex": ""
+  },
+  {
+    "name": "Hindistan Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Hint Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Hint Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Çivit mavisi",
+    "hex": ""
+  },
+  {
+    "name": "İndigo Boya",
+    "hex": ""
+  },
+  {
+    "name": "İndigo (Web)",
+    "hex": ""
+  },
+  {
+    "name": "Kızılötesi",
+    "hex": ""
+  },
+  {
+    "name": "Boyutlararası Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Uluslararası Klein Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Uluslararası Orange (Havacılık ve Uzay)",
+    "hex": ""
+  },
+  {
+    "name": "Uluslararası Orange (Mühendislik)",
+    "hex": ""
+  },
+  {
+    "name": "Uluslararası Orange (Golden Gate Köprüsü)",
+    "hex": ""
+  },
+  {
+    "name": "İris",
+    "hex": ""
+  },
+  {
+    "name": "Dayanılmaz",
+    "hex": ""
+  },
+  {
+    "name": "Isabelline",
+    "hex": ""
+  },
+  {
+    "name": "İslam Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "İtalyan Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Fildişi",
+    "hex": ""
+  },
+  {
+    "name": "Yeşim",
+    "hex": ""
+  },
+  {
+    "name": "Japon Karmini",
+    "hex": ""
+  },
+  {
+    "name": "Japon İndigosu",
+    "hex": ""
+  },
+  {
+    "name": "Japon Menekşesi",
+    "hex": ""
+  },
+  {
+    "name": "Yasemin",
+    "hex": ""
+  },
+  {
+    "name": "Jasper",
+    "hex": ""
+  },
+  {
+    "name": "Caz meyvesi reçeli",
+    "hex": ""
+  },
+  {
+    "name": "Jöle fasulye şekerleme",
+    "hex": ""
+  },
+  {
+    "name": "Jet",
+    "hex": ""
+  },
+  {
+    "name": "Fulya",
+    "hex": ""
+  },
+  {
+    "name": "Jordy Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Haziran Tomurcuğu",
+    "hex": ""
+  },
+  {
+    "name": "Orman Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Kelly Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Kenya Bakırı",
+    "hex": ""
+  },
+  {
+    "name": "Keppel",
+    "hex": ""
+  },
+  {
+    "name": "Anahtar Kireç",
+    "hex": ""
+  },
+  {
+    "name": "Haki (HTML/CSS) (Haki)",
+    "hex": ""
+  },
+  {
+    "name": "Haki (X11) (Açık Haki)",
+    "hex": ""
+  },
+  {
+    "name": "kivi",
+    "hex": ""
+  },
+  {
+    "name": "Kobe",
+    "hex": ""
+  },
+  {
+    "name": "Kobi",
+    "hex": ""
+  },
+  {
+    "name": "Kobicha",
+    "hex": ""
+  },
+  {
+    "name": "Kombu Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "KSÜ Mor",
+    "hex": ""
+  },
+  {
+    "name": "KU Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "La Salle Green",
+    "hex": ""
+  },
+  {
+    "name": "Baygın Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Lapis Lazuli",
+    "hex": ""
+  },
+  {
+    "name": "Lazer Limon",
+    "hex": ""
+  },
+  {
+    "name": "Defne Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Lav",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta (Çiçek)",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta (Web)",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Allık",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta İndigo",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Sisi",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Moru",
+    "hex": ""
+  },
+  {
+    "name": "Lavanta Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Çim Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Limon",
+    "hex": ""
+  },
+  {
+    "name": "Limon Şifon",
+    "hex": ""
+  },
+  {
+    "name": "Limonlu Köri",
+    "hex": ""
+  },
+  {
+    "name": "Limon Buzulu",
+    "hex": ""
+  },
+  {
+    "name": "Limon dilimi",
+    "hex": ""
+  },
+  {
+    "name": "Limon Beze",
+    "hex": ""
+  },
+  {
+    "name": "Limon sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Meyan kökü",
+    "hex": ""
+  },
+  {
+    "name": "Özgürlük",
+    "hex": ""
+  },
+  {
+    "name": "Açık Kayısı",
+    "hex": ""
+  },
+  {
+    "name": "Açık mavi",
+    "hex": ""
+  },
+  {
+    "name": "Açık kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Karmin Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Kobalt Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Mercan",
+    "hex": ""
+  },
+  {
+    "name": "Açık Peygamber Çiçeği Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Açık cam göbeği",
+    "hex": ""
+  },
+  {
+    "name": "Açık Koyu Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Açık Fransız Beji",
+    "hex": ""
+  },
+  {
+    "name": "Açık Fuşya Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Açık Altın Başak Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Açık gri",
+    "hex": ""
+  },
+  {
+    "name": "Açık Grimsi Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Açık yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Açık Sıcak Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Açık Haki",
+    "hex": ""
+  },
+  {
+    "name": "Hafif Orta Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Açık Yosun Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Açık turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Açık Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Açık Pastel Mor",
+    "hex": ""
+  },
+  {
+    "name": "Açık pembe",
+    "hex": ""
+  },
+  {
+    "name": "Açık Kırmızı Toprak Boyası",
+    "hex": ""
+  },
+  {
+    "name": "Açık Somon",
+    "hex": ""
+  },
+  {
+    "name": "Açık Somon Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Deniz Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Açık Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Arduvaz Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Hafif Çelik Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Açık Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Açık Thulian Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Açık sarı",
+    "hex": ""
+  },
+  {
+    "name": "Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Leylak Parlaklığı",
+    "hex": ""
+  },
+  {
+    "name": "Kireç (Renk Çarkı)",
+    "hex": ""
+  },
+  {
+    "name": "Kireç (Web) (X11 Yeşil)",
+    "hex": ""
+  },
+  {
+    "name": "Limon yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Limerick",
+    "hex": ""
+  },
+  {
+    "name": "Lincoln Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Keten",
+    "hex": ""
+  },
+  {
+    "name": "Loeen (Lopen) Bak",
+    "hex": ""
+  },
+  {
+    "name": "Liseran Mor",
+    "hex": ""
+  },
+  {
+    "name": "Küçük Çocuk Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Karaciğer",
+    "hex": ""
+  },
+  {
+    "name": "Karaciğer (Köpekler)",
+    "hex": ""
+  },
+  {
+    "name": "Karaciğer (Organ)",
+    "hex": ""
+  },
+  {
+    "name": "Karaciğer Kestanesi",
+    "hex": ""
+  },
+  {
+    "name": "Mor",
+    "hex": ""
+  },
+  {
+    "name": "Kereste",
+    "hex": ""
+  },
+  {
+    "name": "Şehvet",
+    "hex": ""
+  },
+  {
+    "name": "Maastricht Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Makarna ve peynir",
+    "hex": ""
+  },
+  {
+    "name": "Madder Gölü",
+    "hex": ""
+  },
+  {
+    "name": "Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Macenta (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Macenta (Boya)",
+    "hex": ""
+  },
+  {
+    "name": "Macenta (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Macenta (Süreç)",
+    "hex": ""
+  },
+  {
+    "name": "Macenta Pus",
+    "hex": ""
+  },
+  {
+    "name": "Macenta-Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Sihirli Nane",
+    "hex": ""
+  },
+  {
+    "name": "Sihirli iksir",
+    "hex": ""
+  },
+  {
+    "name": "Manolya",
+    "hex": ""
+  },
+  {
+    "name": "Maun",
+    "hex": ""
+  },
+  {
+    "name": "Mısır",
+    "hex": ""
+  },
+  {
+    "name": "Majorelle Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Malakit",
+    "hex": ""
+  },
+  {
+    "name": "Deniz ayısı",
+    "hex": ""
+  },
+  {
+    "name": "Mandalina",
+    "hex": ""
+  },
+  {
+    "name": "Mango Tango",
+    "hex": ""
+  },
+  {
+    "name": "Peygamber devesi",
+    "hex": ""
+  },
+  {
+    "name": "Mardi Gras",
+    "hex": ""
+  },
+  {
+    "name": "Kadife çiçeği",
+    "hex": ""
+  },
+  {
+    "name": "Bordo (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Bordo (HTML/CSS)",
+    "hex": ""
+  },
+  {
+    "name": "Bordo (X11)",
+    "hex": ""
+  },
+  {
+    "name": "leylak rengi",
+    "hex": ""
+  },
+  {
+    "name": "Leylak Taupe",
+    "hex": ""
+  },
+  {
+    "name": "leylak rengi",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Mavi Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Mavi Mor",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Yeşil Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Mor",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Kırmızı Mor",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Maksimum Sarı Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Mayıs Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Maya Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Et Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Akuamarin",
+    "hex": ""
+  },
+  {
+    "name": "Orta mavi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Şeker Elma Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Orta Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Orta Şampanya",
+    "hex": ""
+  },
+  {
+    "name": "Orta Elektrik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Orman Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Orta Lavanta Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Orta Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Orta Fars Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Kırmızı-Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Yakut",
+    "hex": ""
+  },
+  {
+    "name": "Orta Deniz Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Orta Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Kayrak Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Bahar Tomurcuğu",
+    "hex": ""
+  },
+  {
+    "name": "Orta Bahar Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Orta Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Orta Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Orta Toskana Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Orta Vermilyon",
+    "hex": ""
+  },
+  {
+    "name": "Orta Menekşe-Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Yumuşak Kayısı",
+    "hex": ""
+  },
+  {
+    "name": "Yumuşak sarı",
+    "hex": ""
+  },
+  {
+    "name": "Kavun",
+    "hex": ""
+  },
+  {
+    "name": "Metalik Deniz Yosunu",
+    "hex": ""
+  },
+  {
+    "name": "Metalik Güneş Patlaması",
+    "hex": ""
+  },
+  {
+    "name": "Meksika Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Orta Mavi Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Orta Mavi Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Kırmızı Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Orta Yeşil Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Orta Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Orta Kırmızı Mor",
+    "hex": ""
+  },
+  {
+    "name": "Orta Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Orta Sarı Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Gece yarısı",
+    "hex": ""
+  },
+  {
+    "name": "Gece yarısı mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Gece Yarısı Yeşili (Kartal Yeşili)",
+    "hex": ""
+  },
+  {
+    "name": "Mikado Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Süt",
+    "hex": ""
+  },
+  {
+    "name": "Mimi Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Mindaro",
+    "hex": ""
+  },
+  {
+    "name": "Ming",
+    "hex": ""
+  },
+  {
+    "name": "Minion Sarı",
+    "hex": ""
+  },
+  {
+    "name": "nane",
+    "hex": ""
+  },
+  {
+    "name": "Nane Kreması",
+    "hex": ""
+  },
+  {
+    "name": "Nane yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Puslu Yosun",
+    "hex": ""
+  },
+  {
+    "name": "Puslu Gül",
+    "hex": ""
+  },
+  {
+    "name": "Makosen",
+    "hex": ""
+  },
+  {
+    "name": "Mod Bej",
+    "hex": ""
+  },
+  {
+    "name": "Aytaşı Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Mordan Kırmızı 19",
+    "hex": ""
+  },
+  {
+    "name": "Sabah Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Yosun yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Dağ Çayırı",
+    "hex": ""
+  },
+  {
+    "name": "Mountbatten Pembe",
+    "hex": ""
+  },
+  {
+    "name": "MSU Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Babür Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Dut",
+    "hex": ""
+  },
+  {
+    "name": "Mumyanın Mezarı",
+    "hex": ""
+  },
+  {
+    "name": "Hardal",
+    "hex": ""
+  },
+  {
+    "name": "mersin yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Mistik",
+    "hex": ""
+  },
+  {
+    "name": "Mistik Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Nadeshiko Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Napier Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Napoli Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Navaho Beyazı",
+    "hex": ""
+  },
+  {
+    "name": "Donanma",
+    "hex": ""
+  },
+  {
+    "name": "Lacivert Mor",
+    "hex": ""
+  },
+  {
+    "name": "Neon Havuç",
+    "hex": ""
+  },
+  {
+    "name": "Neon Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Neon yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Yeni araba",
+    "hex": ""
+  },
+  {
+    "name": "New York Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Nikel",
+    "hex": ""
+  },
+  {
+    "name": "Fotoğrafsız Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Kuzey Teksas Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Nyanza",
+    "hex": ""
+  },
+  {
+    "name": "Okyanus mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Okyanus Tekne Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Okyanus Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Okra",
+    "hex": ""
+  },
+  {
+    "name": "Ofis Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Dev Kokusu",
+    "hex": ""
+  },
+  {
+    "name": "Eski Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Eski altın",
+    "hex": ""
+  },
+  {
+    "name": "Eski Kediotu",
+    "hex": ""
+  },
+  {
+    "name": "Eski Dantel",
+    "hex": ""
+  },
+  {
+    "name": "Eski Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Eski Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Eski Yosun Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Eski Gül",
+    "hex": ""
+  },
+  {
+    "name": "Eski Gümüş",
+    "hex": ""
+  },
+  {
+    "name": "zeytin",
+    "hex": ""
+  },
+  {
+    "name": "Zeytinyağı (",
+    "hex": ""
+  },
+  {
+    "name": "Zeytin yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Olivin",
+    "hex": ""
+  },
+  {
+    "name": "Oniks",
+    "hex": ""
+  },
+  {
+    "name": "Opera Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu (Renk Çarkı)",
+    "hex": ""
+  },
+  {
+    "name": "Portakal (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu (İnternet)",
+    "hex": ""
+  },
+  {
+    "name": "Portakal kabuğu",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu-Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Portakallı soda",
+    "hex": ""
+  },
+  {
+    "name": "Turuncu sarı",
+    "hex": ""
+  },
+  {
+    "name": "Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Orkide Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Sarıasma Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "Su samuru kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Uzay",
+    "hex": ""
+  },
+  {
+    "name": "Çirkin Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Oxford Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "OU Kızıl Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Pasifik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Pakistan Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Pfalz Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Pfalz Moru",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Su",
+    "hex": ""
+  },
+  {
+    "name": "Soluk mavi",
+    "hex": ""
+  },
+  {
+    "name": "Soluk kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Kestane",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Bakır",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Peygamber Çiçeği Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Camgöbeği",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Altın",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Altın Başak",
+    "hex": ""
+  },
+  {
+    "name": "Soluk yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Eflatun-Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Açık pembe",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Erik",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Kırmızı-Mor",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Robin Yumurta Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Gümüş",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Bahar Tomurcuğu",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Soluk Menekşe-Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Palmiye yaprağı",
+    "hex": ""
+  },
+  {
+    "name": "Hercai Menekşe Mor",
+    "hex": ""
+  },
+  {
+    "name": "Paolo Veronese Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Papaya Kırbaç",
+    "hex": ""
+  },
+  {
+    "name": "Cennet Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Paris Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Papağan Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Kahve",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Gri",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Mor",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Pastel Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Patrik",
+    "hex": ""
+  },
+  {
+    "name": "Payne'in Grisi",
+    "hex": ""
+  },
+  {
+    "name": "şeftali",
+    "hex": ""
+  },
+  {
+    "name": "şeftali",
+    "hex": ""
+  },
+  {
+    "name": "Şeftali-Portakal",
+    "hex": ""
+  },
+  {
+    "name": "Şeftali Pufu",
+    "hex": ""
+  },
+  {
+    "name": "Şeftali-Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Armut",
+    "hex": ""
+  },
+  {
+    "name": "inci",
+    "hex": ""
+  },
+  {
+    "name": "İnci Su",
+    "hex": ""
+  },
+  {
+    "name": "İnci Moru",
+    "hex": ""
+  },
+  {
+    "name": "Peridot",
+    "hex": ""
+  },
+  {
+    "name": "Deniz salyangozu",
+    "hex": ""
+  },
+  {
+    "name": "Kalıcı Sardunya Gölü",
+    "hex": ""
+  },
+  {
+    "name": "Fars Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Fars Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Fars İndigosu",
+    "hex": ""
+  },
+  {
+    "name": "İran Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "Farsça Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Farsça Erik",
+    "hex": ""
+  },
+  {
+    "name": "İran Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "İran Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Trabzon hurması",
+    "hex": ""
+  },
+  {
+    "name": "Peru",
+    "hex": ""
+  },
+  {
+    "name": "Kalay Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Floksa",
+    "hex": ""
+  },
+  {
+    "name": "Ftalo Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Ftalo Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Pikton Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Resimli Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Domuz Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Çam yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Ananas",
+    "hex": ""
+  },
+  {
+    "name": "Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Pembe (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Pembe flamingo",
+    "hex": ""
+  },
+  {
+    "name": "Pembe Dantel",
+    "hex": ""
+  },
+  {
+    "name": "Pembe Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Pembe-Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Pembe İnci",
+    "hex": ""
+  },
+  {
+    "name": "Pembe Ahududu",
+    "hex": ""
+  },
+  {
+    "name": "Pembe Şerbet",
+    "hex": ""
+  },
+  {
+    "name": "Fıstık",
+    "hex": ""
+  },
+  {
+    "name": "Peri Tozu",
+    "hex": ""
+  },
+  {
+    "name": "Platin",
+    "hex": ""
+  },
+  {
+    "name": "Erik",
+    "hex": ""
+  },
+  {
+    "name": "Erik (Web)",
+    "hex": ""
+  },
+  {
+    "name": "Tombul Mor",
+    "hex": ""
+  },
+  {
+    "name": "Cilalı Çam",
+    "hex": ""
+  },
+  {
+    "name": "Gösteriş ve Güç",
+    "hex": ""
+  },
+  {
+    "name": "Pop yıldızı",
+    "hex": ""
+  },
+  {
+    "name": "Portland Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "Toz mavi",
+    "hex": ""
+  },
+  {
+    "name": "Prenses Parfüm",
+    "hex": ""
+  },
+  {
+    "name": "Princeton Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "Kuru erik",
+    "hex": ""
+  },
+  {
+    "name": "Prusya mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Psikedelik Mor",
+    "hex": ""
+  },
+  {
+    "name": "Puce",
+    "hex": ""
+  },
+  {
+    "name": "Puce Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Pullman Kahverengi (UPS Kahverengi)",
+    "hex": ""
+  },
+  {
+    "name": "Pullman Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Kabak",
+    "hex": ""
+  },
+  {
+    "name": "Mor (HTML)",
+    "hex": ""
+  },
+  {
+    "name": "Mor (Munsell)",
+    "hex": ""
+  },
+  {
+    "name": "Mor (X11)",
+    "hex": ""
+  },
+  {
+    "name": "Mor Kalp",
+    "hex": ""
+  },
+  {
+    "name": "Mor Dağ Majesteleri",
+    "hex": ""
+  },
+  {
+    "name": "Mor Lacivert",
+    "hex": ""
+  },
+  {
+    "name": "Mor Pizza",
+    "hex": ""
+  },
+  {
+    "name": "Mor Erik",
+    "hex": ""
+  },
+  {
+    "name": "Mor Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Purpureus",
+    "hex": ""
+  },
+  {
+    "name": "Kuvars",
+    "hex": ""
+  },
+  {
+    "name": "Kraliçe Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Kraliçe Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Hızlı Gümüş",
+    "hex": ""
+  },
+  {
+    "name": "Quinacridone Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Rackley",
+    "hex": ""
+  },
+  {
+    "name": "Radikal Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Kuru Üzüm Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Raca",
+    "hex": ""
+  },
+  {
+    "name": "Ahududu",
+    "hex": ""
+  },
+  {
+    "name": "Ahududu Glazesi",
+    "hex": ""
+  },
+  {
+    "name": "Ahududu Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Ahududu Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Ham Sienna",
+    "hex": ""
+  },
+  {
+    "name": "Ham toprak rengi",
+    "hex": ""
+  },
+  {
+    "name": "Razzle Dazzle Rose",
+    "hex": ""
+  },
+  {
+    "name": "Razzmatazz",
+    "hex": ""
+  },
+  {
+    "name": "Razzmic Berry",
+    "hex": ""
+  },
+  {
+    "name": "Rebecca Mor",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (Munsell)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (NCS)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (Pigment)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "kırmızı şeytan",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı portakal",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı mor",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı Salsa",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Sekoya",
+    "hex": ""
+  },
+  {
+    "name": "Regalia",
+    "hex": ""
+  },
+  {
+    "name": "Kayıt Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Çözünürlük Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Ritim",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Siyah (FOGRA29)",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Siyah (FOGRA39)",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Parlak Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Karmin",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Elektrik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Leylak",
+    "hex": ""
+  },
+  {
+    "name": "Zengin Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Tüfek Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Kavrulmuş Kahve",
+    "hex": ""
+  },
+  {
+    "name": "Robin Yumurta Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Roket Metalik",
+    "hex": ""
+  },
+  {
+    "name": "Roma Gümüşü",
+    "hex": ""
+  },
+  {
+    "name": "Gül",
+    "hex": ""
+  },
+  {
+    "name": "Gül Bonbonu",
+    "hex": ""
+  },
+  {
+    "name": "Gül Tozu",
+    "hex": ""
+  },
+  {
+    "name": "gül abanoz",
+    "hex": ""
+  },
+  {
+    "name": "Altın gül",
+    "hex": ""
+  },
+  {
+    "name": "Gül Madder",
+    "hex": ""
+  },
+  {
+    "name": "Pembe gül",
+    "hex": ""
+  },
+  {
+    "name": "Gül kuvartzı",
+    "hex": ""
+  },
+  {
+    "name": "Kırmızı gül",
+    "hex": ""
+  },
+  {
+    "name": "Gül Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Gül Vadisi",
+    "hex": ""
+  },
+  {
+    "name": "Gül ağacı",
+    "hex": ""
+  },
+  {
+    "name": "Rosso Corsa",
+    "hex": ""
+  },
+  {
+    "name": "Pembe Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet Azure",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet Fuşya",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet Moru",
+    "hex": ""
+  },
+  {
+    "name": "Kraliyet Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Ruber",
+    "hex": ""
+  },
+  {
+    "name": "Rubin Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Yakut",
+    "hex": ""
+  },
+  {
+    "name": "Yakut kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Rus Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Rus Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Pas",
+    "hex": ""
+  },
+  {
+    "name": "Paslı Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Sacramento Eyalet Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Eyer Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Güvenlik Turuncusu",
+    "hex": ""
+  },
+  {
+    "name": "Güvenlik Turuncusu (Alev Turuncusu)",
+    "hex": ""
+  },
+  {
+    "name": "Güvenlik Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Safran",
+    "hex": ""
+  },
+  {
+    "name": "Adaçayı",
+    "hex": ""
+  },
+  {
+    "name": "Aziz Patrick Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Somon",
+    "hex": ""
+  },
+  {
+    "name": "Somon Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Kum",
+    "hex": ""
+  },
+  {
+    "name": "Kumul",
+    "hex": ""
+  },
+  {
+    "name": "Kum fırtınası",
+    "hex": ""
+  },
+  {
+    "name": "Kumlu Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Sandy Tan",
+    "hex": ""
+  },
+  {
+    "name": "Sandy Taupe",
+    "hex": ""
+  },
+  {
+    "name": "Sangria",
+    "hex": ""
+  },
+  {
+    "name": "Sap Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Safir",
+    "hex": ""
+  },
+  {
+    "name": "Safir mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Sasquatch Çorap",
+    "hex": ""
+  },
+  {
+    "name": "Saten Parlak Altın",
+    "hex": ""
+  },
+  {
+    "name": "kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Schauss Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Okul Otobüsü Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Yeşil çığlık atıyor",
+    "hex": ""
+  },
+  {
+    "name": "Deniz mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Deniz Köpüğü Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Deniz yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Deniz yılanı",
+    "hex": ""
+  },
+  {
+    "name": "Mühür Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Deniz kabuğu",
+    "hex": ""
+  },
+  {
+    "name": "Seçici Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Sepya",
+    "hex": ""
+  },
+  {
+    "name": "Gölge",
+    "hex": ""
+  },
+  {
+    "name": "Gölge Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Şampuan",
+    "hex": ""
+  },
+  {
+    "name": "Yonca Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Pırıltılı Allık",
+    "hex": ""
+  },
+  {
+    "name": "Parlak Yonca",
+    "hex": ""
+  },
+  {
+    "name": "Çingene pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Şok edici Pembe (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Siena",
+    "hex": ""
+  },
+  {
+    "name": "Gümüş",
+    "hex": ""
+  },
+  {
+    "name": "Gümüş Kadeh",
+    "hex": ""
+  },
+  {
+    "name": "Gümüş Göl Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Gümüş Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Gümüş Kum",
+    "hex": ""
+  },
+  {
+    "name": "Sinopya",
+    "hex": ""
+  },
+  {
+    "name": "Cızırtılı Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Cızırtılı Gündoğumu",
+    "hex": ""
+  },
+  {
+    "name": "Skobeloff",
+    "hex": ""
+  },
+  {
+    "name": "Gökyüzü mavi",
+    "hex": ""
+  },
+  {
+    "name": "Gökyüzü Macenta",
+    "hex": ""
+  },
+  {
+    "name": "Kayrak Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Arduvaz Grisi",
+    "hex": ""
+  },
+  {
+    "name": "Smalt (Koyu Toz Mavi)",
+    "hex": ""
+  },
+  {
+    "name": "Sümüksü Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Ezilmiş Kabak",
+    "hex": ""
+  },
+  {
+    "name": "aşık oldum",
+    "hex": ""
+  },
+  {
+    "name": "Sigara içmek",
+    "hex": ""
+  },
+  {
+    "name": "Dumanlı Topaz",
+    "hex": ""
+  },
+  {
+    "name": "Dumanlı Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Dumanlı Topaz",
+    "hex": ""
+  },
+  {
+    "name": "Kar",
+    "hex": ""
+  },
+  {
+    "name": "Sabun",
+    "hex": ""
+  },
+  {
+    "name": "Katı Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Sonik Gümüş",
+    "hex": ""
+  },
+  {
+    "name": "Spartalı Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Uzay Harbiyeli",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Bistre",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Karmini",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Kızılı",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Grisi",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Portakalı",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "İspanyol Menekşesi",
+    "hex": ""
+  },
+  {
+    "name": "İspanyolca Viridian",
+    "hex": ""
+  },
+  {
+    "name": "Baharatlı Karışım",
+    "hex": ""
+  },
+  {
+    "name": "Spiro Disko Topu",
+    "hex": ""
+  },
+  {
+    "name": "Bahar tomurcuğu",
+    "hex": ""
+  },
+  {
+    "name": "Bahar Ayazı",
+    "hex": ""
+  },
+  {
+    "name": "İlkbahar yesili",
+    "hex": ""
+  },
+  {
+    "name": "Yıldız Komutanlığı Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Çelik Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Çelik Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Çelik Deniz Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Stil De Tahıl Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Stizza",
+    "hex": ""
+  },
+  {
+    "name": "Fırtına bulutu",
+    "hex": ""
+  },
+  {
+    "name": "Pipet",
+    "hex": ""
+  },
+  {
+    "name": "çilek",
+    "hex": ""
+  },
+  {
+    "name": "Şeker erik",
+    "hex": ""
+  },
+  {
+    "name": "Güneş yanığı Tepegöz",
+    "hex": ""
+  },
+  {
+    "name": "güneş ışığı",
+    "hex": ""
+  },
+  {
+    "name": "Güneşli",
+    "hex": ""
+  },
+  {
+    "name": "Güneş ışını",
+    "hex": ""
+  },
+  {
+    "name": "Gün batımı",
+    "hex": ""
+  },
+  {
+    "name": "Gün Batımı Turuncusu",
+    "hex": ""
+  },
+  {
+    "name": "Süper Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Tatlı Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "ten rengi",
+    "hex": ""
+  },
+  {
+    "name": "Tangelo",
+    "hex": ""
+  },
+  {
+    "name": "mandalina",
+    "hex": ""
+  },
+  {
+    "name": "Mandalina Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Tango Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Turta Portakal",
+    "hex": ""
+  },
+  {
+    "name": "Boz kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Taupe Gri",
+    "hex": ""
+  },
+  {
+    "name": "Çay Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Gül çayı",
+    "hex": ""
+  },
+  {
+    "name": "Gül çayı",
+    "hex": ""
+  },
+  {
+    "name": "turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Turkuaz mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Deniz mavisi geyik",
+    "hex": ""
+  },
+  {
+    "name": "Deniz mavisi yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Telemacenta",
+    "hex": ""
+  },
+  {
+    "name": "Tenne (Sarımsı kahverengi)",
+    "hex": ""
+  },
+  {
+    "name": "Pişmiş toprak",
+    "hex": ""
+  },
+  {
+    "name": "Devedikeni",
+    "hex": ""
+  },
+  {
+    "name": "Thulian Pembesi",
+    "hex": ""
+  },
+  {
+    "name": "Beni Gıdıkla Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Tiffany Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kaplan Gözü",
+    "hex": ""
+  },
+  {
+    "name": "Timberwolf",
+    "hex": ""
+  },
+  {
+    "name": "Titanyum Sarısı",
+    "hex": ""
+  },
+  {
+    "name": "Domates",
+    "hex": ""
+  },
+  {
+    "name": "Araç Kutusu",
+    "hex": ""
+  },
+  {
+    "name": "Topaz",
+    "hex": ""
+  },
+  {
+    "name": "Traktör Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Arabası Gri",
+    "hex": ""
+  },
+  {
+    "name": "Tropikal yağmur ormanı",
+    "hex": ""
+  },
+  {
+    "name": "Tropikal Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Gerçek mavi",
+    "hex": ""
+  },
+  {
+    "name": "Püskül Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Lale",
+    "hex": ""
+  },
+  {
+    "name": "Tumbleweed",
+    "hex": ""
+  },
+  {
+    "name": "Türk Gülü",
+    "hex": ""
+  },
+  {
+    "name": "Turkuaz",
+    "hex": ""
+  },
+  {
+    "name": "Turkuaz mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Turkuaz Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Turkuaz Sörf",
+    "hex": ""
+  },
+  {
+    "name": "Kaplumbağa Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Toskana",
+    "hex": ""
+  },
+  {
+    "name": "Toskana Kahvesi",
+    "hex": ""
+  },
+  {
+    "name": "Toskana Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Toskana Tan",
+    "hex": ""
+  },
+  {
+    "name": "Toskana",
+    "hex": ""
+  },
+  {
+    "name": "Alacakaranlık Lavanta",
+    "hex": ""
+  },
+  {
+    "name": "Tyrian Moru",
+    "hex": ""
+  },
+  {
+    "name": "UA Mavi",
+    "hex": ""
+  },
+  {
+    "name": "UA Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Ube",
+    "hex": ""
+  },
+  {
+    "name": "UCLA Mavi",
+    "hex": ""
+  },
+  {
+    "name": "UCLA Altın",
+    "hex": ""
+  },
+  {
+    "name": "UFO Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Lacivert",
+    "hex": ""
+  },
+  {
+    "name": "Lacivert Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Ultra Pembe",
+    "hex": ""
+  },
+  {
+    "name": "Ultra Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "kereste",
+    "hex": ""
+  },
+  {
+    "name": "Ağartılmamış İpek",
+    "hex": ""
+  },
+  {
+    "name": "Birleşmiş Milletler Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Kaliforniya Üniversitesi Altın",
+    "hex": ""
+  },
+  {
+    "name": "Yumuşak Sarı",
+    "hex": ""
+  },
+  {
+    "name": "UP Orman Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "YUKARI Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Yükseliş Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Ürobilin",
+    "hex": ""
+  },
+  {
+    "name": "USAFA Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "USC Kardinal",
+    "hex": ""
+  },
+  {
+    "name": "USC Altın",
+    "hex": ""
+  },
+  {
+    "name": "Tennessee Orange Üniversitesi",
+    "hex": ""
+  },
+  {
+    "name": "Utah Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Van Dyke Brown",
+    "hex": ""
+  },
+  {
+    "name": "Vanilya",
+    "hex": ""
+  },
+  {
+    "name": "Vanilyalı Buz",
+    "hex": ""
+  },
+  {
+    "name": "Vegas Altını",
+    "hex": ""
+  },
+  {
+    "name": "Venedik Kırmızısı",
+    "hex": ""
+  },
+  {
+    "name": "Bakır pası",
+    "hex": ""
+  },
+  {
+    "name": "Vermilyon",
+    "hex": ""
+  },
+  {
+    "name": "Vermilyon",
+    "hex": ""
+  },
+  {
+    "name": "Veronika",
+    "hex": ""
+  },
+  {
+    "name": "Çok Açık Azure",
+    "hex": ""
+  },
+  {
+    "name": "Çok Açık Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Çok Açık Malakit Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Çok Hafif Tangelo",
+    "hex": ""
+  },
+  {
+    "name": "Çok Soluk Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Çok Soluk Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe (Renk Çarkı)",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe (Web)",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe-Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Menekşe-Kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Viridian",
+    "hex": ""
+  },
+  {
+    "name": "Viridian Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Vista Mavi",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Kehribar",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Kumral",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Bordo",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Kiraz",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Kızıl",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Gambo",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Limon Yeşili",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Malakit",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Dut",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Portakal Kabuğu",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Ahududu",
+    "hex": ""
+  },
+  {
+    "name": "Canlı kırmızı",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Kırmızı-Tangelo",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Gök Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Tangelo",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Mandalina",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Vermilyon",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Menekşe",
+    "hex": ""
+  },
+  {
+    "name": "Canlı Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Volt",
+    "hex": ""
+  },
+  {
+    "name": "Wageningen Yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Sıcak Siyah",
+    "hex": ""
+  },
+  {
+    "name": "Su hortumu",
+    "hex": ""
+  },
+  {
+    "name": "Weldon Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Wenge",
+    "hex": ""
+  },
+  {
+    "name": "Buğday",
+    "hex": ""
+  },
+  {
+    "name": "Beyaz",
+    "hex": ""
+  },
+  {
+    "name": "Beyaz duman",
+    "hex": ""
+  },
+  {
+    "name": "Vahşi Mavi Yonder",
+    "hex": ""
+  },
+  {
+    "name": "Vahşi Orkide",
+    "hex": ""
+  },
+  {
+    "name": "Dağ çileği",
+    "hex": ""
+  },
+  {
+    "name": "Yabani Karpuz",
+    "hex": ""
+  },
+  {
+    "name": "İrade Gücü Turuncu",
+    "hex": ""
+  },
+  {
+    "name": "Windsor Tan",
+    "hex": ""
+  },
+  {
+    "name": "Şarap",
+    "hex": ""
+  },
+  {
+    "name": "Şarap Tortuları",
+    "hex": ""
+  },
+  {
+    "name": "Kış Gökyüzü",
+    "hex": ""
+  },
+  {
+    "name": "Kış Sihirbazı",
+    "hex": ""
+  },
+  {
+    "name": "Kış Yeşili Rüyası",
+    "hex": ""
+  },
+  {
+    "name": "Morsalkım",
+    "hex": ""
+  },
+  {
+    "name": "Ahşap Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Xanadu",
+    "hex": ""
+  },
+  {
+    "name": "Yale Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Yankee Mavisi",
+    "hex": ""
+  },
+  {
+    "name": "Sarı",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (Crayola)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (Munsell)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (NCS)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (Pantone)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (Süreç)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı (RYB)",
+    "hex": ""
+  },
+  {
+    "name": "Sarı yeşil",
+    "hex": ""
+  },
+  {
+    "name": "Sarı portakal",
+    "hex": ""
+  },
+  {
+    "name": "Sarı gül",
+    "hex": ""
+  },
+  {
+    "name": "Sarı Güneş Işığı",
+    "hex": ""
+  },
+  {
+    "name": "Zafre",
+    "hex": ""
+  },
+  {
+    "name": "Zinnwaldit Kahverengi",
+    "hex": ""
+  },
+  {
+    "name": "Zomb",
+    "hex": ""
+  }
+]

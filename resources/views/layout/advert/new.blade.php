@@ -227,8 +227,6 @@
                         $.each(res.data,function(index, brand) {
                             brands.append("<option class='brands' value='"+ brand.id +"'>"+ brand.name +"</option>");
                         });
-                    }else{
-                        console.log("sıfır")
                     }
                 });
             });
@@ -246,8 +244,6 @@
                             $.each(res.data,function(index, model) {
                                 models.append("<option class='models' value='"+ model.id +"'>"+ model.name +"</option>");
                             });
-                        }else{
-                            console.log("sıfır")
                         }
                     });
             });
