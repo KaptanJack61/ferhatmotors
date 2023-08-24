@@ -139,27 +139,17 @@
                         @foreach ($lastTenAdverts as $item)
                             <tr>
                             <th scope="row">{{$item->id}}</th>
-                            <td>{{$item->vehicle_brand_id.'/'.$item->vehicle_model_id}}</td>
-                            <td>{!! $item->sale_type_id == 1 ? '<span class="badge bg-primary">Sahiplik</span>': '<span class="badge bg-warning">Komisyon</span>' !!}</td>
+                            <td>{{$item->brand->name.'/'.$item->model->name}}</td>
+                            <td>
+                                    @if($item->sale_type == 1)
+                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$iten->id}}">{{ $item->saleType->name }}</a></span>
+                                    @else
+                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$item->id}}">{{ $item->saleType->name }}</a></span>
+                                    @endif
+                            </td>
                             <td>{!! $item->Owner->firstname.' '.$item->Owner->lastname !!}</td>
                             <td>
-                                @if ($item->status_id == 1)
-                                    <span class="badge bg-warning">Satılık</span>
-                                @elseif($item->status_id == 2)
-                                    <span class="badge bg-primary">Kullanımda</span>
-                                @elseif($item->status_id == 3)
-                                    <span class="badge bg-info">Sahibinde</span>
-                                @elseif($item->status_id == 4)
-                                    <span class="badge bg-danger">Kirada</span>
-                                @elseif($item->status_id == 5)
-                                    <span class="badge bg-danger">Onarımda</span>
-                                @elseif($item->status_id == 6)
-                                    <span class="badge bg-primary">Hazırlanıyor</span>
-                                @elseif($item->status_id == 7)
-                                    <span class="badge bg-success">Satıldı</span>
-                                @else
-                                    <span class="badge bg-secondary">Bilinmiyor</span>
-                                @endif
+                                <span class="badge bg-primary">{{ $item->status->name }}</span>
                             </td>
                           </tr>
                         @endforeach

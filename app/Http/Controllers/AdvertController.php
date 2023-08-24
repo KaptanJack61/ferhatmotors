@@ -5,7 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Advert;
 use App\Models\AdvertNote;
 use App\Models\AdvertPhoto;
+use App\Models\CaseType;
+use App\Models\Color;
 use App\Models\Expense;
+use App\Models\Fuel;
+use App\Models\Gear;
+use App\Models\SaleType;
+use App\Models\Status;
 use App\Models\User;
 use App\Models\VehicleBrand;
 use App\Models\VehicleModel;
@@ -22,21 +28,34 @@ class AdvertController extends Controller
         $vehicle_types = VehicleType::all();
         $vehicle_brands = VehicleBrand::all();
         $vehicle_models = VehicleModel::all();
+        $gears = Gear::all();
+        $fuels = Fuel::all();
+        $colors = Color::all();
+        $case_types = CaseType::all();
+        $sale_types = SaleType::all();
+        $statuses = Status::all();
 
         return view('layout.advert.new', [
             'users' => User::all(),
             'vehicleTypes' => $vehicle_types,
             'vehicleBrands' => $vehicle_brands,
-            'vehicleModels' => $vehicle_models
+            'vehicleModels' => $vehicle_models,
+            'gears' => $gears,
+            'colors' => $colors,
+            'fuels' => $fuels,
+            'case_types' => $case_types,
+            'sale_types' => $sale_types,
+            'statuses' => $statuses
+
         ]);
     }
 
     public function save(Request $request){
         if(empty($request->brand) || empty($request->model) || empty($request->km) || empty($request->year) || $request->sales_type == 0|| $request->owner == 0 || empty($request->buy_price)){
-            $this->response["message"] = "Yızldız (*) ile işaretlenen alanlar zorunludur.";
+            $this->response["message"] = "Yıldız (*) ile işaretlenen alanlar zorunludur.";
         }else{
             $adv = new Advert;
-            $adv->vehicle_type_id = 1;
+            $adv->vehicle_type_id = trim(ucfirst($request->type));
             $adv->vehicle_brand_id = trim(ucfirst($request->brand));
             $adv->vehicle_model_id = trim(ucfirst($request->model));
             $adv->package = trim(ucfirst($request->package)) ?? null;
@@ -83,15 +102,22 @@ class AdvertController extends Controller
     }
 
     public function all(){
-        return view('layout.advert.all', ['adverts' => Advert::all()]);
+        return view('layout.advert.all', [
+                'adverts' => Advert::all(),
+                'statuses' => Status::all()
+            ]);
     }
 
     public function sold(){
-        return view('layout.advert.sold', ['adverts' => Advert::where('status_id', 7)->get()]);
+        return view('layout.advert.sold', ['adverts' => Advert::all(), 'statuses' => Status::all()]);
     }
 
     public function on_sale(){
-        return view('layout.advert.onSale', ['adverts' => Advert::where('status_id', '!=', 7)->get()]);
+
+        return view('layout.advert.onSale', [
+            'adverts' => Advert::all(),
+            'statuses' => Status::all()
+        ]);
     }
 
     public function change_status(Request $request){
@@ -226,7 +252,32 @@ class AdvertController extends Controller
     }
 
     public function edit($id){
-        return view('layout.advert.edit', ['advert' => Advert::find($id), 'users' => User::all(), 'photos' => AdvertPhoto::where('advert', $id)->get()]);
+
+        $vehicle_types = VehicleType::all();
+        $vehicle_brands = VehicleBrand::all();
+        $vehicle_models = VehicleModel::all();
+        $gears = Gear::all();
+        $fuels = Fuel::all();
+        $colors = Color::all();
+        $case_types = CaseType::all();
+        $sale_types = SaleType::all();
+        $statuses = Status::all();
+
+        return view('layout.advert.edit', [
+            'users' => User::all(),
+            'vehicleTypes' => $vehicle_types,
+            'vehicleBrands' => $vehicle_brands,
+            'vehicleModels' => $vehicle_models,
+            'gears' => $gears,
+            'colors' => $colors,
+            'fuels' => $fuels,
+            'case_types' => $case_types,
+            'sale_types' => $sale_types,
+            'statuses' => $statuses,
+            'advert' => Advert::find($id),
+            'photos' => AdvertPhoto::where('advert', $id)->get()
+        ]);
+
     }
 
 

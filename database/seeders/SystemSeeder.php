@@ -23,7 +23,7 @@ class SystemSeeder extends Seeder
             'login_cover' =>  '/static/assets/images/auth-bg.jpg',
             'site_status' => 1,
             'delivery_time' => date('Y-m-d'),
-            'add_expense' => 1
+            'add_expense' => 0
         ]);
 
     }

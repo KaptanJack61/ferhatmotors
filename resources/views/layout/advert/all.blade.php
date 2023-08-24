@@ -38,36 +38,20 @@
                         @foreach ($adverts as $advert)
                             <tr>
                                 <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand->name}}</a></td>
+                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model->name}}</a></td>
                                 <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->package ?? "-"}}</a></td>
                                 <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->year}}</a></td>
                                 <td>
-                                    @if($advert->sales_type == 1)
-                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Sahiplik</a></span>
+                                    @if($advert->sale_type_id == 1)
+                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">{{ $advert->saleType->name }}</a></span>
                                     @else
-                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Komisyon</a></span>
+                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">{{ $advert->saleType->name }}</a></span>
                                     @endif
                                 </td>
                                 <td>{!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</td>
                                 <td>
-                                    @if ($advert->status == 1)
-                                        <span class="badge bg-warning">Satılık</span>
-                                    @elseif($advert->status == 2)
-                                        <span class="badge bg-primary">Kullanımda</span>
-                                    @elseif($advert->status == 3)
-                                        <span class="badge bg-info">Sahibinde</span>
-                                    @elseif($advert->status == 4)
-                                        <span class="badge bg-danger">Kirada</span>
-                                    @elseif($advert->status == 5)
-                                        <span class="badge bg-danger">Onarımda</span>
-                                    @elseif($advert->status == 6)
-                                        <span class="badge bg-primary">Hazırlanıyor</span>
-                                    @elseif($advert->status == 7)
-                                        <span class="badge bg-success">Satıldı</span>
-                                    @else
-                                        <span class="badge bg-secondary">Bilinmiyor</span>
-                                    @endif
+                                    {{ $advert->status->name }}
                                 </td>
                                 <td>
 
@@ -126,13 +110,16 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+
                                         <select class="form-control new_status" advert-id="{{$advert->id}}">
-                                            <option value="1" {{$advert->status == 1 ? "selected":""}}>Satılık</option>
-                                            <option value="2" {{$advert->status == 2 ? "selected":""}}>Kullanımda</option>
-                                            <option value="3" {{$advert->status == 3 ? "selected":""}}>Sahibinde</option>
-                                            <option value="4" {{$advert->status == 4 ? "selected":""}}>Kirada</option>
-                                            <option value="5" {{$advert->status == 5 ? "selected":""}}>Onarımda</option>
-                                            <option value="6" {{$advert->status == 6 ? "selected":""}}>Hazırlanıyor</option>
+
+                                            @foreach($statuses as $status)
+                                                @if($status->id == $advert->status->id)
+                                                    <option value="{{ $status->id }}" selected>{{ $status->name }}</option>
+                                                @else
+                                                    <option value="{{ $status->id }}">{{ $status->name }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
 
                                     </div>

@@ -38,122 +38,108 @@
                     <tbody>
 
                         @foreach ($adverts as $advert)
-                            <tr>
-                                <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->package ?? "-"}}</a></td>
-                                <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->year}}</a></td>
-                                <td>
-                                    @if($advert->sales_type == 1)
-                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Sahiplik</a></span>
-                                    @else
-                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">Komisyon</a></span>
-                                    @endif
-                                </td>
-                                <td>{!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</td>
-                                <td>
-                                    @if ($advert->status == 1)
-                                        <span class="badge bg-warning">Satılık</span>
-                                    @elseif($advert->status == 2)
-                                        <span class="badge bg-primary">Kullanımda</span>
-                                    @elseif($advert->status == 3)
-                                        <span class="badge bg-info">Sahibinde</span>
-                                    @elseif($advert->status == 4)
-                                        <span class="badge bg-danger">Kirada</span>
-                                    @elseif($advert->status == 5)
-                                        <span class="badge bg-danger">Onarımda</span>
-                                    @elseif($advert->status == 6)
-                                        <span class="badge bg-primary">Hazırlanıyor</span>
-                                    @elseif($advert->status == 7)
-                                        <span class="badge bg-success">Satıldı</span>
-                                    @else
-                                        <span class="badge bg-secondary">Bilinmiyor</span>
-                                    @endif
-                                </td>
-                                <td><b class="h4 fw-bold text-primary">₺{{currency_format($advert->sell_price)}}</b></td>
-                                <td>
+                            @if(!$advert->status->sold)
+                                <tr>
+                                    <td><a class="text-decoration-underline" href="/advert/detail/{{$advert->id}}">{{$advert->id}}</a></td>
+                                    <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->brand->name}}</a></td>
+                                    <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->model->name}}</a></td>
+                                    <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->package ?? "-"}}</a></td>
+                                    <td><a class="fw-bold text-dark" href="/advert/detail/{{$advert->id}}">{{$advert->year}}</a></td>
+                                    <td>
+                                        @if($advert->sale_type_id == 1)
+                                            <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">{{ $advert->saleType->name }}</a></span>
+                                        @else
+                                            <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$advert->id}}">{{ $advert->saleType->name }}</a></span>
+                                        @endif
+                                    </td>
+                                    <td>{!! $advert->Owner != "" ? $advert->Owner->firstname.' '.$advert->Owner->lastname : '<strike class="text-danger">'.$advert->ownername.'</strike>' !!}</td>
+                                    <td>
+                                        {{ $advert->status->name }}
+                                    </td>
+                                    <td><b class="h4 fw-bold text-primary">₺{{currency_format($advert->sell_price)}}</b></td>
+                                    <td>
 
-                                    <div class="dropdown">
+                                        <div class="dropdown">
 
-                                        <button type="button" class=" btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
-                                            style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                            İşlem
-                                    </button>
+                                            <button type="button" class=" btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                                                    style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                İşlem
+                                            </button>
 
-                                        <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="/advert/detail/{{$advert->id}}">Görüntüle</a></li>
-                                          <li><a class="dropdown-item" href="/advert/edit/{{$advert->id}}">Düzenle</a></li>
-                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changeStatusModal{{$advert->id}}" href="javascript:;">Durumu Değiştir</a></li>
-                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}" href="javascript:;">Harcama Ekle</a></li>
-                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addNote{{$advert->id}}" href="javascript:;">Not Ekle</a></li>
-                                          <li><hr class="dropdown-divider"></li>
-                                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sell{{$advert->id}}" href="javascript:;">Satış Yap</a></li>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/advert/detail/{{$advert->id}}">Görüntüle</a></li>
+                                                <li><a class="dropdown-item" href="/advert/edit/{{$advert->id}}">Düzenle</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changeStatusModal{{$advert->id}}" href="javascript:;">Durumu Değiştir</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}" href="javascript:;">Harcama Ekle</a></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addNote{{$advert->id}}" href="javascript:;">Not Ekle</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sell{{$advert->id}}" href="javascript:;">Satış Yap</a></li>
 
-                                        </ul>
-                                      </div>
-                                </td>
-                            </tr>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <div class="modal fade" id="changeStatusModal{{$advert->id}}" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Durumu Değiştir</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <select class="form-control new_status" advert-id="{{$advert->id}}">
 
+                                                    @foreach($statuses as $status)
+                                                        @if($status->id == $advert->status->id)
+                                                            <option value="{{ $status->id }}" selected>{{ $status->name }}</option>
+                                                        @else
+                                                            <option value="{{ $status->id }}">{{ $status->name }}</option>
+                                                        @endif
+                                                    @endforeach
+                                                </select>
 
-                            <div class="modal fade" id="changeStatusModal{{$advert->id}}" tabindex="-1">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title">Durumu Değiştir</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                        <select class="form-control new_status" advert-id="{{$advert->id}}">
-                                            <option value="1" {{$advert->status == 1 ? "selected":""}}>Satılık</option>
-                                            <option value="2" {{$advert->status == 2 ? "selected":""}}>Kullanımda</option>
-                                            <option value="3" {{$advert->status == 3 ? "selected":""}}>Sahibinde</option>
-                                            <option value="4" {{$advert->status == 4 ? "selected":""}}>Kirada</option>
-                                            <option value="5" {{$advert->status == 5 ? "selected":""}}>Onarımda</option>
-                                            <option value="6" {{$advert->status == 6 ? "selected":""}}>Hazırlanıyor</option>
-                                        </select>
-
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="modal fade" id="addNote{{$advert->id}}" tabindex="-1">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title">Not Ekle</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
+                                <div class="modal fade" id="addNote{{$advert->id}}" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Not Ekle</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
 
-                                        <textarea class="form-control" id="note{{$advert->id}}" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
+                                                <textarea class="form-control" id="note{{$advert->id}}" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary saveNote" advert-id="{{$advert->id}}">Kaydet</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-primary saveNote" advert-id="{{$advert->id}}">Kaydet</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
 
-                              <div class="modal fade" id="sell{{$advert->id}}" tabindex="-1">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title">Satış Yap</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <label for="amount{{$advert->id}}" class="mb-2">Satış Tutarı:</label>
-                                        <input type="text" class="form-control" id="amount{{$advert->id}}" placeholder="100.000">
+                                <div class="modal fade" id="sell{{$advert->id}}" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Satış Yap</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label for="amount{{$advert->id}}" class="mb-2">Satış Tutarı:</label>
+                                                <input type="text" class="form-control" id="amount{{$advert->id}}" placeholder="100.000">
 
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-primary saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
+                            @endif
                         @endforeach
 
 

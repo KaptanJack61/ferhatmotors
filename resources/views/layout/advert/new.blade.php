@@ -22,6 +22,7 @@
                     <div class="col-md-4">
                         <label for="type">Tip *</label>
                         <select name="type" id="type" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
                             @foreach($vehicleTypes as $type)
                                 <option value="{{ $type->id }}">{{ $type->name }}</option>
                             @endforeach
@@ -31,18 +32,12 @@
                         <label for="type">Marka *</label>
                         <select name="brand" id="brand" class="js-example-basic-single js-states form-control">
                             <option value="0">Seçiniz..</option>
-                            @foreach($vehicleBrands as $brand)
-                                {{--<option value="{{ $brand->id }}">{{ $brand->name }}</option> --}}
-                            @endforeach
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label for="type">Model *</label>
                         <select name="model" id="model" class="form-control">
                             <option value="0">Seçiniz..</option>
-                            @foreach($vehicleModels as $model)
-                                {{-- <option value="{{ $model->id }}">{{ $model->name }}</option> --}}
-                            @endforeach
                         </select>
                     </div>
                     <div class="col-3">
@@ -62,57 +57,55 @@
                       <input type="text" class="form-control" id="year" name="year" placeholder="2000, 2023 ...">
                     </div>
                     <div class="col-3">
-                      <label for="gear" class="form-label">Şanzıman</label>
-                      <select name="gear" id="gear" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1">Manuel</option>
-                        <option value="2">Otomatik</option>
-                        <option value="3">Triptonik</option>
-                      </select>
+                        <label for="type">Şanzıman</label>
+                        <select name="gear" id="gear" class="js-example-basic-single js-states form-control">
+                            <option value="0" selected>Seçin</option>
+                            @foreach($gears as $gear)
+                                <option value="{{ $gear->id }}">{{ $gear->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
-                      <label for="fuel" class="form-label">Yakıt</label>
-                      <select name="fuel" id="fuel" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1">Benzin</option>
-                        <option value="2">Dizel</option>
-                        <option value="3">LPG</option>
-                        <option value="4">Elektrik</option>
-                      </select>
+                        <label for="type">Yakıt</label>
+                        <select name="fuel" id="fuel" class="js-example-basic-single js-states form-control">
+                            <option value="0" selected>Seçin</option>
+                            @foreach($fuels as $fuel)
+                                <option value="{{ $fuel->id }}">{{ $fuel->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
-                      <label for="color" class="form-label">Renk</label>
-                      <input type="text" class="form-control" id="color" name="color" placeholder="Siyah, Kırmızı, Beyaz">
+                        <label for="type">Renk</label>
+                        <select name="color" id="color" class="js-example-basic-single js-states form-control">
+                            <option value="0" selected>Seçin</option>
+                            @foreach($colors as $color)
+                                <option value="{{ $color->id }}">{{ $color->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
-                      <label for="case" class="form-label">Kasa Tipi</label>
-                      <select name="case" id="case" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1">Sedan</option>
-                        <option value="2">Hatchback</option>
-                        <option value="3">Station Wagon</option>
-                        <option value="4">SUV</option>
-                        <option value="5">Crossover</option>
-                        <option value="6">Coupe</option>
-                        <option value="7">Coupe SUV</option>
-                        <option value="8">Convertible</option>
-                        <option value="9">MPV</option>
-                        <option value="10">Roadster</option>
-                      </select>
+                        <label for="type">Kasa Tipi</label>
+                        <select name="case" id="case" class="js-example-basic-single js-states form-control">
+                            <option value="0" selected>Seçin</option>
+                            @foreach($case_types as $case_type)
+                                <option value="{{ $case_type->id }}">{{ $case_type->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="col-md-6">
-                      <label for="sales_type" class="form-label">Satış Türü *</label>
-                      <select id="sales_type" name="sales_type" class="form-select">
-                        <option value="0" selected>Seçin</option>
-                        <option value="1">Sahiplik</option>
-                        <option value="2">Komisyon</option>
-                      </select>
+                        <label for="type">Satış Türü *</label>
+                        <select name="sales_type" id="sales_type" class="js-example-basic-single js-states form-control">
+                            <option value="0" selected>Seçin</option>
+                            @foreach($sale_types as $sale_type)
+                                <option value="{{ $sale_type->id }}">{{ $sale_type->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-md-6">
-                        <label for="owner" class="form-label">Araç Sahibi *</label>
+                        <label for="type">Araç Sahibi *</label>
                         <select id="owner" name="owner" class="form-select">
-                          <option value="0" selected>Seçin</option>
+                          <option value="0">Seçin</option>
                             @foreach ($users as $user)
                                 <option value="{{$user->id}}">{{$user->firstname.' '.$user->lastname}}</option>
                             @endforeach
@@ -129,17 +122,13 @@
                         <input type="text" class="form-control" id="arabam" name="arabam" placeholder="https://www.arabam.com/ilan/galeriden-satilik-...">
                       </div>
                       <div class="col-4">
-                        <label for="status" class="form-label">Araç Durumu *</label>
-                        <select id="status" name="status" class="form-select">
-                          <option selected>Seçin</option>
-                          <option value="1">Satılık</option>
-                          <option value="2">Kullanımda</option>
-                          <option value="3">Sahibinde</option>
-                          <option value="4">Kirada</option>
-                          <option value="5">Onarımda</option>
-                          <option value="6">Hazırlanıyor</option>
-                          <option value="7">Satıldı</option>
-                        </select>
+                          <label for="type">Araç Durumu *</label>
+                          <select name="status" id="status" class="js-example-basic-single js-states form-control">
+                              <option value="0" selected>Seçin</option>
+                              @foreach($statuses as $status)
+                                  <option value="{{ $status->id }}">{{ $status->name }}</option>
+                              @endforeach
+                          </select>
                       </div>
 
                       <div class="col-3">
@@ -211,6 +200,13 @@
         const types = $("#type");
         const brands = $("#brand");
         const models = $("#model");
+        const gears = $("#gear");
+        const fuels = $("#fuel");
+        const colors = $("#color");
+        const case_types = $("#case");
+        const sale_types = $("#sales_type");
+        const owner = $("#owner");
+        const statuses = $("#status");
 
         $(document).ready(function() {
             types.select2({
@@ -248,7 +244,42 @@
                     });
             });
 
-            $('#model').select2({
+            models.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            gears.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            fuels.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            colors.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            case_types.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            sale_types.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            owner.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            statuses.select2({
                 placeholder: 'Seçiniz',
                 theme: 'bootstrap-5'
             });

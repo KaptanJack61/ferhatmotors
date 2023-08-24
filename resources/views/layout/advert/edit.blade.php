@@ -20,13 +20,47 @@
             <div class="card-body">
                 <form class="row g-3" id="advertForm">
                   <input type="hidden" name="id" id="id" value="{{$advert->id}}">
-                    <div class="col-md-6">
-                      <label for="brand" class="form-label">Marka *</label>
-                      <input type="text" class="form-control" id="brand" name="brand" value="{{$advert->vehicle_brand_id}}">
+                    <div class="col-md-4">
+                        <label for="type">Tip *</label>
+                        <select name="type" id="type" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($vehicleTypes as $type)
+                                @if($type->id == $advert->type->id)
+                                    <option value="{{ $type->id }}" selected>{{ $type->name }}</option>
+                                @else
+                                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                @endif
+
+                            @endforeach
+                        </select>
                     </div>
-                    <div class="col-md-6">
-                      <label for="model" class="form-label">Model *</label>
-                      <input type="text" class="form-control" id="model" name="model" value="{{$advert->vehicle_model_id}}">
+                    <div class="col-md-4">
+                        <label for="brand">Marka *</label>
+                        <select name="brand" id="brand" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($vehicleBrands as $brand)
+                                @if($brand->id == $advert->brand->id)
+                                    <option value="{{ $brand->id }}" selected class="brands">{{ $brand->name }}</option>
+                                @else
+                                    <option value="{{ $brand->id }}" class="brands">{{ $brand->name }}</option>
+                                @endif
+
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="model">Model *</label>
+                        <select name="model" id="model" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($vehicleModels as $model)
+                                @if($model->id == $advert->model->id)
+                                    <option value="{{ $model->id }}" selected class="models">{{ $model->name }}</option>
+                                @else
+                                    <option value="{{ $model->id }}" class="models">{{ $model->name }}</option>
+                                @endif
+
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
                       <label for="motor" class="form-label">Motor</label>
@@ -45,49 +79,59 @@
                       <input type="text" class="form-control" id="year" name="year" value="{{$advert->year}}">
                     </div>
                     <div class="col-3">
-                      <label for="gear" class="form-label">Şanzıman</label>
-                      <select name="gear" id="gear" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1" {{$advert->gear_id == 1 ? "selected":""}}>Manuel</option>
-                        <option value="2" {{$advert->gear_id == 2 ? "selected":""}}>Otomatik</option>
-                        <option value="3" {{$advert->gear_id == 3 ? "selected":""}}>Triptonik</option>
-                      </select>
+                        <label for="gear">Şanzıman</label>
+                        <select name="gear" id="gear" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($gears as $gear)
+                                @if($gear->id == $advert->gear->id)
+                                    <option value="{{ $gear->id }}" selected>{{ $gear->name }}</option>
+                                @else
+                                    <option value="{{ $gear->id }}">{{ $gear->name }}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="col-3">
-                      <label for="fuel" class="form-label">Yakıt</label>
-                      <select name="fuel" id="fuel" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1" {{$advert->fuel_id == 1 ? "selected":""}}>Benzin</option>
-                        <option value="2" {{$advert->fuel_id == 2 ? "selected":""}}>Dizel</option>
-                        <option value="3" {{$advert->fuel_id == 3 ? "selected":""}}>LPG</option>
-                        <option value="4" {{$advert->fuel_id == 4 ? "selected":""}}>Elektrik</option>
-                      </select>
+                        <label for="fuel">Yakıt</label>
+                        <select name="fuel" id="fuel" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($fuels as $fuel)
+                                @if($fuel->id == $advert->fuel->id)
+                                    <option value="{{ $fuel->id }}" selected>{{ $fuel->name }}</option>
+                                @else
+                                    <option value="{{ $fuel->id }}">{{ $fuel->name }}</option>
+                                @endif
+
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
-                      <label for="color" class="form-label">Renk</label>
-                      <input type="text" class="form-control" id="color" name="color" value="{{$advert->color_id}}">
+                        <label for="color">Renk</label>
+                        <select name="color" id="color" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($colors as $color)
+                                @if($color->id == $advert->color->id)
+                                    <option value="{{ $color->id }}" selected>{{ $color->name }}</option>
+                                @else
+                                    <option value="{{ $color->id }}">{{ $color->name }}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
-                      <label for="case" class="form-label">Kasa Tipi</label>
-                      <select name="case" id="case" class="form-control">
-                        <option value="0">Seçin</option>
-                        <option value="1" {{$advert->case_type_id == 1 ? "selected":""}}>Sedan</option>
-                        <option value="2" {{$advert->case_type_id == 2 ? "selected":""}}>Hatchback</option>
-                        <option value="3" {{$advert->case_type_id == 3 ? "selected":""}}>Station Wagon</option>
-                        <option value="4" {{$advert->case_type_id == 4 ? "selected":""}}>SUV</option>
-                        <option value="5" {{$advert->case_type_id == 5 ? "selected":""}}>Crossover</option>
-                        <option value="6" {{$advert->case_type_id == 6 ? "selected":""}}>Coupe</option>
-                        <option value="7" {{$advert->case_type_id == 7 ? "selected":""}}>Coupe SUV</option>
-                        <option value="8" {{$advert->case_type_id == 8 ? "selected":""}}>Convertible</option>
-                        <option value="9" {{$advert->case_type_id == 9 ? "selected":""}}>MPV</option>
-                        <option value="10" {{$advert->case_type_id == 10 ? "selected":""}}>Roadster</option>
-                      </select>
+                        <label for="case">Kasa Tipi</label>
+                        <select name="case" id="case" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($case_types as $case_type)
+                                @if($case_type->id == $advert->caseType->id)
+                                    <option value="{{ $case_type->id }}" selected>{{ $case_type->name }}</option>
+                                @else
+                                    <option value="{{ $case_type->id }}">{{ $case_type->name }}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
-
-
-
-
                       <div class="col-4">
                         <label for="sahibinden" class="form-label">Sahibinden.com URL</label>
                         <input type="text" class="form-control" id="sahibinden" name="sahibinden" value="{{$advert->sahibinden_url}}">
@@ -97,17 +141,19 @@
                         <input type="text" class="form-control" id="arabam" name="arabam" value="{{$advert->arabam_url}}">
                       </div>
                       <div class="col-4">
-                        <label for="status" class="form-label">Araç Durumu *</label>
-                        <select id="status" name="status" class="form-select">
-                          <option value="1" {{$advert->status_id == 1 ? "selected":""}}>Satılık</option>
-                          <option value="2" {{$advert->status_id == 2 ? "selected":""}}>Kullanımda</option>
-                          <option value="3" {{$advert->status_id == 3 ? "selected":""}}>Sahibinde</option>
-                          <option value="4" {{$advert->status_id == 4 ? "selected":""}}>Kirada</option>
-                          <option value="5" {{$advert->status_id == 5 ? "selected":""}}>Onarımda</option>
-                          <option value="6" {{$advert->status_id == 6 ? "selected":""}}>Hazırlanıyor</option>
-                        </select>
-                      </div>
+                          <label for="status">Araç Durumu *</label>
+                          <select name="status" id="status" class="js-example-basic-single js-states form-control">
+                              <option value="0">Seçiniz..</option>
+                              @foreach($statuses as $status)
+                                  @if($status->id == $advert->status->id)
+                                      <option value="{{ $status->id }}" selected>{{ $status->name }}</option>
+                                  @else
+                                      <option value="{{ $status->id }}">{{ $status->name }}</option>
+                                  @endif
 
+                              @endforeach
+                          </select>
+                      </div>
                       <div class="col-3">
                         <label for="buy_price" class="form-label">Alış Fiyatı *</label>
                         <input type="text" class="form-control" id="buy_price" name="buy_price" value="{{$advert->buy_price}}">
@@ -130,7 +176,6 @@
                     <div class="col-12">
                       <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Güncelle</a>
                     </div>
-
             </div>
         </div>
     </div>
@@ -169,6 +214,94 @@
 
 @section('script')
     <script>
+
+        const types = $("#type");
+        const brands = $("#brand");
+        const models = $("#model");
+        const gears = $("#gear");
+        const fuels = $("#fuel");
+        const colors = $("#color");
+        const case_types = $("#case");
+        const sale_types = $("#sales_type");
+        const owner = $("#owner");
+        const statuses = $("#status");
+
+        $(document).ready(function() {
+            types.select2({
+                theme: 'bootstrap-5',
+                allowClear: false
+            });
+
+            types.on('change', function() {
+                axios.get('/type/'+this.value+'/brands')
+                    .then((res)=>{
+                        $('.brands').remove();
+                        $('.models').remove();
+                        if (res.data.length != 0) {
+                            $.each(res.data,function(index, brand) {
+                                brands.append("<option class='brands' value='"+ brand.id +"'>"+ brand.name +"</option>");
+                            });
+                        }
+                    });
+            });
+
+            brands.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            brands.on('change', function() {
+                axios.get('/type/model/'+this.value+'/models')
+                    .then((res)=>{
+                        $('.models').remove();
+                        if (res.data.length != 0) {
+                            $.each(res.data,function(index, model) {
+                                models.append("<option class='models' value='"+ model.id +"'>"+ model.name +"</option>");
+                            });
+                        }
+                    });
+            });
+
+            models.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            gears.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            fuels.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            colors.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            case_types.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            sale_types.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            owner.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            statuses.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+        });
 
 $(document).ready(function(){
     id = $("#id").val();
