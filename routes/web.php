@@ -8,6 +8,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VehicleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,7 +43,7 @@ Route::controller(UserController::class)->prefix('user')->middleware('auth')->gr
     Route::post('/change-password', 'change_password');
     Route::post('/update', 'update');
     Route::post('/remove', 'remove');
-}); 
+});
 
 
 Route::controller(CustomerController::class)->prefix('/customer')->middleware('auth')->group(function(){
@@ -81,6 +82,11 @@ Route::controller(ReportController::class)->prefix('report')->middleware('auth')
 Route::controller(DocController::class)->prefix('docs')->middleware('auth')->group(function(){
     Route::get('how-to-use', 'htu');
     Route::get('support', 'support');
+});
+
+Route::controller(VehicleController::class)->prefix('type')->middleware('auth')->group(function(){
+    Route::get('{id}/brands', 'getBrands');
+    Route::get('/model/{id}/models', 'getModels');
 });
 
 Route::controller(UploadController::class)->prefix('upload')->middleware('auth')->group(function(){

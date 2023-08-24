@@ -13,19 +13,19 @@ return new class extends Migration
     {
         Schema::create('adverts', function (Blueprint $table) {
             $table->id();
-            $table->integer('vehicle_type_id');
-            $table->integer('vehicle_brand_id');
-            $table->integer('vehicle_model_id');
+            $table->foreignId('vehicle_type_id')->references('id')->on('vehicle_types')->onDelete('cascade');
+            $table->foreignId('vehicle_brand_id')->references('id')->on('vehicle_brands')->onDelete('cascade');
+            $table->foreignId('vehicle_model_id')->references('id')->on('vehicle_models')->onDelete('cascade');
             $table->string('package')->nullable();
             $table->string('motor')->nullable();
             $table->integer('km');
             $table->integer('year');
-            $table->integer('gear_id')->nullable();
-            $table->integer('fuel_id')->nullable();
-            $table->integer('color_id')->nullable();
-            $table->integer('case_type_id')->nullable();
-            $table->integer('sale_type_id');
-            $table->integer('owner_id');
+            $table->foreignId('gear_id')->references('id')->on('gears')->onDelete('cascade');
+            $table->foreignId('fuel_id')->references('id')->on('fuels')->onDelete('cascade');
+            $table->foreignId('color_id')->references('id')->on('colors')->onDelete('cascade');
+            $table->foreignId('case_type_id')->references('id')->on('case_types')->onDelete('cascade');
+            $table->foreignId('sale_type_id')->references('id')->on('sale_types')->onDelete('cascade');
+            $table->foreignId('owner_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('sahibinden_url')->nullable();
             $table->string('arabam_url')->nullable();
             $table->decimal('damage', 9,2)->nullable();
@@ -34,9 +34,11 @@ return new class extends Migration
             $table->decimal('sold_price', 9,2)->nullable();
             $table->timestamp('buy_date')->nullable();
             $table->timestamp('sold_date')->nullable();
-            $table->integer('status_id');
+            $table->foreignId('status_id')->references('id')->on('statuses')->onDelete('cascade');
+
             $table->decimal('profit')->nullable();
             $table->timestamps();
+
         });
     }
 

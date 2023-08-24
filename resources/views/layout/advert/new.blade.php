@@ -19,13 +19,31 @@
         <div class="card">
             <div class="card-body">
                 <form class="row g-3" id="advertForm">
-                    <div class="col-md-6">
-                      <label for="brand" class="form-label">Marka *</label>
-                      <input type="text" class="form-control" id="brand" name="brand" placeholder="Audi, Mercedes, BMW ...">
+                    <div class="col-md-4">
+                        <label for="type">Tip *</label>
+                        <select name="type" id="type" class="js-example-basic-single js-states form-control">
+                            @foreach($vehicleTypes as $type)
+                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                    <div class="col-md-6">
-                      <label for="model" class="form-label">Model *</label>
-                      <input type="text" class="form-control" id="model" name="model" placeholder="Passat, Megane, A6">
+                    <div class="col-md-4">
+                        <label for="type">Marka *</label>
+                        <select name="brand" id="brand" class="js-example-basic-single js-states form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($vehicleBrands as $brand)
+                                {{--<option value="{{ $brand->id }}">{{ $brand->name }}</option> --}}
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="type">Model *</label>
+                        <select name="model" id="model" class="form-control">
+                            <option value="0">Seçiniz..</option>
+                            @foreach($vehicleModels as $model)
+                                {{-- <option value="{{ $model->id }}">{{ $model->name }}</option> --}}
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-3">
                       <label for="motor" class="form-label">Motor</label>
@@ -47,19 +65,19 @@
                       <label for="gear" class="form-label">Şanzıman</label>
                       <select name="gear" id="gear" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Manuel">Manuel</option>
-                        <option value="Otomatik">Otomatik</option>
-                        <option value="Triptonik">Triptonik</option>
+                        <option value="1">Manuel</option>
+                        <option value="2">Otomatik</option>
+                        <option value="3">Triptonik</option>
                       </select>
                     </div>
                     <div class="col-3">
                       <label for="fuel" class="form-label">Yakıt</label>
                       <select name="fuel" id="fuel" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Benzin">Benzin</option>
-                        <option value="Dizel">Dizel</option>
-                        <option value="LPG">LPG</option>
-                        <option value="Elektrik">Elektrik</option>
+                        <option value="1">Benzin</option>
+                        <option value="2">Dizel</option>
+                        <option value="3">LPG</option>
+                        <option value="4">Elektrik</option>
                       </select>
                     </div>
                     <div class="col-3">
@@ -70,16 +88,16 @@
                       <label for="case" class="form-label">Kasa Tipi</label>
                       <select name="case" id="case" class="form-control">
                         <option value="0">Seçin</option>
-                        <option value="Sedan">Sedan</option>
-                        <option value="Hatchback">Hatchback</option>
-                        <option value="Station Wagon">Station Wagon</option>
-                        <option value="SUV">SUV</option>
-                        <option value="Crossover">Crossover</option>
-                        <option value="Coupe">Coupe</option>
-                        <option value="Coupe SUV">Coupe SUV</option>
-                        <option value="Convertible">Convertible</option>
-                        <option value="MPV">MPV</option>
-                        <option value="Roadster">Roadster</option>
+                        <option value="1">Sedan</option>
+                        <option value="2">Hatchback</option>
+                        <option value="3">Station Wagon</option>
+                        <option value="4">SUV</option>
+                        <option value="5">Crossover</option>
+                        <option value="6">Coupe</option>
+                        <option value="7">Coupe SUV</option>
+                        <option value="8">Convertible</option>
+                        <option value="9">MPV</option>
+                        <option value="10">Roadster</option>
                       </select>
                     </div>
 
@@ -113,7 +131,7 @@
                       <div class="col-4">
                         <label for="status" class="form-label">Araç Durumu *</label>
                         <select id="status" name="status" class="form-select">
-                          <option value="0" selected>Seçin</option>
+                          <option selected>Seçin</option>
                           <option value="1">Satılık</option>
                           <option value="2">Kullanımda</option>
                           <option value="3">Sahibinde</option>
@@ -190,6 +208,56 @@
 @section('script')
     <script>
 
+        const types = $("#type");
+        const brands = $("#brand");
+        const models = $("#model");
+
+        $(document).ready(function() {
+            types.select2({
+                theme: 'bootstrap-5',
+                allowClear: false
+            });
+
+            types.on('change', function() {
+                axios.get('/type/'+this.value+'/brands')
+                    .then((res)=>{
+                        $('.brands').remove();
+                        $('.models').remove();
+                    if (res.data.length != 0) {
+                        $.each(res.data,function(index, brand) {
+                            brands.append("<option class='brands' value='"+ brand.id +"'>"+ brand.name +"</option>");
+                        });
+                    }else{
+                        console.log("sıfır")
+                    }
+                });
+            });
+
+            brands.select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+
+            brands.on('change', function() {
+                axios.get('/type/model/'+this.value+'/models')
+                    .then((res)=>{
+                        $('.models').remove();
+                        if (res.data.length != 0) {
+                            $.each(res.data,function(index, model) {
+                                models.append("<option class='models' value='"+ model.id +"'>"+ model.name +"</option>");
+                            });
+                        }else{
+                            console.log("sıfır")
+                        }
+                    });
+            });
+
+            $('#model').select2({
+                placeholder: 'Seçiniz',
+                theme: 'bootstrap-5'
+            });
+        });
+
         $("#advertSaveBtn").on("click", function(){
             var formData = $("#advertForm").serialize();
 
@@ -243,5 +311,8 @@
           $("#profitRow").addClass('d-none');
         }
       });
+
+
+
     </script>
 @endsection

@@ -7,6 +7,9 @@ use App\Models\AdvertNote;
 use App\Models\AdvertPhoto;
 use App\Models\Expense;
 use App\Models\User;
+use App\Models\VehicleBrand;
+use App\Models\VehicleModel;
+use App\Models\VehicleType;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -15,7 +18,17 @@ class AdvertController extends Controller
 
     protected $response = ["type" => "warning", "message" => null, "status" => false];
     public function new(){
-        return view('layout.advert.new', ['users' => User::all()]);
+
+        $vehicle_types = VehicleType::all();
+        $vehicle_brands = VehicleBrand::all();
+        $vehicle_models = VehicleModel::all();
+
+        return view('layout.advert.new', [
+            'users' => User::all(),
+            'vehicleTypes' => $vehicle_types,
+            'vehicleBrands' => $vehicle_brands,
+            'vehicleModels' => $vehicle_models
+        ]);
     }
 
     public function save(Request $request){
@@ -30,10 +43,10 @@ class AdvertController extends Controller
             $adv->motor = trim(ucfirst($request->motor)) ?? null;
             $adv->km = trim(ucfirst($request->km)) ?? null;
             $adv->year = trim(ucfirst($request->year)) ?? null;
-            $adv->gear_id = 1;//trim(ucfirst($request->gear)) ?? null;
-            $adv->fuel_id = 1;//trim(ucfirst($request->fuel)) ?? null;
-            $adv->color_id = 1;//trim(ucfirst($request->color)) ?? null;
-            $adv->case_type_id = 1;//trim(ucfirst($request->case)) ?? null;
+            $adv->gear_id = $request->gear;
+            $adv->fuel_id = $request->fuel;
+            $adv->color_id = $request->color;
+            $adv->case_type_id = $request->case;
             $adv->sale_type_id = trim(ucfirst($request->sales_type));
             $adv->owner_id = trim(ucfirst($request->owner));
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden)) ?? null;
@@ -74,11 +87,11 @@ class AdvertController extends Controller
     }
 
     public function sold(){
-        return view('layout.advert.sold', ['adverts' => Advert::where('status', 7)->get()]);
+        return view('layout.advert.sold', ['adverts' => Advert::where('status_id', 7)->get()]);
     }
 
     public function on_sale(){
-        return view('layout.advert.onSale', ['adverts' => Advert::where('status', '!=', 7)->get()]);
+        return view('layout.advert.onSale', ['adverts' => Advert::where('status_id', '!=', 7)->get()]);
     }
 
     public function change_status(Request $request){
@@ -220,7 +233,7 @@ class AdvertController extends Controller
     public function update(Request $request){
 
         if(empty($request->brand) || empty($request->model) || empty($request->km) || empty($request->year) ||  empty($request->buy_price)){
-            $this->response["message"] = "Yızldız (*) ile işaretlenen alanlar zorunludur.";
+            $this->response["message"] = "Yıldız (*) ile işaretlenen alanlar zorunludur.";
         }else{
             $adv = Advert::find($request->id);
 

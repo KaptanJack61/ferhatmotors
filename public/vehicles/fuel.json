@@ -1,0 +1,11 @@
+[
+    {"type":"table","name":"arac_fuel","database":"otobul","data":
+    [
+        {"id":"1","name":"Benzin"},
+        {"id":"2","name":"Dizel"},
+        {"id":"3","name":"Benzin + LPG"},
+        {"id":"4","name":"Elektrik"},
+        {"id":"5","name":"Hybrit"}
+    ]
+    }
+]

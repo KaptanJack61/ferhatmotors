@@ -14,14 +14,17 @@ class MainController extends Controller
 {
     public function home(){
 
+        //$colors = json_decode(file_get_contents(asset('vehicles/color.json')));
+        //dd($colors);
+
         $count = [
             "user" => User::all()->count(),
             "customer" => Customer::all()->count(),
             "advert" => Advert::all()->count(),
-            "advert_sell" => Advert::where('status', '!=', 7)->get()->count(),
-            "advert_sold" => Advert::where('status', 7)->get()->count(),
+            "advert_sell" => Advert::where('status_id', '!=', 7)->get()->count(),
+            "advert_sold" => Advert::where('status_id', 7)->get()->count(),
             "expense" => Expense::sum('amount'),
-            "gain" => Advert::where('status',7)->sum('sold_price')
+            "gain" => Advert::where('status_id',7)->sum('sold_price')
         ];
 
         $lastTenAdverts = Advert::orderBy('id', 'desc')->take(10)->get();

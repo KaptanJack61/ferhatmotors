@@ -1,0 +1,10 @@
+[
+    {"type":"table","name":"arac_vites","database":"otobul","data":
+    [
+        {"id":"1","name":"Manuel"},
+        {"id":"2","name":"Otomatik"},
+        {"id":"3","name":"Triptonik"},
+        {"id":"4","name":"Multitronik"}
+    ]
+    }
+]

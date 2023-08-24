@@ -17,15 +17,15 @@ class DatabaseSeeder extends Seeder
             SystemSeeder::class,
             VehicleTypeSeeder::class,
             VehicleBrandSeeder::class,
-            VehicleModelSeeder::class
+            VehicleModelSeeder::class,
+            ColorSeeder::class,
+            GearSeeder::class,
+            FuelSeeder::class,
+            CaseTypeSeeder::class,
+            SaleTypeSeeder::class,
+            StatusSeeder::class,
         ]);
 
-        $this->command->info("Varsayılan Kullanıcı: Default User");
-        $this->command->info("Varsayılan Kullanıcı E-posta: admin@metatige.com");
-        $this->command->info("Varsayılan Kullanıcı Şifre: 1234567");
-        $this->command->info("--------");
-        $this->command->info("! Giriş yaptıktan sonra yeni bir kullanıcı oluşturun ve oturumunuzu yeniledikten sonra bu kullanıcıyı silin.");
-        $this->command->info("+-------------------------------+");
         $this->command->info("| Sistem bilgileri güncellendi |");
         $this->command->info("+-------------------------------+");
     }

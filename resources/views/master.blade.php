@@ -17,72 +17,75 @@
   <!-- End fonts -->
 
 	<!-- core:css -->
-	<link rel="stylesheet" href="/static/assets/vendors/core/core.css">
+    <link rel="stylesheet" href="{{ asset('css/core.css') }}">
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="/static/assets/fonts/feather-font/css/iconfont.css">
-	<link rel="stylesheet" href="/static/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="{{ asset('css/iconfont.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flag-icon.min.css') }}">
 	<!-- endinject -->
 
-  <!-- Layout styles -->  
-	<link rel="stylesheet" href="/static/assets/css/demo1/style.css">
+  <!-- Layout styles -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <!-- End layout styles -->
 
-  <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.22/sweetalert2.min.css"/>
-  <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
+    <link rel="shortcut icon" href="{{ asset('icon/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.min.js.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select2-bootstrap-5-theme.min.css') }}">
   @yield('style')
 </head>
 <body>
 	<div class="main-wrapper">
 
 		<!-- partial:partials/_sidebar.html -->
-		
+
         @include('src.sidebar')
-    
+
 		<!-- partial -->
-	
+
 		<div class="page-wrapper">
-					
+
 			<!-- partial:partials/_navbar.html -->
 			@include('src.topbar')
 			<!-- partial -->
 
             @yield('content')
-            
+
 
 			<!-- partial:partials/_footer.html -->
 			@include('src.footer')
 			<!-- partial -->
-		
+
 		</div>
 	</div>
 
 	<!-- core:js -->
-	<script src="/static/assets/vendors/core/core.js"></script>
+    <script src="{{ asset('js/core.js') }}"></script>
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->
-	<script src="/static/assets/vendors/feather-icons/feather.min.js"></script>
-	<script src="/static/assets/js/template.js"></script>
+    <script src="{{ asset('js/feather.min.js') }}"></script>
+    <script src="{{ asset('js/template.js') }}"></script>
 	<!-- endinject -->
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.22/sweetalert2.min.js"></script>
-	<script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/axios.min.js') }}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+    <script src="{{ asset('js/sweetalert2.min.js') }}"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/select2.full.min.js') }}"></script>
     @yield('script')
 	<!-- Custom js for this page -->
 	<!-- End custom js for this page -->
 
 </body>
-</html>    
+</html>

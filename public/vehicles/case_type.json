@@ -1,0 +1,16 @@
+[
+    {"type":"table","name":"arac_kasa","database":"otobul","data":
+    [
+        {"id":"1","name":"Sedan"},
+        {"id":"2","name":"Hatchback"},
+        {"id":"3","name":"Station Vagon"},
+        {"id":"4","name":"SUV"},
+        {"id":"5","name":"Crossover"},
+        {"id":"6","name":"Coupe"},
+        {"id":"7","name":"Coupe SUV"},
+        {"id":"8","name":"Convertible"},
+        {"id":"9","name":"MPV"},
+        {"id":"10","name":"Roadster"}
+    ]
+    }
+]

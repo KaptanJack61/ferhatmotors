@@ -12,6 +12,6 @@ class VehicleType extends Model
     public $timestamps = false;
 
     public function brands(){
-        return $this->hasMany(VehicleBrand::class);
+        return $this->hasMany(VehicleBrand::class,'vehicle_type_id','id');
     }
 }

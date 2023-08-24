@@ -27,16 +27,17 @@
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn-outline-secondary"><b>Marka: </b> {{$advert->vehicle_brand_id}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Model: </b> {{$advert->vehicle_model_id}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Tip: </b> {{$advert->type->name}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Marka: </b> {{$advert->brand->name}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Model: </b> {{$advert->model->name}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Paket: </b> {{$advert->package ?? "-"}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Motor: </b> {{$advert->motor ?? "-"}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>KM: </b> {{$advert->km}}</button>
                 <button type="button" class="btn btn-outline-secondary"><b>Yıl: </b> {{$advert->year}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Şanzıman: </b> {{$advert->gear_id ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Yakıt: </b> {{$advert->fuel_id ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Renk: </b> {{$advert->color_id ?? "-"}}</button>
-                <button type="button" class="btn btn-outline-secondary"><b>Kasa: </b> {{$advert->case_type_id ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Şanzıman: </b> {{$advert->gear->name ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Yakıt: </b> {{$advert->fuel->name ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Renk: </b> {{$advert->color->name ?? "-"}}</button>
+                <button type="button" class="btn btn-outline-secondary"><b>Kasa: </b> {{$advert->caseType->name ?? "-"}}</button>
             </div>
         </div>
     </div>
@@ -79,25 +80,16 @@
                                     @endif
                             ">
                                 <b>Araç Durumu: </b>
-                                @if ($advert->status_id == 1)
-                                        Satılık
-                                    @elseif($advert->status_id == 2)
-                                        Kullanımda
-                                    @elseif($advert->status_id == 3)
-                                        Sahibinde
-                                    @elseif($advert->status_id == 4)
-                                        Kirada
-                                    @elseif($advert->status_id == 5)
-                                        Onarımda
-                                    @elseif($advert->status_id == 6)
-                                        Hazırlanıyor
-                                    @elseif($advert->status_id == 7)
-                                        Satıldı
-                                    @else
-                                        Bilinmiyor
-                                    @endif
+                                 {{ $advert->status->name }}
                             </li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tipi: </b> {!!$advert->sale_type_id == 1 ? '<span class="badge bg-primary">Sahiplik</span>' : '<b>'.$profit.'</b><span class="badge bg-primary">Komisyon</span>'!!}</li>
+                            <li class="list-group-item justify-content-between d-flex">
+                                <b>Satış Tipi: </b>
+                                @if($advert->saleType->profit)
+                                    <b>{{ $profit }}</b><span class="badge bg-primary">{{ $advert->saleType->name }}</span>
+                                @else
+                                    <span class="badge bg-primary">{{ $advert->saleType->name }}</span>
+                                @endif
+                            </li>
                             <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {{ $advert->Owner->firstname.' '.$advert->Owner->lastname }}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->created_at)->timestamp)}}</li>

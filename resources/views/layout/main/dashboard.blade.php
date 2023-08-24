@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Pano')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Pano</h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">#</a></li>
@@ -135,27 +135,27 @@
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                         @foreach ($lastTenAdverts as $item)
                             <tr>
                             <th scope="row">{{$item->id}}</th>
-                            <td>{{$item->brand.'/'.$item->model}}</td>
-                            <td>{!! $item->sales_type == 1 ? '<span class="badge bg-primary">Sahiplik</span>': '<span class="badge bg-warning">Komisyon</span>' !!}</td>
-                            <td>{!! $item->Owner != "" ? $item->Owner->firstname.' '.$item->Owner->lastname : '<strike class="text-danger">'.$item->ownername.'</strike>' !!}</td>
+                            <td>{{$item->vehicle_brand_id.'/'.$item->vehicle_model_id}}</td>
+                            <td>{!! $item->sale_type_id == 1 ? '<span class="badge bg-primary">Sahiplik</span>': '<span class="badge bg-warning">Komisyon</span>' !!}</td>
+                            <td>{!! $item->Owner->firstname.' '.$item->Owner->lastname !!}</td>
                             <td>
-                                @if ($item->status == 1)
+                                @if ($item->status_id == 1)
                                     <span class="badge bg-warning">Satılık</span>
-                                @elseif($item->status == 2)
+                                @elseif($item->status_id == 2)
                                     <span class="badge bg-primary">Kullanımda</span>
-                                @elseif($item->status == 3)
+                                @elseif($item->status_id == 3)
                                     <span class="badge bg-info">Sahibinde</span>
-                                @elseif($item->status == 4)
+                                @elseif($item->status_id == 4)
                                     <span class="badge bg-danger">Kirada</span>
-                                @elseif($item->status == 5)
+                                @elseif($item->status_id == 5)
                                     <span class="badge bg-danger">Onarımda</span>
-                                @elseif($item->status == 6)
+                                @elseif($item->status_id == 6)
                                     <span class="badge bg-primary">Hazırlanıyor</span>
-                                @elseif($item->status == 7)
+                                @elseif($item->status_id == 7)
                                     <span class="badge bg-success">Satıldı</span>
                                 @else
                                     <span class="badge bg-secondary">Bilinmiyor</span>
@@ -163,8 +163,6 @@
                             </td>
                           </tr>
                         @endforeach
-                      
-                      
                     </tbody>
                   </table>
             </div>
