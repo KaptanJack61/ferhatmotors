@@ -7,7 +7,7 @@
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Gider Raporları </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Raporlar</a></li>
@@ -52,13 +52,13 @@
                       @foreach ($month as $m)
                       <tr>
                         <th scope="row">{{$m->id}}</th>
-                        <th scope="row"><a href="/advert/detail/{{$m->Advert->id}}">{{$m->Advert->id}}</a></th>
+                        <th scope="row"><a href="{{ route('advert-detail',$m->Advert->id) }}">{{$m->Advert->id}}</a></th>
                         <th scope="row">{{$m->type}}</th>
-                        <td>{{$m->Advert->brand.'/'.$m->Advert->model}}</td>
-                        <td>{{$m->created_at}}</td>
+                        <td>{{$m->Advert->brand->name.'/'.$m->Advert->model->name}}</td>
+                        <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $m->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($m->amount)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="5" class="">Toplam:</td>
@@ -90,13 +90,13 @@
                       @foreach ($year as $y)
                       <tr>
                         <th scope="row">{{$y->id}}</th>
-                        <th scope="row"><a href="/advert/detail/{{$y->Advert->id}}">{{$y->Advert->id}}</a></th>
+                        <th scope="row"><a href="{{ route('advert-detail',$y->Advert->id) }}">{{$y->Advert->id}}</a></th>
                         <th scope="row">{{$y->type}}</th>
-                        <td>{{$y->Advert->brand.'/'.$y->Advert->model}}</td>
-                        <td>{{$y->created_at}}</td>
+                        <td>{{$y->Advert->brand->name.'/'.$y->Advert->model->name}}</td>
+                          <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $y->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($y->amount)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="5" class="">Toplam:</td>
@@ -128,13 +128,13 @@
                       @foreach ($all as $a)
                       <tr>
                         <th scope="row">{{$a->id}}</th>
-                        <th scope="row"><a href="/advert/detail/{{$a->Advert->id}}">{{$a->Advert->id}}</a></th>
+                        <th scope="row"><a href="{{ route('advert-detail',$a->Advert->id) }}">{{$a->Advert->id}}</a></th>
                         <th scope="row">{{$a->type}}</th>
-                        <td>{{$a->Advert->brand.'/'.$a->Advert->model}}</td>
-                        <td>{{$a->created_at}}</td>
+                        <td>{{$a->Advert->brand->name.'/'.$a->Advert->model->name}}</td>
+                          <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $a->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($a->amount)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="5" class="">Toplam:</td>
@@ -192,9 +192,9 @@
                 <div class="row">
                     <div class="col-12">
                         <select id="carselect" class="form-control w-25 m-auto">
-                            <option value="0">Kullanıcı Seçin...</option>
+                            <option value="0">Araç Seçin...</option>
                             @foreach ($adverts as $advert)
-                            <option value="{{$advert->id}}">{{$advert->brand.'/'.$advert->model.' - '.$advert->year}}</option>
+                            <option value="{{$advert->id}}">{{$advert->brand->name.'/'.$advert->model->name.' - '.$advert->year}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -233,7 +233,7 @@
         $("#userselect").on("change", function(){
             var id = $(this).val();
             $("#userBody").html('');
-            axios.post('/report/get-user-expense-report', {id:id}).then((res) => {
+            axios.post('{{ route('report-get-user-expense') }}', {id:id}).then((res) => {
                 $("#userRow").removeClass('d-none');
                 var row = "";
                 res.data.expense.forEach(element => {
@@ -257,7 +257,7 @@
         $("#carselect").on("change", function(){
             var id = $(this).val();
             $("#carBody").html('');
-            axios.post('/report/get-car-expense-report', {id:id}).then((res) => {
+            axios.post('{{ route('report-get-car-expense') }}', {id:id}).then((res) => {
                 $("#carRow").removeClass('d-none');
                 var row = "";
                 res.data.expense.forEach(element => {

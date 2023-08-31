@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-      <a href="/" class="sidebar-brand">
+      <a href="{{ route('control-panel') }}" class="sidebar-brand">
         Ferhat<span>Motors</span>
       </a>
       <div class="sidebar-toggler not-active">
@@ -13,13 +13,13 @@
       <ul class="nav">
         <li class="nav-item nav-category">#</li>
         <li class="nav-item">
-          <a href="/" name="dashboard" class="nav-link">
+          <a href="{{ route('control-panel') }}" class="nav-link">
             <i class="link-icon" data-feather="command"></i>
             <span class="link-title">Pano</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/advert/sold" role="button">
+          <a class="nav-link" href="{{ route('advert-sold') }}" role="button">
             <i class="link-icon" data-feather="shopping-bag"></i>
             <span class="link-title">Satılan Araçlar</span>
           </a>
@@ -36,17 +36,17 @@
           <div class="collapse" id="adverts">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="/advert/new" class="nav-link">Yeni Araç</a>
+                <a href="{{ route('advert-new') }}" class="nav-link">Yeni Araç</a>
               </li>
               <li class="nav-item">
-                <a href="/advert/all" class="nav-link">Tüm Araçlar</a>
+                <a href="{{ route('advert-all') }}" class="nav-link">Tüm Araçlar</a>
               </li>
 
               <li class="nav-item">
-                <a href="/advert/on-sale" class="nav-link">Satıştaki Araçlar</a>
+                <a href="{{ route('advert-on-sale') }}" class="nav-link">Satıştaki Araçlar</a>
               </li>
               <li class="nav-item">
-                <a href="/advert/sold" class="nav-link">Satılan Araçlar</a>
+                <a href="{{ route('advert-sold') }}" class="nav-link">Satılan Araçlar</a>
               </li>
             </ul>
           </div>
@@ -60,10 +60,10 @@
           <div class="collapse" id="customers">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="/customer/all" class="nav-link">Tüm Müşteriler</a>
+                <a href="{{ route('customer-all') }}" class="nav-link">Tüm Müşteriler</a>
               </li>
               <li class="nav-item">
-                <a href="/customer/new" class="nav-link">Yeni Müşteri</a>
+                <a href="{{ route('customer-new') }}" class="nav-link">Yeni Müşteri</a>
               </li>
 
 
@@ -79,10 +79,10 @@
           <div class="collapse" id="users">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="/user/all" class="nav-link">Tüm Kullanıcılar</a>
+                <a href="{{ route('users') }}" class="nav-link">Tüm Kullanıcılar</a>
               </li>
               <li class="nav-item">
-                <a href="/user/new" class="nav-link">Yeni Kullanıcı</a>
+                <a href="{{ route('user-new') }}" class="nav-link">Yeni Kullanıcı</a>
               </li>
             </ul>
           </div>
@@ -97,10 +97,10 @@
           <div class="collapse" id="reports">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="/report/revenue" class="nav-link">Gelir Raporları</a>
+                <a href="{{ route('report-revenue') }}" class="nav-link">Gelir Raporları</a>
               </li>
               <li class="nav-item">
-                <a href="/report/expense" class="nav-link">Gider Raporları</a>
+                <a href="{{ route('report-expense') }}" class="nav-link">Gider Raporları</a>
               </li>
             </ul>
           </div>
@@ -108,7 +108,7 @@
 
         <li class="nav-item nav-category">Ayar</li>
         <li class="nav-item">
-          <a class="nav-link" href="/system">
+          <a class="nav-link" href="{{ route('system') }}">
             <i class="link-icon" data-feather="settings"></i>
             <span class="link-title">Sistem Ayarları</span>
           </a>
@@ -116,13 +116,13 @@
 
         <li class="nav-item nav-category">Yardım</li>
         <li class="nav-item">
-          <a class="nav-link" href="/docs/how-to-use">
+          <a class="nav-link" href="{{ route('htu') }}">
             <i class="link-icon" data-feather="hash"></i>
             <span class="link-title">Nasıl Kullanılır?</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/docs/support">
+          <a class="nav-link" href="{{ route('support') }}">
             <i class="link-icon" data-feather="hash"></i>
             <span class="link-title">Teknik Destek</span>
           </a>

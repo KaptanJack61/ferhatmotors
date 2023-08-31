@@ -139,12 +139,12 @@
                         @foreach ($lastTenAdverts as $item)
                             <tr>
                             <th scope="row">{{$item->id}}</th>
-                            <td>{{$item->brand->name.'/'.$item->model->name}}</td>
+                            <td><a class="fw-bold text-dark" href="{{ route('advert-detail', $item->id) }}">{{$item->brand->name.'/'.$item->model->name}}</a></td>
                             <td>
                                     @if($item->sale_type == 1)
-                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="/advert/detail/{{$iten->id}}">{{ $item->saleType->name }}</a></span>
+                                        <span class="badge bg-primary"><a class="fw-bold text-white" href="{{ route('advert-detail', $item->id) }}">{{ $item->saleType->name }}</a></span>
                                     @else
-                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="/advert/detail/{{$item->id}}">{{ $item->saleType->name }}</a></span>
+                                        <span class="badge bg-warning"><a class="fw-bold text-white" href="{{ route('advert-detail', $item->id) }}">{{ $item->saleType->name }}</a></span>
                                     @endif
                             </td>
                             <td>{!! $item->Owner->firstname.' '.$item->Owner->lastname !!}</td>

@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title', 'Yeni Kullanıcı')
-    
+
 @section('content')
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Yeni Kullanıcı</h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/user/all">Kullanıcılar</a></li>
@@ -32,7 +32,7 @@
                                   </div>
                             </div>
                           </div>
-                          
+
                         <div class="row mb-3">
                           <label for="email" class="col-sm-2 col-form-label">E-posta</label>
                           <div class="col-sm-10">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </form>
 @endsection
@@ -90,7 +90,7 @@
 
             formData.append('file', file);
 
-            axios.post('/upload/profile', formData, {
+            axios.post('{{ route('upload-profile') }}', formData, {
                 headers: {
                     "Content-Type" : "multipart/form-data"
                 }
@@ -105,11 +105,11 @@
         $("#saveNewUserBtn").on("click", function(){
             var formData = $("#newUserForm").serialize();
 
-            axios.post('/user/new', formData).then((res) => {
+            axios.post('{{ route('user-new') }}', formData).then((res) => {
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     setInterval(() => {
-                        window.location.assign('/user/all');
+                        window.location.assign('{{ route('users') }}');
                     }, 1000);
                 }
             });

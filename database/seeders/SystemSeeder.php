@@ -18,9 +18,9 @@ class SystemSeeder extends Seeder
         DB::statement('truncate table system_data');
 
         DB::table('system_data')->insert([
-            'site_name' => "Ferhat Motors - Metatige Dijital",
-            'site_url' => 'http://localhost',
-            'login_cover' =>  '/static/assets/images/auth-bg.jpg',
+            'site_name' => "Ferhat Motors",
+            'site_url' => 'https://ferhatmotors.com.tr',
+            'login_cover' =>  'profile/v8JXl9ZSdprsKebmfZrLpvtdP6LBRKFC6vDmLLZD.jpg',
             'site_status' => 1,
             'delivery_time' => date('Y-m-d'),
             'add_expense' => 0

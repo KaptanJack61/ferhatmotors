@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title', 'Kullanıcılar')
-    
+
 @section('content')
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Kullanıcı Listesi </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Kullanıcılar</a></li>
@@ -30,7 +30,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                       @foreach ($users as $user)
                       <tr class="align-middle">
                         <th scope="row">{{$user->id}}</th>
@@ -94,8 +94,8 @@
                                               <input type="hidden" name="fileData" id="fileData{{$user->id}}" value="{{$user->photo}}">
                                             </div>
                                           </div>
-                                        
-                                        
+
+
                                       </form>
                                 </div>
                                 <div class="modal-footer">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                       @endforeach
-                      
+
                     </tbody>
                   </table>
                   <a href="/user/new" class="btn btn-outline-primary btn-xs float-end" data-bs-toggle="tooltip" title="Bilgileri Güncelle"><i width="10" data-feather="plus"></i> Yeni Kullanıcı Oluştur</a>
@@ -143,7 +143,7 @@
 
 
 
-  
+
 @endsection
 
 @section('script')
@@ -159,7 +159,7 @@
             let user_id = $("#user_id").val();
             let pass = $("#password").val();
 
-            axios.post('/user/change-password', {user_id:user_id, pass:pass}).then((res)=>{
+            axios.post('{{ route('user-post-change-password') }}', {user_id:user_id, pass:pass}).then((res)=>{
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     $("#changePassModal").modal('hide')
@@ -176,8 +176,8 @@
             console.log(file);
             var formData = new FormData();
             formData.append('file', file);
-            
-            axios.post('/upload/profile', formData, {
+
+            axios.post('{{ route('upload-profile') }}', formData, {
                 headers: {
                     "Content-Type" : "multipart/form-data"
                 }
@@ -201,7 +201,7 @@
             var id = $(this).attr('user-id');
             var formData = $("#editForm"+id).serialize();
 
-            axios.post('/user/update', formData).then((res) => {
+            axios.post('{{ route('user-update') }}', formData).then((res) => {
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     setInterval(() => {
@@ -226,7 +226,7 @@
           }).then((result) => {
             if (result.isConfirmed) {
 
-              axios.post('/user/remove', {id:id}).then((res)=>{
+              axios.post('{{ route('user-remove') }}', {id:id}).then((res)=>{
                 Swal.fire(
                   res.data.title,
                   res.data.message,
@@ -240,7 +240,7 @@
               })
 
 
-              
+
             }
           })
         })

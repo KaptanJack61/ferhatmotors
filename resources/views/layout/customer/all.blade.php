@@ -1,12 +1,12 @@
 @extends('master')
 
 @section('title', 'Müşteriler')
-    
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Müşteri Listesi </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Müşteriler</a></li>
@@ -30,7 +30,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      
+
                       @foreach ($customers as $customer)
                       <tr class="align-middle">
                         <th scope="row">{{$customer->id}}</th>
@@ -38,7 +38,7 @@
                         <td>{{$customer->email}}</td>
                         <td>{{$customer->phone}}</td>
                         <td class="text-end" id="{{$customer->id}}">
-                            <a href="/customer/detail/{{$customer->id}}" class="btn btn-primary btn-xs" data-bs-toggle="tooltip" title="Detay"><i width="10" data-feather="eye"></i></a>
+                            <a href="{{ route('customer-detail',$customer->id) }}" class="btn btn-primary btn-xs" data-bs-toggle="tooltip" title="Detay"><i width="10" data-feather="eye"></i></a>
                             <a href="javascript:;" class="btn btn-info btn-xs editInfoBtn" data-bs-toggle="tooltip" title="Bilgileri Güncelle"><i width="10" data-feather="edit"></i></a>
                         </td>
                       </tr>
@@ -83,9 +83,9 @@
                                             </div>
                                           </div>
 
-                                          
-                                        
-                                        
+
+
+
                                       </form>
                                 </div>
                                 <div class="modal-footer">
@@ -96,10 +96,10 @@
                             </div>
                         </div>
                       @endforeach
-                      
+
                     </tbody>
                   </table>
-                  <a href="/customer/new" class="btn btn-outline-primary btn-xs float-end"><i width="10" data-feather="plus"></i> Yeni Müşteri Oluştur</a>
+                  <a href="{{ route('customer-new') }}" class="btn btn-outline-primary btn-xs float-end"><i width="10" data-feather="plus"></i> Yeni Müşteri Oluştur</a>
             </div>
         </div>
     </div>
@@ -109,7 +109,7 @@
 
 @section('script')
     <script>
-    
+
 
 
         $(".editInfoBtn").on("click", function(){
@@ -123,7 +123,7 @@
             var id = $(this).attr('customer-id');
             var formData = $("#editForm"+id).serialize();
 
-            axios.post('/customer/update', formData).then((res) => {
+            axios.post('{{ route('customer-update') }}', formData).then((res) => {
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     setInterval(() => {

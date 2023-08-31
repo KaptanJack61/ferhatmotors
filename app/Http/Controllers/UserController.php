@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -58,7 +59,7 @@ class UserController extends Controller
                     $user->email     = trim($request->email);
                     $user->phone     = trim($request->phone);
                     $user->photo     = trim($request->fileData);
-                    
+
                     if($user->save()){
                         $this->response["type"] = "success";
                         $this->response["message"] = "Bilgiler Güncellendi!";
@@ -86,7 +87,7 @@ class UserController extends Controller
     }
 
     public function newUser(Request $request){
-        
+
         if(empty($request->firstname) || empty($request->lastname) || empty($request->email) || empty($request->phone) || empty($request->password) || empty($request->fileData)){
             $this->response["message"] = "Boş alan bırakmayın!";
         }elseif(strlen($request->password) < 6){
@@ -119,24 +120,35 @@ class UserController extends Controller
     }
 
     public function remove(Request $request){
-        
-
         if($request->id){
-            $user = User::find($request->id);
-            if($user){
-                if($user->delete()){
-                    $this->response["type"] = "success";
-                    $this->response["title"] = "İşlem Başarılı";
-                    $this->response["message"] = "Kullanıcıyı başarıyla sildiniz.";
-                    $this->response["status"] = true;
-                }else{
+            if (!in_array($request->id,[1,2])) {
+                if (!$request->id == Auth::user()->id) {
+                    $user = User::find($request->id);
+                    if($user){
+                        if($user->delete()){
+                            $this->response["type"] = "success";
+                            $this->response["title"] = "İşlem Başarılı";
+                            $this->response["message"] = "Kullanıcıyı başarıyla sildiniz.";
+                            $this->response["status"] = true;
+                        }else{
+                            $this->response["type"] = "error";
+                            $this->response["title"] = "SYSTEM_ERROR";
+                        }
+                    }else{
+                        $this->response["type"] = "error";
+                        $this->response["title"] = "SYSTEM_ERROR";
+                    }
+                }else {
                     $this->response["type"] = "error";
                     $this->response["title"] = "SYSTEM_ERROR";
+                    $this->response["message"] = "Kendi kullanıcınızı silemezsiniz.";
                 }
-            }else{
+            }else {
                 $this->response["type"] = "error";
                 $this->response["title"] = "SYSTEM_ERROR";
+                $this->response["message"] = "Bu kullanıcıyı silemezsiniz.";
             }
+
         }else{
             $this->response["type"] = "error";
             $this->response["title"] = "SYSTEM_ERROR";

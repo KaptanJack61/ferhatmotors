@@ -55,7 +55,7 @@ class ReportController extends Controller
 
                 return response(['expense' => $expense, 'userprice' => currency_format($userprice)]);
             }
-        } 
+        }
     }
 
     public function get_car_expense_report(Request $request){
