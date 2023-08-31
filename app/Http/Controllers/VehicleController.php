@@ -9,16 +9,16 @@ use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
-    public function getBrands($id) {
+    public function getBrands(Request $request) {
 
-        $vehicle_type = VehicleType::find($id);
+        $vehicle_type = VehicleType::find($request->id);
 
         return $vehicle_type->brands;
     }
 
-    public function getModels($id) {
+    public function getModels(Request $request) {
 
-        $vehicle_brand = VehicleBrand::find($id);
+        $vehicle_brand = VehicleBrand::find($request->id);
 
         return $vehicle_brand->models;
     }

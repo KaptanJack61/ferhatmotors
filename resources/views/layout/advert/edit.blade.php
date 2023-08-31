@@ -1,16 +1,16 @@
 @extends('master')
 
-@section('title', 'Yeni İlan')
+@section('title', 'İlan Düzenle')
 
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
-    <h4 class="page-title">Yeni İlan </h4>
+    <h4 class="page-title">İlan Düzenle </h4>
 
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/advert">İlanlar</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Yeni İlan</li>
+        <li class="breadcrumb-item"><a href="{{ route('advert-all') }}">İlanlar</a></li>
+        <li class="breadcrumb-item active" aria-current="page">İlan Düzenle</li>
     </ol>
 </nav>
 </div>
@@ -213,170 +213,10 @@
 @endsection
 
 @section('script')
-    <script>
 
-        const types = $("#type");
-        const brands = $("#brand");
-        const models = $("#model");
-        const gears = $("#gear");
-        const fuels = $("#fuel");
-        const colors = $("#color");
-        const case_types = $("#case");
-        const sale_types = $("#sales_type");
-        const owner = $("#owner");
-        const statuses = $("#status");
+    @include('layout.advert.script.script-brands')
+    @include('layout.advert.script.script-photo-owner')
+    @include('layout.advert.script.script-save',['name' => 'advert-update'])
+    @include('layout.advert.script.script-edit')
 
-        $(document).ready(function() {
-            types.select2({
-                theme: 'bootstrap-5',
-                allowClear: false
-            });
-
-            types.on('change', function() {
-                axios.get('/type/'+this.value+'/brands')
-                    .then((res)=>{
-                        $('.brands').remove();
-                        $('.models').remove();
-                        if (res.data.length != 0) {
-                            $.each(res.data,function(index, brand) {
-                                brands.append("<option class='brands' value='"+ brand.id +"'>"+ brand.name +"</option>");
-                            });
-                        }
-                    });
-            });
-
-            brands.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            brands.on('change', function() {
-                axios.get('/type/model/'+this.value+'/models')
-                    .then((res)=>{
-                        $('.models').remove();
-                        if (res.data.length != 0) {
-                            $.each(res.data,function(index, model) {
-                                models.append("<option class='models' value='"+ model.id +"'>"+ model.name +"</option>");
-                            });
-                        }
-                    });
-            });
-
-            models.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            gears.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            fuels.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            colors.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            case_types.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            sale_types.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            owner.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            statuses.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-        });
-
-$(document).ready(function(){
-    id = $("#id").val();
-    axios.post('/upload/get-photos/', {id:id}).then((res) => {
-
-        var photoArray = res.data.map(item => item.file);
-
-        // Diziyi virgül ile ayırıp tek bir string haline getir
-        var photoDataString = photoArray.join(',');
-
-        // Elde edilen string'i #photodata inputuna yazdır
-        $("#photodata").val(photoDataString);
-
-        // Dizideki resim yollarını önizleme olarak eklemek için döngü
-        for (let i = 0; i < res.data.length; i++) {
-           // $("#photoPreview").append('<img src="/storage/'+res.data[i].file+'" class="wd-50 border-5 m-2" alt="...">');
-        }
-    });
-});
-
-
-        $("#advertSaveBtn").on("click", function(){
-            var formData = $("#advertForm").serialize();
-
-            axios.post('/advert/update', formData).then((res)=>{
-                toastr[res.data.type](res.data.message);
-                if(res.data.status){
-                    setInterval(() => {
-                        window.location.assign('/advert/detail/'+res.data.id);
-                    }, 1000);
-                }
-            });
-        });
-
-        $("#photo").on("change", function(e) {
-          var files = e.target.files;
-
-          console.log(files);
-
-          var formData = new FormData();
-
-          for (var i = 0; i < files.length; i++) {
-              formData.append('photos[]', files[i]);
-          }
-
-          axios.post('/upload/photos', formData, {
-              headers: {
-                  'Content-Type': 'multipart/form-data'
-              }
-          }).then((res) => {
-              toastr[res.data.type](res.data.message);
-              if (res.data.status) {
-                  $("#photodata").val(res.data.paths);
-                  $("#photoLine").removeClass('d-none');
-                  for (let i = 0; i < res.data.paths.length; i++) {
-                    $("#photoPreview").append('<img src="/storage/'+res.data.paths[i]+'" class="wd-50 border-5 m-2" alt="...">');
-                  }
-              }
-          }).catch((error) => {
-              console.error(error);
-          });
-      });
-      $("#owner").on("change", function(){
-        if($(this).val() != 0){
-          $("#ownername").val($("#owner :selected").html());
-        }
-      });
-
-      $(".delImg").on("click", function(){
-        var id = $(this).attr('id');
-        axios.post('/advert/delete/photo', {id:id}).then((res) => {
-          if(res.data.status){
-            window.location.reload();
-          }
-        })
-      })
-    </script>
 @endsection

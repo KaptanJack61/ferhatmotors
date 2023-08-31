@@ -89,7 +89,7 @@ class AdvertController extends Controller
                 }
                 $this->response["type"] = "success";
                 $this->response["message"] = "İlan oluşturuldu";
-                $this->response["id"] = $adv->id;
+                $this->response["link"] = route('advert-detail',$adv->id);
                 $this->response["status"] = true;
             }else{
                 $this->response["type"] = "error";
@@ -126,6 +126,10 @@ class AdvertController extends Controller
             $advert = Advert::find($request->id);
             if($advert){
                 $advert->status_id = $request->status;
+                if (!$advert->status->sold){
+                    $advert->sold_price = null;
+                }
+
                 if($advert->save()){
                     $this->response["type"] = "success";
                     $this->response["message"] = "Durum Güncellendi!";
@@ -321,6 +325,7 @@ class AdvertController extends Controller
                 $this->response["message"] = "İlan güncellendi";
                 $this->response["id"] = $adv->id;
                 $this->response["status"] = true;
+                $this->response["link"] = route('advert-detail',$adv->id);
             }else{
                 $this->response["type"] = "error";
                 $this->response["message"] = "SYSTEM_ERROR";

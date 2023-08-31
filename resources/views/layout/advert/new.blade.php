@@ -113,6 +113,12 @@
                         <input type="hidden" name="ownername" id="ownername">
                       </div>
 
+                    <div class="col--md-12 d-none" id="profitRow">
+                        <h2 class="card-title d-flex justify-content-between">Komisyon Oranı</h2>
+                        <input type="text" name="profit" id="profit" class="form-control" placeholder="10, 10.000..." value="0">
+                        <p class="text-muted mt-2">Yüzdelik kar oranı ya da doğrudan rakam girin.</p>
+                    </div>
+
                       <div class="col-4">
                         <label for="sahibinden" class="form-label">Sahibinden.com URL</label>
                         <input type="text" class="form-control" id="sahibinden" name="sahibinden" placeholder="https://www.sahibinden.com/ilan/vasita-otomobil-...">
@@ -137,7 +143,7 @@
                       </div>
 
                       <div class="col-3">
-                        <label for="sell_price" class="form-label">Satış Fiyatı</label>
+                        <label for="sell_price" class="form-label">İstenen Fiyat</label>
                         <input type="text" class="form-control" id="sell_price" name="sell_price" placeholder="1.000.000">
                       </div>
                       <div class="col-3">
@@ -171,16 +177,7 @@
             </div>
         </div>
         </div>
-        <div class="row mb-3 d-none" id="profitRow">
-          <div class="card">
-            <div class="card-body">
-                <div class="col-12 ">
-                    <h2 class="card-title d-flex justify-content-between">Komisyon Oranı</h2>
-                    <input type="text" name="profit" id="profit" class="form-control" placeholder="10, 10.000..." value="0">
-                    <p class="text-muted mt-2">Yüzdelik kar oranı ya da doğrudan rakam girin.</p>
-                  </div>
-            </div>
-        </div>
+        <div class="row mb-3 d-none">
         </div>
         <div id="photoLine" class="row d-none">
           <div class="card">
@@ -195,151 +192,10 @@
 @endsection
 
 @section('script')
-    <script>
 
-        const types = $("#type");
-        const brands = $("#brand");
-        const models = $("#model");
-        const gears = $("#gear");
-        const fuels = $("#fuel");
-        const colors = $("#color");
-        const case_types = $("#case");
-        const sale_types = $("#sales_type");
-        const owner = $("#owner");
-        const statuses = $("#status");
+    @include('layout.advert.script.script-brands')
+    @include('layout.advert.script.script-photo-owner')
+    @include('layout.advert.script.script-save',['name' => 'advert-save'])
+    @include('layout.advert.script.script-new')
 
-        $(document).ready(function() {
-            types.select2({
-                theme: 'bootstrap-5',
-                allowClear: false
-            });
-
-            types.on('change', function() {
-                axios.get('/type/'+this.value+'/brands')
-                    .then((res)=>{
-                        $('.brands').remove();
-                        $('.models').remove();
-                    if (res.data.length != 0) {
-                        $.each(res.data,function(index, brand) {
-                            brands.append("<option class='brands' value='"+ brand.id +"'>"+ brand.name +"</option>");
-                        });
-                    }
-                });
-            });
-
-            brands.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            brands.on('change', function() {
-                axios.get('/type/model/'+this.value+'/models')
-                    .then((res)=>{
-                        $('.models').remove();
-                        if (res.data.length != 0) {
-                            $.each(res.data,function(index, model) {
-                                models.append("<option class='models' value='"+ model.id +"'>"+ model.name +"</option>");
-                            });
-                        }
-                    });
-            });
-
-            models.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            gears.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            fuels.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            colors.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            case_types.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            sale_types.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            owner.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-
-            statuses.select2({
-                placeholder: 'Seçiniz',
-                theme: 'bootstrap-5'
-            });
-        });
-
-        $("#advertSaveBtn").on("click", function(){
-            var formData = $("#advertForm").serialize();
-
-            axios.post('/advert/save', formData).then((res)=>{
-                toastr[res.data.type](res.data.message);
-                if(res.data.status){
-                    setInterval(() => {
-                        window.location.assign('/advert/detail/'+res.data.id);
-                    }, 1000);
-                }
-            });
-        });
-
-        $("#photo").on("change", function(e) {
-          var files = e.target.files;
-
-          console.log(files);
-
-          var formData = new FormData();
-
-          for (var i = 0; i < files.length; i++) {
-              formData.append('photos[]', files[i]);
-          }
-
-          axios.post('/upload/photos', formData, {
-              headers: {
-                  'Content-Type': 'multipart/form-data'
-              }
-          }).then((res) => {
-              toastr[res.data.type](res.data.message);
-              if (res.data.status) {
-                  $("#photodata").val(res.data.paths);
-                  $("#photoLine").removeClass('d-none');
-                  for (let i = 0; i < res.data.paths.length; i++) {
-                    $("#photoPreview").append('<img src="/storage/'+res.data.paths[i]+'" class="wd-50 border-5 m-2" alt="...">');
-                  }
-              }
-          }).catch((error) => {
-              console.error(error);
-          });
-      });
-      $("#owner").on("change", function(){
-        if($(this).val() != 0){
-          $("#ownername").val($("#owner :selected").html());
-        }
-      });
-      $("#sales_type").on("change", function(){
-        if($(this).val() == 2){
-          $("#profitRow").removeClass('d-none');
-        }else{
-          $("#profitRow").addClass('d-none');
-        }
-      });
-
-
-
-    </script>
 @endsection

@@ -55,20 +55,20 @@ Route::controller(CustomerController::class)->prefix('/customer')->middleware('a
 });
 
 Route::controller(AdvertController::class)->prefix('advert')->middleware('auth')->group(function(){
-    Route::get('/new', 'new');
-    Route::get('/all', 'all');
-    Route::get('/detail/{id}', 'detail');
-    Route::get('/edit/{id}', 'edit');
-    Route::get('/sold', 'sold');
-    Route::get('/on-sale', 'on_sale');
-    Route::post('/save', 'save');
-    Route::post('/update', 'update');
-    Route::post('/change-status', 'change_status');
-    Route::post('/add-note', 'add_note');
-    Route::post('/sell', 'sell');
-    Route::post('/add-expense', 'add_expense');
-    Route::post('/delete', 'delete');
-    Route::post('/delete/photo', 'delete_photo');
+    Route::get('/new', 'new')->name('advert-new');
+    Route::get('/all', 'all')->name('advert-all');
+    Route::get('/detail/{id}', 'detail')->name('advert-detail');
+    Route::get('/edit/{id}', 'edit')->name('advert-edit');
+    Route::get('/sold', 'sold')->name('advert-sold');
+    Route::get('/on-sale', 'on_sale')->name('advert-on-sale');
+    Route::post('/save', 'save')->name('advert-save');
+    Route::post('/update', 'update')->name('advert-update');
+    Route::post('/change-status', 'change_status')->name('advert-change-status');
+    Route::post('/add-note', 'add_note')->name('advert-add-note');
+    Route::post('/sell', 'sell')->name('advert-sell');
+    Route::post('/add-expense', 'add_expense')->name('advert-add-expense');
+    Route::post('/delete', 'delete')->name('advert-delete');
+    Route::post('/delete/photo', 'delete_photo')->name('advert-delete-photo');
 });
 
 Route::controller(ReportController::class)->prefix('report')->middleware('auth')->group(function(){
@@ -85,12 +85,12 @@ Route::controller(DocController::class)->prefix('docs')->middleware('auth')->gro
 });
 
 Route::controller(VehicleController::class)->prefix('type')->middleware('auth')->group(function(){
-    Route::get('{id}/brands', 'getBrands');
-    Route::get('/model/{id}/models', 'getModels');
+    Route::post('brands', 'getBrands')->name('get-brands');
+    Route::post('/model/models', 'getModels')->name('get-models');
 });
 
 Route::controller(UploadController::class)->prefix('upload')->middleware('auth')->group(function(){
     Route::post('/profile', 'profile');
-    Route::post('/photos', 'photos');
-    Route::post('/get-photos', 'get_photos');
+    Route::post('/photos', 'photos')->name('upload-photos');
+    Route::post('/get-photos', 'get_photos')->name('get-photos');
 });
