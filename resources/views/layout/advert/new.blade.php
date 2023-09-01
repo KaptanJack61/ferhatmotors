@@ -50,11 +50,11 @@
                     </div>
                     <div class="col-3">
                       <label for="km" class="form-label">KM *</label>
-                      <input type="text" class="form-control" id="km" name="km" placeholder="300.000, 450.000 ...">
+                      <input type="text" class="form-control" id="km" name="km" placeholder="300.000, 450.000 ..." maxlength="6" onkeypress="return isNumericKey(event)">
                     </div>
                     <div class="col-3">
                       <label for="year" class="form-label">Yıl *</label>
-                      <input type="text" class="form-control" id="year" name="year" placeholder="2000, 2023 ...">
+                      <input type="text" class="form-control" id="year" name="year" placeholder="2000, 2023 ..." maxlength="4" minlength="4" onkeypress="return isNumericKey(event)">
                     </div>
                     <div class="col-3">
                         <label for="type">Şanzıman</label>

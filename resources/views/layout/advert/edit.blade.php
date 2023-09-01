@@ -72,11 +72,11 @@
                     </div>
                     <div class="col-3">
                       <label for="km" class="form-label">KM *</label>
-                      <input type="text" class="form-control" id="km" name="km" value="{{$advert->km}}">
+                      <input type="text" class="form-control" id="km" name="km" value="{{$advert->km}}" maxlength="6" onkeypress="return isNumericKey(event)">
                     </div>
                     <div class="col-3">
                       <label for="year" class="form-label">Yıl *</label>
-                      <input type="text" class="form-control" id="year" name="year" value="{{$advert->year}}">
+                      <input type="text" class="form-control" id="year" name="year" value="{{$advert->year}}" maxlength="4" minlength="4" onkeypress="return isNumericKey(event)">
                     </div>
                     <div class="col-3">
                         <label for="gear">Şanzıman</label>
