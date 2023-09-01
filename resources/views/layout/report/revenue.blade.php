@@ -7,7 +7,7 @@
 <div class="page-content">
 <div class="d-flex justify-content-between">
     <h4 class="page-title">Gelir Raporları </h4>
-    
+
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Raporlar</a></li>
@@ -47,11 +47,11 @@
                       @foreach ($month as $m)
                       <tr>
                         <th scope="row">{{$m->id}}</th>
-                        <td>{{$m->brand.'/'.$m->model}}</td>
-                        <td>{{$m->sold_date}}</td>
+                        <td><a href="{{ route('advert-detail', $m->id) }}">{{$m->brand->name.'/'.$m->model->name}}</a></td>
+                        <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $m->sold_date)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($m->sold_price)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="3" class="">Toplam:</td>
@@ -81,11 +81,11 @@
                       @foreach ($year as $y)
                       <tr>
                         <th scope="row">{{$y->id}}</th>
-                        <td>{{$y->brand.'/'.$y->model}}</td>
-                        <td>{{$y->sold_date}}</td>
+                          <td><a href="{{ route('advert-detail', $y->id) }}">{{$y->brand->name.'/'.$y->model->name}}</a></td>
+                          <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $y->sold_date)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($y->sold_price)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="3" class="">Toplam:</td>
@@ -115,11 +115,11 @@
                       @foreach ($all as $a)
                       <tr>
                         <th scope="row">{{$a->id}}</th>
-                        <td>{{$a->brand.'/'.$a->model}}</td>
-                        <td>{{$y->sold_date}}</td>
+                          <td><a href="{{ route('advert-detail', $a->id) }}">{{$a->brand->name.'/'.$a->model->name}}</a></td>
+                          <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $a->sold_date)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($a->sold_price)}} ₺</td>
                       </tr>
-                      
+
                       @endforeach
                       <tr class="fw-bold text-end">
                         <td colspan="3" class="">Toplam:</td>
@@ -173,22 +173,22 @@
 @endsection
 
 @section('script')
-    <script src="/static/assets/js/jQuery.print.min.js"></script>
+    <script src="{{ asset('/static/assets/js/jQuery.print.min.js') }}"></script>
 
     <script>
         $("#userselect").on("change", function(){
             var id = $(this).val();
             $("#userBody").html('');
-            axios.post('/report/get-user-report', {id:id}).then((res) => {
+            axios.post('{{ route('report-get-user') }}', {id:id}).then((res) => {
                 $("#userRow").removeClass('d-none');
                 var row = "";
                 res.data.useradvert.forEach(element => {
                     row += '<tr>';
-                    row += '<td>'+element.id+'</td>';
+                    row += '<td>'+element.advert+'</td>';
                     row += '<td>'+element.brand+' '+element.model+'</td>';
                     row += '<td>'+element.sold_date+'</td>';
                     row += '<td class="text-end">'+element.sold_price+' ₺</td>';
-                    row += '</td>';
+                    row += '</tr>';
                 });
                 row += '<tr class="fw-bold text-end">';
                     row += '<td colspan="3" class="">Toplam:</td>';

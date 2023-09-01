@@ -3,9 +3,9 @@
 @section('title', 'Araç Detayları')
 
 @section('style')
-<link rel="stylesheet" href="/static/assets/vendors/owl.carousel/owl.carousel.min.css">
-<link rel="stylesheet" href="/static/assets/vendors/owl.carousel/owl.theme.default.min.css">
-<link rel="stylesheet" href="/static/assets/vendors/animate.css/animate.min.css">
+<link rel="stylesheet" href="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/static/assets/vendors/owl.carousel/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/static/assets/vendors/animate.css/animate.min.css') }}">
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
 
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/advert">Araçlar</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('advert-all') }}">Araçlar</a></li>
         <li class="breadcrumb-item" aria-current="page">Araç Detayları</li>
         <li class="breadcrumb-item active" aria-current="page"># {{$advert->id}}</li>
     </ol>
@@ -141,41 +141,50 @@
             </div>
         </div>
 
-        <div class="row mb-3">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="{{$advert->sahibinden_url}}" target="_blank" class="btn text-white btn-warning w-100 mb-2">SAHİBİNDEN.COM</a>
-                        <a href="{{$advert->arabam_url}}" target="_blank" class="btn btn-danger w-100">ARABAM.COM</a>
+        @if ($advert->status->sold == false)
+            @if($advert->sahibinden_url != null or $advert->arabam_url != null)
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                @if($advert->sahibinden_url != null)
+                                    <a href="{{$advert->sahibinden_url}}" target="_blank" class="btn text-white btn-warning w-100 mb-2">SAHİBİNDEN.COM</a>
+                                @endif
+
+                                @if($advert->arabam_url != null)
+                                    <a href="{{$advert->arabam_url}}" target="_blank" class="btn btn-danger w-100">ARABAM.COM</a>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            @endif
+        @endif
 
         <div class="row mb-3">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        @if ($advert->status_id == 7)
+                        @if ($advert->status->sold == true)
                         <div class="alert alert-primary" role="alert">
-                            Bu ilan <b>{{$advert->sold_date}}</b> tarihinde <u>Satıldı</u> olarak işaretlendiği için değişiklik yapamazsınız.
+                            Bu ilan <b>{{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->sold_date)->timestamp)}}</b> tarihinde <u>Satıldı</u> olarak işaretlendiği için değişiklik yapamazsınız.
                         </div>
                         @else
-                        <a href="/advert/edit/{{$advert->id}}" class="btn text-white btn-primary w-100 mb-2">İlanı Düzenle</a>
+                        <a href="{{ route('advert-edit',$advert->id) }}" class="btn text-white btn-primary w-100 mb-2">İlanı Düzenle</a>
 
                         @if ($system->add_expense == 0)
-                            <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense">Masraf Ekle</a>
+                            <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}">Masraf Ekle</a>
 
                         @else
                             @if(Auth::user()->id == $advert->user_id)
-                            <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense">Masraf Ekle</a>
+                            <a href="javascript:;" class="btn text-white btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addExpense{{$advert->id}}">Masraf Ekle</a>
                             @endif
                         @endif
 
 
-                        <a href="javascript:;" class="btn btn-info w-100 mb-2" data-bs-toggle="modal" data-bs-target="#changeStatusModal">İlan Durumunu Değiştir</a>
-                        <a href="javascript:;" class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addNote">İlana Not Ekle</a>
-                        <a href="javascript:;" class="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#sell">Satıldı Olarak İşaretle</a>
+                        <a href="javascript:;" class="btn btn-info w-100 mb-2" data-bs-toggle="modal" data-bs-target="#changeStatusModal{{$advert->id}}">İlan Durumunu Değiştir</a>
+                        <a href="javascript:;" class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#addNote{{$advert->id}}">İlana Not Ekle</a>
+                        <a href="javascript:;" class="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#sell{{$advert->id}}">Satıldı Olarak İşaretle</a>
                         <a href="javascript:;" class="btn btn-danger w-100 mb-2" id="delete" data-id="{{$advert->id}}">İlanı Sil</a>
                         @endif
                     </div>
@@ -222,7 +231,7 @@
                                     <span class="text-muted text-center">
                                         {{$item->User->firstname.' '.$item->User->lastname}}
                                         <br>
-                                        {{date_format($item->created_at,"d M, Y")}}
+                                        {{date_format($item->created_at,"d.m.Y")}}
                                     </span>
                                     <p class="px-4" >₺{{currency_format($item->amount)}}</p>
                                 </li>
@@ -260,7 +269,7 @@
                                     <span class="text-muted text-center">
                                         {{$item->User->firstname.' '.$item->User->lastname}}
                                         <br>
-                                        {{date_format($item->created_at,"d M, Y")}}
+                                        {{date_format($item->created_at,"d.m.Y")}}
                                     </span>
                                 </li>
                             @endforeach
@@ -277,62 +286,10 @@
     </div>
 </div>
 
-
-<div class="modal fade" id="changeStatusModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Durumu Değiştir</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <select class="form-control" id="new_status" advert-id="{{$advert->id}}">
-                <option value="1" {{$advert->status_id == 1 ? "selected":""}}>Satılık</option>
-                <option value="2" {{$advert->status_id == 2 ? "selected":""}}>Kullanımda</option>
-                <option value="3" {{$advert->status_id == 3 ? "selected":""}}>Sahibinde</option>
-                <option value="4" {{$advert->status_id == 4 ? "selected":""}}>Kirada</option>
-                <option value="5" {{$advert->status_id == 5 ? "selected":""}}>Onarımda</option>
-                <option value="6" {{$advert->status_id == 6 ? "selected":""}}>Hazırlanıyor</option>
-            </select>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="addNote" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Not Ekle</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-            <textarea class="form-control" id="note" cols="30" rows="10" placeholder="Notunuzu girin..."></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="saveNote" advert-id="{{$advert->id}}">Kaydet</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="sell" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Satış Yap</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <label for="amount" class="mb-2">Satış Tutarı:</label>
-            <input type="text" class="form-control" id="amount" placeholder="100.000">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="saveSell" advert-id="{{$advert->id}}">Satışı Onayla</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    @include('layout.advert.modal.modal-change-status',['id' => $advert->id, 'advertStatusId' => $advert->status->id])
+    @include('layout.advert.modal.modal-add-note',['id' => $advert->id])
+    @include('layout.advert.modal.modal-sale',['id' => $advert->id])
+    @include('layout.advert.modal.modal-add-expense',['id' => $advert->id])
 
   <div class="modal fade" id="addExpense" tabindex="-1">
     <div class="modal-dialog">
@@ -361,64 +318,28 @@
 @endsection
 
 @section('script')
-<script src="/static/assets/vendors/owl.carousel/owl.carousel.min.js"></script>
-<script src="/static/assets/vendors/jquery-mousewheel/jquery.mousewheel.js"></script>
-<script src="/static/assets/js/carousel.js"></script>
+    <script src="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/static/assets/vendors/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
+    <script src="{{ asset('/static/assets/js/carousel.js') }}"></script>
 
+    @include('layout.advert.script.script-list')
     <script>
-        $("#new_status").on("change", function(){
-        var id = $(this).attr('advert-id');
-        var status = $(this).val();
 
-        axios.post('/advert/change-status', {id:id, status:status}).then((res) => {
-            toastr[res.data.type](res.data.message);
-            if(res.data.status){
-                setInterval(() => {
-                    window.location.reload();
-                }, 500);
-            }
-        });
-    });
-    $("#saveNote").on("click", function(){
-        var note = $("#note").val();
-        var id   = $(this).attr('advert-id');
+        $(".saveExpense").on("click", function(){
+            var id   = $(this).attr('advert-id');
+            var type = $("#expenseType"+id).val();
+            var amount = $("#expenseAmount"+id).val();
 
-        axios.post('/advert/add-note', {id:id,note:note}).then((res) => {
-            toastr[res.data.type](res.data.message);
-            if(res.data.status){
-                setInterval(() => {
-                    window.location.reload();
-                }, 500);
-            }
+            axios.post('{{ route('advert-add-expense') }}', {id:id, type:type, amount:amount}).then((res) => {
+                toastr[res.data.type](res.data.message);
+                if(res.data.status){
+                    setInterval(() => {
+                        window.location.reload();
+                    }, 500);
+                }
+            });
         });
-    });
-    $("#saveSell").on("click", function(){
-        var id   = $(this).attr('advert-id');
-        var amount = $("#amount").val();
 
-        axios.post('/advert/sell', {id:id, amount:amount}).then((res) => {
-            toastr[res.data.type](res.data.message);
-            if(res.data.status){
-                setInterval(() => {
-                    window.location.reload();
-                }, 500);
-            }
-        });
-    });
-    $("#saveExpense").on("click", function(){
-        var id   = $(this).attr('advert-id');
-        var type = $("#expenseType").val();
-        var amount = $("#expenseAmount").val();
-
-        axios.post('/advert/add-expense', {id:id, type:type, amount:amount}).then((res) => {
-            toastr[res.data.type](res.data.message);
-            if(res.data.status){
-                setInterval(() => {
-                    window.location.reload();
-                }, 500);
-            }
-        });
-    });
     $("#delete").on("click", function(){
         var id = $(this).attr('data-id');
         Swal.fire({
@@ -432,7 +353,7 @@
         }).then((result) => {
         if (result.isConfirmed) {
 
-            axios.post('/advert/delete', {id:id}).then((res) => {
+            axios.post('{{ route('advert-delete') }}', {id:id}).then((res) => {
                 Swal.fire(
                     res.data.title,
                     res.data.message,
@@ -440,7 +361,7 @@
                 )
                 if(res.data.status){
                     setInterval(() => {
-                        window.location.assign('/advert/all');
+                        window.location.assign('{{ route('advert-all') }}');
                     }, 500);
                 }
             })

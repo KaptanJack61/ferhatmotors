@@ -67,6 +67,6 @@ class Advert extends Model
     }
 
     public function Expense(){
-        return $this->hasMany(Expense::class, 'advert', 'id')->orderBy('id','desc');
+        return $this->hasMany(Expense::class, 'advert_id', 'id')->orderBy('id','desc');
     }
 }

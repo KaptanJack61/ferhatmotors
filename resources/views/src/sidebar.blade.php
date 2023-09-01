@@ -13,13 +13,13 @@
       <ul class="nav">
         <li class="nav-item nav-category">#</li>
         <li class="nav-item">
-          <a href="{{ route('control-panel') }}" class="nav-link">
+          <a href="{{ route('control-panel') }}" class="nav-link" aria-controls="dashboard">
             <i class="link-icon" data-feather="command"></i>
-            <span class="link-title">Pano</span>
+            <span class="link-title passive">Pano</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('advert-sold') }}" role="button">
+          <a class="nav-link" href="{{ route('advert-sold') }}" role="button" aria-controls="adverts">
             <i class="link-icon" data-feather="shopping-bag"></i>
             <span class="link-title">Satılan Araçlar</span>
           </a>

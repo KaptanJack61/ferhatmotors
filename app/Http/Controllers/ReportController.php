@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class ReportController extends Controller
 {
     public function revenue(){
-        $month = Advert::where('status', 7)->whereMonth('sold_date', now()->month)->whereYear('sold_date', now()->year)->get();
-        $year  = Advert::where('status', 7)->whereYear('sold_date', now()->year)->get();
-        $all   = Advert::where('status', 7)->get();
+        $month = Advert::where('sold_price', '!=', null)->whereMonth('sold_date', now()->month)->whereYear('sold_date', now()->year)->get();
+        $year  = Advert::where('sold_price', '!=', null)->whereYear('sold_date', now()->year)->get();
+        $all   = Advert::where('sold_price', '!=', null)->get();
 
         $monthprice = $month->sum('sold_price');
         $yearprice = $year->sum('sold_price');
@@ -38,10 +38,23 @@ class ReportController extends Controller
         if($request->id){
             $user = User::find($request->id);
             if($user){
-                $adv = Advert::where('user',$user->id)->where('status', 7)->get();
+
+                $adv = Advert::query();
+                $adv->join('vehicle_brands','vehicle_brands.id','=','adverts.vehicle_brand_id');
+                $adv->join('vehicle_models','vehicle_models.id','=', 'adverts.vehicle_model_id');
+                $adv->where('adverts.owner_id',$user->id);
+                $adv->select(
+                    'adverts.sold_price',
+                    'adverts.sold_date',
+                    'adverts.id as advert',
+                    'vehicle_brands.name as brand',
+                    'vehicle_models.name as model',
+                );
+
+                //$adv = Advert::where('owner_id',$user->id)->where('sold_price', '!=', null)->get();
                 $userprice = $adv->sum('sold_price');
 
-                return response(['useradvert' => $adv, 'userprice' => currency_format($userprice)]);
+                return response(['useradvert' => $adv->get(), 'userprice' => currency_format($userprice)]);
             }
         }
 
@@ -50,10 +63,22 @@ class ReportController extends Controller
         if($request->id){
             $user = User::find($request->id);
             if($user){
-                $expense = Expense::where('user', $user->id)->with('Advert')->get();
+
+                $expense = Expense::query();
+                $expense->join('adverts','adverts.id','=','expense.advert_id');
+                $expense->join('vehicle_brands','vehicle_brands.id','=','adverts.vehicle_brand_id');
+                $expense->join('vehicle_models','vehicle_models.id','=', 'adverts.vehicle_model_id');
+                $expense->where('expense.user_id',$user->id);
+                $expense->select(
+                    'expense.*',
+                    'adverts.id as advert',
+                    'vehicle_brands.name as brand',
+                    'vehicle_models.name as model',
+                );
+
                 $userprice = $expense->sum('amount');
 
-                return response(['expense' => $expense, 'userprice' => currency_format($userprice)]);
+                return response(['expense' => $expense->get(), 'userprice' => currency_format($userprice)]);
             }
         }
     }
@@ -62,10 +87,24 @@ class ReportController extends Controller
         if($request->id){
             $advert = Advert::find($request->id);
             if($advert){
-                $expense = Expense::where('advert', $advert->id)->with('Advert')->get();
+
+                $expense = Expense::query();
+                $expense->join('adverts','adverts.id','=','expense.advert_id');
+                $expense->join('vehicle_brands','vehicle_brands.id','=','adverts.vehicle_brand_id');
+                $expense->join('vehicle_models','vehicle_models.id','=', 'adverts.vehicle_model_id');
+                $expense->where('expense.advert_id',$advert->id);
+                $expense->select(
+                    'expense.*',
+                    'adverts.id as advert',
+                    'vehicle_brands.name as brand',
+                    'vehicle_models.name as model',
+                );
+
+
+                //$expense = Expense::where('advert_id', $advert->id)->with('Advert')->get();
                 $carprice = $expense->sum('amount');
 
-                return response(['expense' => $expense, 'carprice' => currency_format($carprice)]);
+                return response(['expense' => $expense->get(), 'carprice' => currency_format($carprice)]);
             }
         }
     }

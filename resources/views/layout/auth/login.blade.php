@@ -1,14 +1,14 @@
 @extends('auth')
 
 @section('title', 'Oturum Aç')
-    
+
 @section('content')
 <div class="row w-100 mx-0 auth-page">
     <div class="col-md-8 col-xl-6 mx-auto">
         <div class="card">
             <div class="row">
 <div class="col-md-4 pe-md-0">
-  <div class="auth-side-wrapper" style="background: url('{{$system->login_cover}}')">
+  <div class="auth-side-wrapper" style="background: url('{{asset($system->login_cover)}}')">
 
   </div>
     </div>
@@ -26,14 +26,14 @@
                 <label for="password" class="form-label">Şifre</label>
                 <input type="password" class="form-control" id="password" autocomplete="current-password" placeholder="Şifreniz">
             </div>
-            
+
             <div>
-                
+
                     <button id="loginBtn" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Oturum Aç</button>
-               
-                
+
+
             </div>
-            
+
             </form>
             @else
             <div class="alert alert-danger" role="alert">
@@ -52,11 +52,11 @@
             let email = $("#email").val();
             let password = $("#password").val();
 
-            axios.post('/auth/login', {email:email,password:password}).then((res)=>{
+            axios.post('{{ route('login-post') }}', {email:email,password:password}).then((res)=>{
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     setInterval(() => {
-                        window.location.assign("/")
+                        window.location.assign("{{ route('control-panel') }}")
                     }, 1000);
                 }
             })

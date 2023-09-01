@@ -12,10 +12,10 @@ class Expense extends Model
     protected $table = "expense";
 
     public function User(){
-        return $this->belongsTo(User::class, 'user', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public function Advert(){
-        return $this->hasOne(Advert::class, 'id', 'advert');
+        return $this->hasOne(Advert::class, 'id', 'advert_id');
     }
 }

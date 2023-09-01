@@ -20,7 +20,7 @@ class SystemSeeder extends Seeder
         DB::table('system_data')->insert([
             'site_name' => "Ferhat Motors",
             'site_url' => 'https://ferhatmotors.com.tr',
-            'login_cover' =>  'profile/v8JXl9ZSdprsKebmfZrLpvtdP6LBRKFC6vDmLLZD.jpg',
+            'login_cover' =>  'static/assets/images/auth-bg.jpg',
             'site_status' => 1,
             'delivery_time' => date('Y-m-d'),
             'add_expense' => 0

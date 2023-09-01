@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'lastname' => 'Kalaycı',
             'email' => 'hamdikalayci@gmail.com',
             'phone' => '5616111154',
-            'photo' => '/static/assets/images/profile-user.png',
+            'photo' => 'profile/nzbS3i9czCpF3oItvCYnlGPU2zRnK6eBceZKLaGY.jpg',
             'password' => Hash::make('54Kaptan.')
         ]);
 

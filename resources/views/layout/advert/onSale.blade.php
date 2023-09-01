@@ -9,7 +9,7 @@
 
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/advert">Araçlar</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('advert-all') }}">Araçlar</a></li>
         <li class="breadcrumb-item active" aria-current="page">Satıştaki İlanlar</li>
     </ol>
 </nav>

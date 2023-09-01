@@ -128,6 +128,7 @@ class AdvertController extends Controller
                 $advert->status_id = $request->status;
                 if (!$advert->status->sold){
                     $advert->sold_price = null;
+                    $advert->sold_date = null;
                 }
 
                 if($advert->save()){
@@ -174,13 +175,14 @@ class AdvertController extends Controller
 
         if($request->id){
             $advert = Advert::find($request->id);
+            $status = Status::where('sold',true)->get();
             if($advert){
                 if(empty($request->amount)){
                     $this->response["message"] = "Tutar girin...";
                 }else{
                     $advert->sold_price = $request->amount;
                     $advert->sold_date  = date('Y-m-d');
-                    $advert->status_id = 7;
+                    $advert->status_id = $status[0]->id;
 
                     if($advert->save()){
                         $this->response["type"] = "success";
@@ -198,13 +200,14 @@ class AdvertController extends Controller
 
     public function detail($id){
         $advert = Advert::find($id);
-        $totalExpense = Expense::where('advert', $id)->sum('amount');
+        $totalExpense = Expense::where('advert_id', $id)->sum('amount');
+        $statuses = Status::all();
         if($advert->profit < 100){
             $profit = '%'.$advert->profit;
         }else{
             $profit = '₺'.$advert->profit;
         }
-        return view('layout.advert.detail', ['advert' => $advert, 'profit' => $profit, 'totalExpense' => $totalExpense]);
+        return view('layout.advert.detail', ['advert' => $advert, 'profit' => $profit, 'totalExpense' => $totalExpense, 'statuses' => $statuses]);
     }
 
     public function add_expense(Request $request){
@@ -216,8 +219,8 @@ class AdvertController extends Controller
                     $this->response["message"] = "Boş alan bırakmayın!";
                 }else{
                     $exp = new Expense;
-                    $exp->advert = $request->id;
-                    $exp->user = Auth::user()->id;
+                    $exp->advert_id = $request->id;
+                    $exp->user_id = Auth::user()->id;
                     $exp->type = trim(ucfirst($request->type));
                     $exp->amount = $request->amount;
                     if($exp->save()){

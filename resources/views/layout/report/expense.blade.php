@@ -54,7 +54,7 @@
                         <th scope="row">{{$m->id}}</th>
                         <th scope="row"><a href="{{ route('advert-detail',$m->Advert->id) }}">{{$m->Advert->id}}</a></th>
                         <th scope="row">{{$m->type}}</th>
-                        <td>{{$m->Advert->brand->name.'/'.$m->Advert->model->name}}</td>
+                        <td><a href="{{ route('advert-detail',$m->Advert->id) }}">{{$m->Advert->brand->name.'/'.$m->Advert->model->name}}</a></td>
                         <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $m->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($m->amount)}} ₺</td>
                       </tr>
@@ -92,7 +92,7 @@
                         <th scope="row">{{$y->id}}</th>
                         <th scope="row"><a href="{{ route('advert-detail',$y->Advert->id) }}">{{$y->Advert->id}}</a></th>
                         <th scope="row">{{$y->type}}</th>
-                        <td>{{$y->Advert->brand->name.'/'.$y->Advert->model->name}}</td>
+                          <td><a href="{{ route('advert-detail',$m->Advert->id) }}">{{$m->Advert->brand->name.'/'.$m->Advert->model->name}}</a></td>
                           <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $y->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($y->amount)}} ₺</td>
                       </tr>
@@ -130,7 +130,7 @@
                         <th scope="row">{{$a->id}}</th>
                         <th scope="row"><a href="{{ route('advert-detail',$a->Advert->id) }}">{{$a->Advert->id}}</a></th>
                         <th scope="row">{{$a->type}}</th>
-                        <td>{{$a->Advert->brand->name.'/'.$a->Advert->model->name}}</td>
+                          <td><a href="{{ route('advert-detail',$m->Advert->id) }}">{{$m->Advert->brand->name.'/'.$m->Advert->model->name}}</a></td>
                           <td>{{date('d.m.Y H:i',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $a->created_at)->timestamp)}}</td>
                         <td class="text-end">{{currency_format($a->amount)}} ₺</td>
                       </tr>
@@ -205,8 +205,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">İlan ID</th>
-                                    <th scope="col">Harcama</th>
+                                    <th scope="col">Araç No</th>
+                                    <th scope="col">Harcama Tipi</th>
                                     <th scope="col">Marka / Model</th>
                                     <th scope="col">Tarih</th>
                                     <th scope="col" class="text-end">Tutar</th>
@@ -239,12 +239,12 @@
                 res.data.expense.forEach(element => {
                     row += '<tr>';
                     row += '<td>'+element.id+'</td>';
-                    row += '<td>'+element.advert.id+'</td>';
+                    row += '<td>'+element.advert+'</td>';
                     row += '<td>'+element.type+'</td>';
-                    row += '<td>'+element.advert.brand+' '+element.advert.model+'</td>';
+                    row += '<td>'+element.brand+' '+element.model+'</td>';
                     row += '<td>'+element.amount+'</td>';
                     row += '<td class="text-end">'+element.amount+' ₺</td>';
-                    row += '</td>';
+                    row += '</tr>';
                 });
                 row += '<tr class="fw-bold text-end">';
                     row += '<td colspan="5" class="">Toplam:</td>';
@@ -263,12 +263,12 @@
                 res.data.expense.forEach(element => {
                     row += '<tr>';
                     row += '<td>'+element.id+'</td>';
-                    row += '<td>'+element.advert.id+'</td>';
+                    row += '<td>'+element.advert+'</td>';
                     row += '<td>'+element.type+'</td>';
-                    row += '<td>'+element.advert.brand+' '+element.advert.model+'</td>';
+                    row += '<td>'+element.brand+' '+element.model+'</td>';
                     row += '<td>'+element.amount+'</td>';
                     row += '<td class="text-end">'+element.amount+' ₺</td>';
-                    row += '</td>';
+                    row += '</tr>';
                 });
                 row += '<tr class="fw-bold text-end">';
                     row += '<td colspan="5" class="">Toplam:</td>';

@@ -7,7 +7,7 @@
     var footer = $('footer');
     var sidebar = $('.sidebar');
     var navbar = $('.navbar').not('.top-navbar');
-    
+
 
     // Enable feather-icons with SVG markup
     feather.replace();
@@ -45,7 +45,7 @@
     })
 
 
-    // Applying perfect-scrollbar 
+    // Applying perfect-scrollbar
     if ($('.sidebar .sidebar-body').length) {
       const sidebarBodyScroll = new PerfectScrollbar('.sidebar-body');
     }
@@ -105,9 +105,9 @@
      var current = location.pathname;
     //Add active class to nav-link based on url dynamically
     function addActiveClass(element) {
-        if (current === "/") {
+        if (current === "/dashboard") {
           //for root url
-          if (element.attr('name').indexOf("/dashboard") !== 1) {
+          if (element.attr('name').indexOf("/") !== 1) {
             element.parents('.nav-item').last().addClass('active');
             if (element.parents('.sub-menu').length) {
               element.closest('.collapse').addClass('show');
@@ -128,18 +128,17 @@
           }
         }
     }
-console.log(location.pathname)
-      
+
       $('.nav li a', sidebar).each(function() {
         var $this = $(this);
         addActiveClass($this);
-        
+
       });
 
     $('.horizontal-menu .nav li a').each(function() {
       var $this = $(this);
       addActiveClass($this);
-      
+
     })
 
 
@@ -157,7 +156,7 @@ console.log(location.pathname)
     });
 
 
-    // close sidebar when click outside on mobile/table    
+    // close sidebar when click outside on mobile/table
     $(document).on('click touchstart', function(e){
       e.stopPropagation();
 
@@ -186,7 +185,7 @@ console.log(location.pathname)
           navItemClicked.removeClass('show-submenu');
         }
         $(this).toggleClass('show-submenu');
-      }        
+      }
     })
 
     $(window).scroll(function() {
@@ -207,7 +206,7 @@ console.log(location.pathname)
     }, function () {
       $('body').removeClass('overflow-hidden');
     });
-   
+
 
   });
 })(jQuery);
