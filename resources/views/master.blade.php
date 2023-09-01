@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="{{ asset('css/select2-bootstrap-5-theme.min.css') }}">
   @yield('style')
 </head>
-<body>
+<body class="sidebar-dark">
 	<div class="main-wrapper">
 
 		<!-- partial:partials/_sidebar.html -->

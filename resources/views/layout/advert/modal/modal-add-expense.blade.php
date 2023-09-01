@@ -12,7 +12,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="expenseAmount{{$id}}" class="form-label">Masraf Tutarı</label>
-                    <input type="text" class="form-control" id="expenseAmount{{$id}}" placeholder="5.000, 2.000 ...">
+                    <input type="text" class="form-control" id="expenseAmount{{$id}}" placeholder="₺0.00"
+                           data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                 </div>
             </div>
             <div class="modal-footer">

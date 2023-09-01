@@ -139,16 +139,19 @@
 
                       <div class="col-3">
                         <label for="buy_price" class="form-label">Alış Fiyatı *</label>
-                        <input type="text" class="form-control" id="buy_price" name="buy_price" placeholder="500.000">
+                        <input type="text" class="form-control" id="buy_price" name="buy_price" placeholder="₺0.00"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
 
                       <div class="col-3">
                         <label for="sell_price" class="form-label">İstenen Fiyat</label>
-                        <input type="text" class="form-control" id="sell_price" name="sell_price" placeholder="1.000.000">
+                        <input type="text" class="form-control" id="sell_price" name="sell_price" placeholder="₺0.00"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
                       <div class="col-3">
                         <label for="damage" class="form-label">Hasar Kaydı</label>
-                        <input type="text" class="form-control" id="damage" name="damage" placeholder="100.000">
+                        <input type="text" class="form-control" id="damage" name="damage" placeholder="₺0.000"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
 
                       <div class="col-3">
@@ -192,7 +195,7 @@
 @endsection
 
 @section('script')
-
+    <script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
     @include('layout.advert.script.script-brands')
     @include('layout.advert.script.script-photo-owner')
     @include('layout.advert.script.script-save',['name' => 'advert-save'])

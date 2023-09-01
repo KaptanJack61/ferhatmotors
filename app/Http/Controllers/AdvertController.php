@@ -53,6 +53,7 @@ class AdvertController extends Controller
     public function save(Request $request){
         if(empty($request->brand) || empty($request->model) || empty($request->km) || empty($request->year) || $request->sales_type == 0|| $request->owner == 0 || empty($request->buy_price)){
             $this->response["message"] = "Yıldız (*) ile işaretlenen alanlar zorunludur.";
+
         }else{
             $adv = new Advert;
             $adv->vehicle_type_id = trim(ucfirst($request->type));
@@ -71,10 +72,11 @@ class AdvertController extends Controller
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden)) ?? null;
             $adv->arabam_url = trim(ucfirst($request->arabam)) ?? null;
             $adv->status_id = $request->status;
-            $adv->buy_price = $request->buy_price;
-            $adv->sell_price = $request->sell_price;
+            $adv->buy_price = getCurrencyToNumber($request->buy_price);
+            $adv->sell_price = getCurrencyToNumber($request->sell_price);
             $adv->buy_date = trim(ucfirst($request->buy_date)) ?? null;
-            $adv->damage = $request->damage ?? null;
+            if ($request->damage)
+                $adv->damage = getCurrencyToNumber($request->damage);
             $adv->profit = $request->profit;
 
             if($adv->save()){
@@ -180,7 +182,7 @@ class AdvertController extends Controller
                 if(empty($request->amount)){
                     $this->response["message"] = "Tutar girin...";
                 }else{
-                    $advert->sold_price = $request->amount;
+                    $advert->sold_price = getCurrencyToNumber($request->amount);
                     $advert->sold_date  = date('Y-m-d');
                     $advert->status_id = $status[0]->id;
 
@@ -222,7 +224,7 @@ class AdvertController extends Controller
                     $exp->advert_id = $request->id;
                     $exp->user_id = Auth::user()->id;
                     $exp->type = trim(ucfirst($request->type));
-                    $exp->amount = $request->amount;
+                    $exp->amount = getCurrencyToNumber($request->amount);
                     if($exp->save()){
                         $this->response["type"] = "success";
                         $this->response["message"] = "Harcama eklendi.";
@@ -309,10 +311,10 @@ class AdvertController extends Controller
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden));
             $adv->arabam_url = trim(ucfirst($request->arabam));
             $adv->status_id = $request->status;
-            $adv->buy_price = $request->buy_price;
-            $adv->sell_price = $request->sell_price;
+            $adv->buy_price = getCurrencyToNumber($request->buy_price);
+            $adv->sell_price = getCurrencyToNumber($request->sell_price);
             $adv->buy_date = trim(ucfirst($request->buy_date));
-            $adv->damage = $request->damage;
+            $adv->damage = getCurrencyToNumber($request->damage);
 
             if($adv->save()){
                 if(!empty($request->photodata)){

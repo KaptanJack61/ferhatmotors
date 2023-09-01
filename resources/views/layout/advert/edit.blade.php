@@ -156,16 +156,19 @@
                       </div>
                       <div class="col-3">
                         <label for="buy_price" class="form-label">Alış Fiyatı *</label>
-                        <input type="text" class="form-control" id="buy_price" name="buy_price" value="{{$advert->buy_price}}">
+                        <input type="text" class="form-control" id="buy_price" name="buy_price" value="₺{{number_format($advert->buy_price, 2)}}" placeholder="₺0.00"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
 
                       <div class="col-3">
                         <label for="sell_price" class="form-label">Satış Fiyatı</label>
-                        <input type="text" class="form-control" id="sell_price" name="sell_price" value="{{$advert->sell_price}}">
+                        <input type="text" class="form-control" id="sell_price" name="sell_price" value="₺{{number_format($advert->sell_price, 2)}}" placeholder="₺0.00"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
                       <div class="col-3">
                         <label for="damage" class="form-label">Hasar Kaydı</label>
-                        <input type="text" class="form-control" id="damage" name="damage" value="{{$advert->damage}}">
+                        <input type="text" class="form-control" id="damage" name="damage" value="₺{{number_format($advert->damage, 2)}}" placeholder="₺0.00"
+                               data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
                       </div>
 
                       <div class="col-3">

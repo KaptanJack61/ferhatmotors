@@ -319,6 +319,7 @@
     <script src="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('/static/assets/vendors/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
     <script src="{{ asset('/static/assets/js/carousel.js') }}"></script>
+    <script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
 
     @include('layout.advert.script.script-list')
     <script>
@@ -366,5 +367,11 @@
         }
         })
     });
+
+        $(document).ready(function() {
+            $('#expenseAmount{{$advert->id}}').inputmask('999.999.999');
+            $('#amount{{$advert->id}}').inputmask('999.999.999');
+
+        });
     </script>
 @endsection
