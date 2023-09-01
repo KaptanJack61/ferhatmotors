@@ -11,7 +11,7 @@
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
-    <h4 class="page-title">İlan Detayları</h4>
+    <h4 class="page-title">Araç Detayları</h4>
 
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
@@ -93,13 +93,11 @@
                             <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {{ $advert->Owner->firstname.' '.$advert->Owner->lastname }}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->created_at)->timestamp)}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b>
-                                @if($advert->sold_date)
+                            @if($advert->sold_date)
+                                <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b>
                                     {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->sold_date)->timestamp)}}
-                                @else
-                                -
-                                @endif
-                            </li>
+                                </li>
+                            @endif
                           </ul>
                     </div>
                 </div>
@@ -115,9 +113,11 @@
                             <li class="list-group-item justify-content-between d-flex"><b>Toplam Harcama: </b> ₺{{currency_format($totalExpense)}}</li>
                             <li class="list-group-item justify-content-between d-flex text-danger fw-bold"><b>Toplam Maliyet: </b> ₺{{currency_format($advert->buy_price + $totalExpense)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İstenen Fiyat: </b> ₺{{currency_format($advert->sell_price) ?? "-"}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> {{$advert->sold_price ? "₺".currency_format($advert->sold_price):"-"}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Bilanço: </b>
-                                @if($advert->sold_price)
+                            @if($advert->sold_price)
+                                <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> {{$advert->sold_price}} ₺</li>
+                            @endif
+                            @if($advert->sold_price)
+                                <li class="list-group-item justify-content-between d-flex"><b>Bilanço: </b>
                                     @if($advert->sold_price - $advert->buy_price + $totalExpense > 0)
                                         <span class="fw-bold text-success">
                                         {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Kazanç"}}
@@ -131,10 +131,8 @@
                                         {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Zarar"}}
                                     </span>
                                     @endif
-                                @else
-                                    -
-                                @endif
-                            </li>
+                                </li>
+                            @endif
                           </ul>
                     </div>
                 </div>
@@ -203,12 +201,12 @@
                       @if ($advert->Photos->count() > 0)
                         @foreach ($advert->Photos as $photo)
                         <div class="item">
-                            <img src="/storage/{{$photo->file}}" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
+                            <img src="{{ asset('storage/'.$photo->file) }}" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
                         </div>
                         @endforeach
                         @else
                         <div class="item">
-                            <img src="/static/assets/images/photo.jpg" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
+                            <img src="{{ asset('/static/assets/images/photo.jpg') }}" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
                           </div>
                       @endif
                     </div>
