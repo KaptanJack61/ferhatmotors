@@ -44,8 +44,7 @@
 </div>
 
 <div class="row">
-    <div class="col-4">
-
+    <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 col-xxl-4">
         <div class="row mb-3">
             <div class="col">
                 <div class="card">
@@ -192,7 +191,7 @@
 
 
     </div>
-    <div class="col-8">
+    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 col-xxl-8">
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
