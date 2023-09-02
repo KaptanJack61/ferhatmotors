@@ -133,11 +133,11 @@
                             @endforeach
                         </select>
                     </div>
-                      <div class="col-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+                      <div class="col-6 col-sm-6 col-lg-6 col-xl-4 col-xxl-4">
                         <label for="sahibinden" class="form-label">Sahibinden.com URL</label>
                         <input type="text" class="form-control" id="sahibinden" name="sahibinden" value="{{$advert->sahibinden_url}}">
                       </div>
-                      <div class="col-6 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+                      <div class="col-6 col-sm-6 col-lg-6 col-xl-4 col-xxl-4">
                         <label for="arabam" class="form-label">Arabam.com URL</label>
                         <input type="text" class="form-control" id="arabam" name="arabam" value="{{$advert->arabam_url}}">
                       </div>
@@ -195,7 +195,7 @@
             <div class="card-body">
                 <div class="col-12 ">
                     <h2 class="card-title d-flex justify-content-between">Fotoğraf
-                      <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a>
+                      <!-- <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a> -->
 
                     </h2>
                     <input type="file" name="photos[]" id="photo" multiple>

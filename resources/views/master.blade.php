@@ -7,6 +7,7 @@
   <meta name="description" content="{{env('APP_DESCRIPTION')}}">
 	<meta name="author" content="{{env('APP_AUTHOR')}}">
 	<meta name="keywords" content="{{env('APP_TAGS')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<title>@yield('title') - {{env('APP_NAME')}}</title>
 

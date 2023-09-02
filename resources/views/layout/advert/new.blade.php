@@ -183,7 +183,7 @@
             <div class="card-body">
                 <div class="col-12 ">
                     <h2 class="card-title d-flex justify-content-between">Fotoğraf
-                      <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a>
+                      <!-- <a href="#" class="btn btn-primary btn-sm"><i style="width:12px" data-feather="plus"></i></a>-->
 
                     </h2>
                     <input type="file" name="photos[]" id="photo" multiple>
