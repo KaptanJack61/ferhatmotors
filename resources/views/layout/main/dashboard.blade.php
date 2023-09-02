@@ -16,7 +16,7 @@
 </div>
 
 <div class="row">
-    <div class="col-4 grid-margin stretch-card">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 grid-margin stretch-card">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 grid-margin stretch-card">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -58,65 +58,63 @@
           </div>
         </div>
       </div>
-</div>
 
-<div class="row">
-    <div class="col-3 grid-margin stretch-card">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-baseline">
-              <h6 class="card-title mb-4">Satıştaki İlan</h6>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-4">Satıştaki İlan</h6>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-2">{{$count["advert_sell"]}}</h3>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <h3 class="mb-2">{{$count["advert_sell"]}}</h3>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col-3 grid-margin stretch-card">
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-baseline">
-              <h6 class="card-title mb-4">Satılan İlan</h6>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-4">Satılan İlan</h6>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-2">{{$count["advert_sold"]}}</h3>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <h3 class="mb-2">{{$count["advert_sold"]}}</h3>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col-3 grid-margin stretch-card">
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-baseline">
-              <h6 class="card-title mb-4">Toplam Harcama</h6>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-4">Toplam Harcama</h6>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-2">{{currency_format($count["expense"])}} ₺</h3>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <h3 class="mb-2">{{currency_format($count["expense"])}} ₺</h3>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col-3 grid-margin stretch-card">
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 grid-margin stretch-card">
         <div class="card">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-baseline">
-              <h6 class="card-title mb-4">Toplam Kazanç</h6>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-4">Toplam Kazanç</h6>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-2">{{currency_format($count["gain"])}} ₺</h3>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <h3 class="mb-2">{{currency_format($count["gain"])}} ₺</h3>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 </div>
 
 <div class="row">

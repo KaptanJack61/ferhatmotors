@@ -91,11 +91,11 @@
                                 @endif
                             </li>
                             <li class="list-group-item justify-content-between d-flex"><b>Araç Sahibi: </b> {{ $advert->Owner->firstname.' '.$advert->Owner->lastname }}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->buy_date)->timestamp)}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b> {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->created_at)->timestamp)}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Alım Tarihi: </b> {{\Carbon\Carbon::parse($advert->buy_date)->format('d.m.Y')}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>İlan Tarihi: </b>  {{\Carbon\Carbon::parse($advert->created_at)->format('d.m.Y')}}</li>
                             @if($advert->sold_date)
                                 <li class="list-group-item justify-content-between d-flex"><b>Satış Tarihi: </b>
-                                    {{date('d.m.Y',\Carbon\Carbon::createFromFormat('Y-m-d H:m:s', $advert->sold_date)->timestamp)}}
+                                    {{\Carbon\Carbon::parse($advert->sold_date)->format('d.m.Y')}}
                                 </li>
                             @endif
                           </ul>

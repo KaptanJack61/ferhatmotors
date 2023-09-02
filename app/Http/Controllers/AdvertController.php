@@ -16,6 +16,7 @@ use App\Models\User;
 use App\Models\VehicleBrand;
 use App\Models\VehicleModel;
 use App\Models\VehicleType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -74,7 +75,8 @@ class AdvertController extends Controller
             $adv->status_id = $request->status;
             $adv->buy_price = getCurrencyToNumber($request->buy_price);
             $adv->sell_price = getCurrencyToNumber($request->sell_price);
-            $adv->buy_date = trim(ucfirst($request->buy_date)) ?? null;
+            if ($request->buy_date)
+                $adv->buy_date = Carbon::parse($request->buy_date)->format('Y-m-d H:i:s');
             if ($request->damage)
                 $adv->damage = getCurrencyToNumber($request->damage);
             $adv->profit = $request->profit;
@@ -313,7 +315,8 @@ class AdvertController extends Controller
             $adv->status_id = $request->status;
             $adv->buy_price = getCurrencyToNumber($request->buy_price);
             $adv->sell_price = getCurrencyToNumber($request->sell_price);
-            $adv->buy_date = trim(ucfirst($request->buy_date));
+            if ($request->buy_date)
+                $adv->buy_date = Carbon::parse($request->buy_date)->format('Y-m-d H:i:s');
             $adv->damage = getCurrencyToNumber($request->damage);
 
             if($adv->save()){
