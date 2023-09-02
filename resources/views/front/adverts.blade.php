@@ -34,7 +34,7 @@
 
                                 @if(count($advert->photos) != 0)
                                     @foreach($advert->photos as $photo)
-                                        <img src="{{ asset($photo->file) }}" alt="" width="320" height="214">
+                                        <img src="{{ asset("storage/".$photo->file) }}" alt="" width="320" height="214">
                                         @break
                                     @endforeach
                                 @else
