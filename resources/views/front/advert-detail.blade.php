@@ -41,7 +41,7 @@
                         @php($x=0)
                         @foreach($advert->photos as $photo)
                             <div class="carousel-item {{ $x == 0 ? "active":""}}">
-                                <img class="d-block w-100" src="{{ asset($photo->file) }}" alt="Test" >
+                                <img class="d-block w-100" src="{{ asset('storage/'.$photo->file) }}" alt="Test" >
                             </div>
                         @php($x++)
                         @endforeach
