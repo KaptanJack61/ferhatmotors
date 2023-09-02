@@ -34,6 +34,7 @@ return new class extends Migration
             $table->decimal('sold_price', 9,2)->nullable();
             $table->timestamp('buy_date')->nullable();
             $table->timestamp('sold_date')->nullable();
+            $table->text('description')->nullable();
             $table->foreignId('status_id')->references('id')->on('statuses')->onDelete('cascade');
 
             $table->decimal('profit')->nullable();

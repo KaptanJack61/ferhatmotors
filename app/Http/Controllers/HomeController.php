@@ -25,4 +25,10 @@ class HomeController extends Controller
             'adverts' => $adverts,
         ]);
     }
+
+    public function advertDetail (Advert $advert){
+        return view('front.advert-detail', [
+            'advert' => $advert
+        ]);
+    }
 }

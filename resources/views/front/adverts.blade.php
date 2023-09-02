@@ -57,11 +57,10 @@
 
                                 <p class="text-center">
                                     <span class="text-dark font-weight-bold mt-0">
-                                        {{date('d.m.Y',$advert->created_at->timestamp)}}
                                     </span>
                                 </p>
                                 <ul class="social-icons">
-                                    <li><a href="car-details.html">+ Araç Detaylarını Görüntüle</a></li>
+                                    <li><a href="{{ route('front-advert-detail', $advert->id) }}">+ Araç Detaylarını Görüntüle</a></li>
                                 </ul>
                             </div>
                         </div>

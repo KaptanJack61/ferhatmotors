@@ -63,7 +63,7 @@
 
                                 <p class="text-center">
                                     <span class="text-dark font-weight-bold mt-0">
-                                        {{date('d.M.Y',$advert->created_at->timestamp)}}
+                                        {{date('d.m.Y',$advert->created_at->timestamp)}}
                                     </span>
                                 </p>
 

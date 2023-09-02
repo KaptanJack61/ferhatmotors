@@ -177,6 +177,12 @@
                       </div>
 
                     <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                        <textarea id="description" name="description">{{ $advert->description }}</textarea>
+
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
                       <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Güncelle</a>
                     </div>
             </div>
@@ -216,6 +222,7 @@
 @endsection
 
 @section('script')
+    <script src="https://cdn.tiny.cloud/1/lmwpmtpkipcql77nmijrtonl0qf33143mj9k5s7thzmsvpy9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
     @include('layout.advert.script.script-brands')
     @include('layout.advert.script.script-photo-owner')

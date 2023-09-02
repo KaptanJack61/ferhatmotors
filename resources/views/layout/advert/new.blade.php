@@ -2,6 +2,10 @@
 
 @section('title', 'Yeni İlan')
 
+@section('header')
+
+@endsection
+
 @section('content')
 <div class="page-content">
 <div class="d-flex justify-content-between">
@@ -161,6 +165,12 @@
                       </div>
 
                     <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                            <textarea id="description" name="description"></textarea>
+
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
                       <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Kaydet</a>
                     </div>
             </div>
@@ -197,6 +207,11 @@
 
 @section('script')
     <script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
+    <script src="https://cdn.tiny.cloud/1/lmwpmtpkipcql77nmijrtonl0qf33143mj9k5s7thzmsvpy9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+
+
     @include('layout.advert.script.script-brands')
     @include('layout.advert.script.script-photo-owner')
     @include('layout.advert.script.script-save',['name' => 'advert-save'])

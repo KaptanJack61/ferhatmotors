@@ -2,7 +2,10 @@
     $("#advertSaveBtn").on("click", function(){
         var formData = $("#advertForm").serialize();
 
-        axios.post('{{ route($name) }}', formData).then((res)=>{
+        console.log(formData);
+
+        axios.post('{{ route($name) }}', formData)
+            .then((res)=>{
             toastr[res.data.type](res.data.message);
             if(res.data.status){
                 setInterval(() => {
