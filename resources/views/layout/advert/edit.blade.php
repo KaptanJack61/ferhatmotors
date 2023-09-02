@@ -18,7 +18,8 @@
     <div class="col-12 col-sm-12 col-md-8 col-xl-8 col-xxl-8">
         <div class="card">
             <div class="card-body">
-                <form class="row g-3" id="advertForm">
+                <form class="row g-3" id="advertForm1" enctype="application/x-www-form-urlencoded" method="post" action="{{ route('advert-update') }}">
+                    @csrf
                   <input type="hidden" name="id" id="id" value="{{$advert->id}}">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                         <label for="type">Tip *</label>
@@ -183,7 +184,7 @@
                     </div>
 
                     <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
-                      <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Güncelle</a>
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
                     </div>
             </div>
         </div>
@@ -226,7 +227,6 @@
 
     @include('layout.advert.script.script-brands')
     @include('layout.advert.script.script-photo-owner')
-    @include('layout.advert.script.script-save',['name' => 'advert-update'])
     @include('layout.advert.script.script-edit')
 
 @endsection

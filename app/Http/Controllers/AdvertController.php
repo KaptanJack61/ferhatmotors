@@ -73,6 +73,7 @@ class AdvertController extends Controller
             $adv->sahibinden_url = trim(ucfirst($request->sahibinden)) ?? null;
             $adv->arabam_url = trim(ucfirst($request->arabam)) ?? null;
             $adv->status_id = $request->status;
+            //dd(getCurrencyToNumber($request->buy_price));
             $adv->buy_price = getCurrencyToNumber($request->buy_price);
             $adv->sell_price = getCurrencyToNumber($request->sell_price);
             if ($request->buy_date)
@@ -104,7 +105,7 @@ class AdvertController extends Controller
 
         }
 
-        return $this->response;
+        return redirect()->route('advert-detail',$adv->id);
     }
 
     public function all(){
@@ -344,7 +345,7 @@ class AdvertController extends Controller
             }
         }
 
-        return $this->response;
+        return redirect()->route('advert-detail',$adv->id);
     }
 
     public function delete_photo(Request $request){

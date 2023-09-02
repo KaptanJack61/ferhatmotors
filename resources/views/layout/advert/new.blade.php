@@ -22,7 +22,8 @@
     <div class="col-12 col-sm-12 col-md-8 col-xl-8 col-xxl-8">
         <div class="card">
             <div class="card-body">
-                <form class="row g-3" id="advertForm">
+                <form class="row g-3" id="advertForm1" enctype="application/x-www-form-urlencoded" method="post" action="{{ route('advert-save') }}">
+                    @csrf
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                         <label for="type">Tip *</label>
                         <select name="type" id="type" class="js-example-basic-single js-states form-control">
@@ -166,12 +167,12 @@
 
                     <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                        <textarea id="description" name="description">{!! "" !!}</textarea>
+                        <textarea id="description" name="description"></textarea>
 
                     </div>
 
                     <div class="col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
-                      <a href="javascript:;" class="btn btn-primary" id="advertSaveBtn">Kaydet</a>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
                     </div>
             </div>
         </div>
@@ -209,12 +210,8 @@
     <script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
     <script src="https://cdn.tiny.cloud/1/lmwpmtpkipcql77nmijrtonl0qf33143mj9k5s7thzmsvpy9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-
-
-
     @include('layout.advert.script.script-brands')
     @include('layout.advert.script.script-photo-owner')
-    @include('layout.advert.script.script-save',['name' => 'advert-save'])
     @include('layout.advert.script.script-new')
 
 @endsection
