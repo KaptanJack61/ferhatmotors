@@ -80,6 +80,7 @@ class AdvertController extends Controller
             if ($request->damage)
                 $adv->damage = getCurrencyToNumber($request->damage);
             $adv->profit = $request->profit;
+
             $adv->description = $request->description;
 
             if($adv->save()){
@@ -319,6 +320,7 @@ class AdvertController extends Controller
             if ($request->buy_date)
                 $adv->buy_date = Carbon::parse($request->buy_date)->format('Y-m-d H:i:s');
             $adv->damage = getCurrencyToNumber($request->damage);
+
             $adv->description = $request->description;
 
             if($adv->save()){
