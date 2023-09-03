@@ -40,6 +40,7 @@
   <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/select2-bootstrap-5-theme.min.css') }}">
   @yield('style')
+  @stack('style')
 </head>
 <body class="sidebar-dark">
 	<div class="main-wrapper">
@@ -85,6 +86,7 @@
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/select2.full.min.js') }}"></script>
     @yield('script')
+    @stack('script')
 	<!-- Custom js for this page -->
 	<!-- End custom js for this page -->
 

@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 <label for="amount{{$id}}" class="mb-2">Satış Tutarı:</label>
-                <input type="text" class="form-control" id="amount{{$id}}" placeholder="₺0.00"
+                <input type="text" class="form-control amount" id="amount{{$id}}" placeholder="₺0.00"
                        data-inputmask="'alias': 'currency', 'prefix':'₺'" style="text-align: right;">
 
             </div>

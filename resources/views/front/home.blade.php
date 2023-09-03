@@ -13,8 +13,9 @@
                 <!-- <h6>Lorem ipsum dolor sit amet</h6> -->
                 <h2>En iyi <em>araba</em> satıcısı!</h2>
                 <div class="main-button">
-                    <a href="contact.html">İletişime geç</a>
+                    <a href="{{ route('contact') }}">İletişime geç</a> &nbsp; <a href="{{ route('adverts') }}">Araçlar</a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -68,7 +69,7 @@
                                 </p>
 
                                 <ul class="social-icons">
-                                    <li><a href="car-details.html">+ Araç Detaylarını Görüntüle</a></li>
+                                    <li><a href="{{ route('front-advert-detail',$advert->id) }}">+ Araç Detaylarını Görüntüle</a></li>
                                 </ul>
                             </div>
                         </div>

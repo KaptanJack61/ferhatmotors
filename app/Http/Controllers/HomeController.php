@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
 
     public function adverts() {
-        $adverts = Advert::where('sold_price', null)->orderBy('created_at','asc')->paginate(6);
+        $adverts = Advert::where('sold_price', null)->orderBy('created_at','desc')->paginate(6);
 
        // dd($adverts);
         return view('front.adverts', [

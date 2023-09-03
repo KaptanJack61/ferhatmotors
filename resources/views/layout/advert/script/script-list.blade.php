@@ -1,3 +1,4 @@
+<script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
 <script>
     $("#adverTable").DataTable({
         "language": {
@@ -47,4 +48,14 @@
             }
         });
     });
+
+
+    $(document).ready(function() {
+        $('.expenseAmount').inputmask('999.999.999');
+    });
+
+    $(document).ready(function() {
+        $('.amount').inputmask('999.999.999');
+    });
+
 </script>

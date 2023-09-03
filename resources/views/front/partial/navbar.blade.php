@@ -21,7 +21,9 @@
                                 <a class="dropdown-item" href="terms.html">Terms</a>
                             </div>
                         </li>
-                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="{{ route('contact') }}">İletişim</a></li>
+
+                        <li><a href="tel:5538610029" class="active font-weight-bold">0553 861 0029</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

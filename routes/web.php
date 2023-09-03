@@ -27,6 +27,9 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('adverts', 'adverts')->name('adverts');
     Route::get('advert/{advert}/detail', 'advertDetail')->name('front-advert-detail');
+
+    Route::get('/contact', 'contact')->name('contact');
+
 });
 
 
