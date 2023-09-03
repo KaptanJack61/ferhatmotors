@@ -69,7 +69,6 @@
                 <div class="col-lg-8">
                     <section class='tabs-content' style="width: 100%;">
                         <article id='tabs-1'>
-
                             <div class="row mt-4 mt-sm-4 mt-md-4 mt-lg-0">
                                 <div class="col-6 col-sm-6 col-md-4">
                                     <label>Araç Tipi</label>
@@ -146,8 +145,8 @@
                             </div>
                         </article>
                         <article id='tabs-2'>
-                            <div class="row mt-4 mt-sm-4 mt-md-4 mt-lg-0">
-                                <div class="description">
+                            <div class="row mt-4 mt-sm-4 mt-md-4 mt-lg-0 pr-4">
+                                <div class="description col-11">
                                     {!! $advert->description !!}
                                 </div>
 
