@@ -1,5 +1,11 @@
 @extends('front.master',['title' => $advert->brand->name." / ".$advert->model->name])
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/static/assets/vendors/owl.carousel/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/static/assets/vendors/animate.css/animate.min.css') }}">
+@endsection
+
 @section('content')
 
     <!-- ***** Call to Action Start ***** -->
@@ -21,53 +27,44 @@
     <!-- ***** Fleet Starts ***** -->
     <section class="section" id="trainers">
         <div class="container">
-            <br>
-            <br>
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    @if(count($advert->photos) != 0)
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        @for($x = 1; $x <= count($advert->photos); $x++)
-                            <li data-target="#carouselExampleIndicators" data-slide-to="{{$x}}"></li>
-                        @endfor
-                    @else
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    @endif
-
-                </ol>
-                <div class="carousel-inner">
-                    @if(count($advert->photos) != 0)
-                        @php($x=0)
-                        @foreach($advert->photos as $photo)
-                            <div class="carousel-item {{ $x == 0 ? "active":""}}">
-                                <img class="d-block w-100" src="{{ asset('storage/'.$photo->file) }}" alt="Test" >
+            <div class="row mt-4">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="owl-carousel owl-theme owl-loaded owl-drag front-owl">
+                                @if ($advert->Photos->count() > 0)
+                                    @foreach ($advert->Photos as $photo)
+                                        <div class="item">
+                                            <img src="{{ asset('storage/'.$photo->file) }}" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="item">
+                                        <img src="{{ asset('/static/assets/images/photo.jpg') }}" alt="item-image" style="max-height: 50vh; width: 100%; object-fit: cover;">
+                                    </div>
+                                @endif
                             </div>
-                        @php($x++)
-                        @endforeach
-                    @else
-                        <img src="{{ asset('/static/assets/images/photo.jpg') }}" alt="" width="100%" height="600">
-                    @endif
+                        </div>
+                    </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Önceki</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Sonraki</span>
-                </a>
             </div>
 
-            <br>
-            <br>
-
-            <div class="row" id="tabs">
+            <div class="row mt-4" id="tabs">
                 <div class="col-lg-4">
                     <ul>
                         <li><a href='#tabs-1'><i class="fa fa-cog"></i> Araç Özellikleri</a></li>
                         <li><a href='#tabs-2'><i class="fa fa-info-circle"></i> Araç Açıklaması</a></li>
                     </ul>
+                    <ul class="mt-4">
+                        @if($advert->sahibinden_url != null)
+                            <li><a href="{{$advert->sahibinden_url}}" target="_blank"><i class="fa fa-link"></i>sahibinden.com</a></li>
+                        @endif
+
+                        @if($advert->arabam_url != null)
+                            <li><a href="{{$advert->arabam_url}}" target="_blank"><i class="fa fa-link"></i>arabam.com</a></li>
+                        @endif
+                    </ul>
+
                 </div>
                 <div class="col-lg-8">
                     <section class='tabs-content' style="width: 100%;">
@@ -133,12 +130,29 @@
 
                                     <p>{{ $advert->color->name }}</p>
                                 </div>
+
+                                <div class="col-6 col-sm-6 col-md-4">
+                                    <label>Hasar Kaydı</label>
+
+                                    <p>
+                                        @if($advert->damage != 0.00)
+                                            ₺{{ currency_format($advert->damage) }}
+                                        @else
+                                            Yok
+                                        @endif
+
+                                    </p>
+                                </div>
                             </div>
                         </article>
                         <article id='tabs-2'>
-                            <p>
-                                {!! $advert->description !!}
-                            </p>
+                            <div class="row mt-4 mt-sm-4 mt-md-4 mt-lg-0">
+                                <div class="description">
+                                    {!! $advert->description !!}
+                                </div>
+
+                            </div>
+
                         </article>
                     </section>
                 </div>
@@ -149,8 +163,8 @@
 @endsection
 
 @section('script')
-
-
+    <script src="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/static/assets/js/carousel.js') }}"></script>
 @endsection
 
 

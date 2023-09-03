@@ -109,7 +109,7 @@
 
                     </tbody>
                   </table>
-                  <a href="/user/new" class="btn btn-outline-primary btn-xs float-end" data-bs-toggle="tooltip" title="Bilgileri Güncelle"><i width="10" data-feather="plus"></i> Yeni Kullanıcı Oluştur</a>
+                  <a href="{{ route('user-new') }}" class="btn btn-outline-primary btn-xs float-end" data-bs-toggle="tooltip" title="Bilgileri Güncelle"><i width="10" data-feather="plus"></i> Yeni Kullanıcı Oluştur</a>
             </div>
         </div>
     </div>

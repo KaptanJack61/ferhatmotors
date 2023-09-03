@@ -31,4 +31,8 @@ class HomeController extends Controller
             'advert' => $advert
         ]);
     }
+
+    public function contact() {
+        return view('front.contact');
+    }
 }

@@ -109,25 +109,31 @@
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item justify-content-between d-flex"><b>Alış Fiyatı: </b> ₺{{currency_format($advert->buy_price)}}</li>
-                            <li class="list-group-item justify-content-between d-flex"><b>Toplam Harcama: </b> ₺{{currency_format($totalExpense)}}</li>
+                            <li class="list-group-item justify-content-between d-flex"><b>Toplam Harcama: </b>
+                                @if($totalExpense == 0)
+                                    Harcama Yok.
+                                @else
+                                    ₺{{currency_format($totalExpense)}}
+                                @endif
+                            </li>
                             <li class="list-group-item justify-content-between d-flex text-danger fw-bold"><b>Toplam Maliyet: </b> ₺{{currency_format($advert->buy_price + $totalExpense)}}</li>
                             <li class="list-group-item justify-content-between d-flex"><b>İstenen Fiyat: </b> ₺{{currency_format($advert->sell_price) ?? "-"}}</li>
                             @if($advert->sold_price)
-                                <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> {{$advert->sold_price}} ₺</li>
+                                <li class="list-group-item justify-content-between d-flex"><b>Satış Tutarı: </b> ₺{{currency_format($advert->sold_price)}}</li>
                             @endif
                             @if($advert->sold_price)
                                 <li class="list-group-item justify-content-between d-flex"><b>Bilanço: </b>
                                     @if($advert->sold_price - $advert->buy_price + $totalExpense > 0)
                                         <span class="fw-bold text-success">
-                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Kazanç"}}
+                                        ₺{{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Kazanç"}}
                                     </span>
                                     @elseif($advert->sold_price - $advert->buy_price + $totalExpense == 0 )
                                         <span class="fw-bold text-primary">
-                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Başa Baş"}}
+                                        ₺{{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Başa Baş"}}
                                     </span>
                                     @else
                                         <span class="fw-bold text-danger">
-                                        {{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Zarar"}}
+                                        ₺{{(currency_format($advert->sold_price - $advert->buy_price + $totalExpense))." Zarar"}}
                                     </span>
                                     @endif
                                 </li>
@@ -196,7 +202,7 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <div class="owl-carousel owl-theme owl-fadeout">
+                    <div class="owl-carousel owl-theme owl-loaded owl-drag owl-nav dashboard-owl">
                       @if ($advert->Photos->count() > 0)
                         @foreach ($advert->Photos as $photo)
                         <div class="item">
@@ -212,6 +218,26 @@
                   </div>
                 </div>
               </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Açıklama</h2>
+
+                        @if ($advert->description)
+                            <div>
+                                {!! $advert->description !!}
+                            </div>
+                        @else
+                            <div class="alert alert-primary" role="alert">
+                                Bu araç için henüz bir not eklenmemiş...
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row mb-4">
             <div class="col-12">
@@ -316,8 +342,8 @@
 
 @section('script')
     <script src="{{ asset('/static/assets/vendors/owl.carousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('/static/assets/vendors/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
     <script src="{{ asset('/static/assets/js/carousel.js') }}"></script>
+    <script src="{{ asset('/static/assets/vendors/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
     <script src="{{ asset('static/assets/vendors/inputmask/jquery.inputmask.min.js') }}"></script>
 
     @include('layout.advert.script.script-list')

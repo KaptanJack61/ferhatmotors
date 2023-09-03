@@ -94,7 +94,7 @@
                         <h2>Bizimle <em>İletişime Geçin</em></h2>
                         <p>İletişim formunu doldurarak ya da telefonla arayarak bizimle iletişime geçebilirsiniz.</p>
                         <div class="main-button">
-                            <a href="contact.html">İletişim</a>
+                            <a href="{{ route('contact') }}">İletişim</a>
                         </div>
                     </div>
                 </div>

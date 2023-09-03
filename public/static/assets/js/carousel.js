@@ -8,7 +8,7 @@ $(function() {
     $('.owl-basic').owlCarousel({
       loop:true,
       margin:10,
-      nav:false,
+      nav:true,
       responsive:{
           0:{
               items:2
@@ -23,9 +23,10 @@ $(function() {
     });
   }
 
+
   if($('.owl-auto-play').length) {
     $('.owl-auto-play').owlCarousel({
-      items:4,
+      items:1,
       loop:true,
       margin:10,
       autoplay:true,
@@ -60,11 +61,51 @@ $(function() {
       animateOut: 'animate__animated animate__slideOutDown',
       animateIn: 'animate__animated animate__flipInX',
       items:1,
+      nav:false,
+      loop:true,
       margin:30,
       stagePadding:30,
-      smartSpeed:450
+      smartSpeed:450,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
     });
   }
+
+    if($('.front-owl').length) {
+        $('.front-owl').owlCarousel({
+            animateOut: 'animate__animated animate__slideOutDown',
+            animateIn: 'animate__animated animate__flipInX',
+            items:1,
+            nav:true,
+            loop:true,
+            margin:30,
+            stagePadding:30,
+            smartSpeed:450,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
+        });
+    }
+
+    if($('.dashboard-owl').length) {
+        $('.dashboard-owl').owlCarousel({
+
+            items:2,
+            nav:true,
+            loop:true,
+            margin:30,
+            stagePadding:30,
+            smartSpeed:450,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
+
+        });
+    }
+
+
+
 
   if($('.owl-mouse-wheel').length) {
     var owl = $('.owl-mouse-wheel');
@@ -78,7 +119,7 @@ $(function() {
             },
             600:{
                 items:3
-            },            
+            },
             960:{
                 items:3
             },
@@ -94,6 +135,10 @@ $(function() {
             owl.trigger('prev.owl');
         }
         e.preventDefault();
+    });
+
+    owl.owlCarousel({
+        nav:true
     });
 
   }

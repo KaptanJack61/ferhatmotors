@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="{{ asset('car/css/style.css') }}">
 
-    @yield('header')
+    @yield('style')
 
 </head>
 
